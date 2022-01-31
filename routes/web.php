@@ -16,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('landingpage', function () {
-    return view('lp.landingpage');
+Route::get('/landingpage', function () {
+    return view('landing');
+});
+Route::get('/about', function () {
+    return view('about');
+});
+Route::get('/articles', function () {
+    return view('articles');
+});
+Route::get('/article', function () {
+    return view('single-article');
+});
+Route::get('/event', function () {
+    return view('event');
 });
