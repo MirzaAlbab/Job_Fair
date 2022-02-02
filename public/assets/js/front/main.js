@@ -227,7 +227,6 @@
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
-    centeredSlides:true,
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',

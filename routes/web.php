@@ -17,17 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/landingpage', function () {
-    return view('landing');
+    return view('landing-page.landing');
+});
+Route::get('/landingpage2', function () {
+    return view('landing-page.landing2');
 });
 Route::get('/about', function () {
-    return view('about');
+    return view('landing-page.about');
 });
 Route::get('/articles', function () {
-    return view('articles');
+    return view('landing-page.articles');
 });
 Route::get('/article', function () {
-    return view('single-article');
+    return view('landing-page.single-article');
 });
 Route::get('/event', function () {
-    return view('event');
+    return view('landing-page.event');
 });

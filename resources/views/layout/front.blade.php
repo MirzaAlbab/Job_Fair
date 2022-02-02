@@ -42,7 +42,7 @@
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
+  <header id="header" class="header fixed-top bg-light">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="/landingpage" class="logo d-flex align-items-center">

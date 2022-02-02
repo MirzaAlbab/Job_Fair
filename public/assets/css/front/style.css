@@ -683,7 +683,13 @@ section {
 .clients .clients-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #4154f1;
 }
-
+@media screen and (max-width:768px) {
+  .container-md .logobawah{
+    display: flex;
+    flex-direction: row;
+  }
+  
+}
 /*--------------------------------------------------------------
 # Recent Blog Posts
 --------------------------------------------------------------*/
