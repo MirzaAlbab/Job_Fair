@@ -31,7 +31,7 @@ Route::get('/articles', function () {
 Route::get('/article', function () {
     return view('landing-page.single-article');
 });
-Route::get('/event', function () {
+Route::get('/events', function () {
     return view('landing-page.event');
 });
 
