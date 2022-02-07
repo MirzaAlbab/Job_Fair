@@ -8,7 +8,7 @@
     <div class="container">
 
       <ol>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/landingpage">Home</a></li>
         <li>Blog</li>
       </ol>
       <h2>Blog</h2>
@@ -31,7 +31,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              <a href="/singlearticle">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
             </h2>
 
             <div class="entry-meta">
@@ -48,7 +48,7 @@
                 Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
               </p>
               <div class="read-more">
-                <a href="blog-single.html">Read More</a>
+                <a href="/singlearticle">Read More</a>
               </div>
             </div>
 
@@ -61,7 +61,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/article">Nisi magni odit consequatur autem nulla dolorem</a>
+              <a href="/singlearticle">Nisi magni odit consequatur autem nulla dolorem</a>
             </h2>
 
             <div class="entry-meta">
@@ -78,7 +78,7 @@
                 Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
               </p>
               <div class="read-more">
-                <a href="/article">Read More</a>
+                <a href="/singlearticle">Read More</a>
               </div>
             </div>
 
@@ -91,7 +91,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/article">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
+              <a href="/singlearticle">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
             </h2>
 
             <div class="entry-meta">
@@ -108,7 +108,7 @@
                 Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
               </p>
               <div class="read-more">
-                <a href="/article">Read More</a>
+                <a href="/singlearticle">Read More</a>
               </div>
             </div>
 
@@ -121,7 +121,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/article">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
+              <a href="/singlearticle">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
             </h2>
 
             <div class="entry-meta">
@@ -138,7 +138,7 @@
                 Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
               </p>
               <div class="read-more">
-                <a href="/article">Read More</a>
+                <a href="/singlearticle">Read More</a>
               </div>
             </div>
 

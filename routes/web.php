@@ -28,11 +28,14 @@ Route::get('/about', function () {
 Route::get('/articles', function () {
     return view('landing-page.articles');
 });
-Route::get('/article', function () {
+Route::get('/singlearticle', function () {
     return view('landing-page.single-article');
 });
 Route::get('/events', function () {
     return view('landing-page.event');
+});
+Route::get('/eventdetail', function () {
+    return view('landing-page.event-details');
 });
 
 

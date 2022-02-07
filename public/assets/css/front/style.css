@@ -690,6 +690,27 @@ section {
   }
   
 }
+/* Mobile Participant */
+.participant .col .img-fluid{
+  max-width: 8%;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+  .participant .col .img-fluid {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 15%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .participant .col .img-fluid {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 20%;
+  }
+}
 /*--------------------------------------------------------------
 # Recent Blog Posts
 --------------------------------------------------------------*/
@@ -1364,9 +1385,9 @@ a, a:hover {
   font-weight: 600;
 }
 .postcard .postcard__img {
-  max-height: 180px;
+  height: 150%;
   width: 100%;
-  object-fit: cover;
+  
   position: relative;
 }
 .postcard .postcard__img_link {
@@ -1374,7 +1395,7 @@ a, a:hover {
 }
 .postcard .postcard__bar {
   width: 50px;
-  height: 20px;
+  height: 5px;
   margin: 10px 0;
   border-radius: 5px;
   background-color: #152d8f;
@@ -1382,7 +1403,7 @@ a, a:hover {
 }
 
 .postcard .postcard__text {
-  padding: 1.5rem;
+  padding: 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1397,7 +1418,7 @@ a, a:hover {
   display: flex;
   flex-flow: row wrap;
   font-size: 14px;
-  margin: 20px 0 0 0;
+  margin: 0px 0 0 0;
   padding: 0;
   justify-content: center;
 }
@@ -1421,7 +1442,7 @@ a, a:hover {
  background-color:#152d8f;
  font-family: 'Nunito', sans-serif;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .postcard {
     flex-wrap: inherit;
  }
@@ -1430,15 +1451,12 @@ a, a:hover {
  }
   .postcard .postcard__tagbox {
     justify-content: start;
+    margin-top: 3%;
  }
   .postcard .postcard__img {
-    max-width: 300px;
-    max-height: 100%;
+    width: 20%;
+    height: auto ;
     transition: transform 0.3s ease;
- }
-  .postcard .postcard__text {
-    padding: 3rem;
-    width: 100%;
  }
   .postcard .media.postcard__text:before {
     content: "";
@@ -1449,15 +1467,10 @@ a, a:hover {
     height: 130%;
     width: 55px;
  }
-  .postcard:hover .postcard__img {
-    transform: scale(1.1);
- }
+ 
  
 }
 @media screen and (min-width: 1024px) {
-  .postcard__text {
-    padding: 2rem 3.5rem;
- }
   .postcard.light .postcard__text:before {
     background: #e1e5ea;
  }
@@ -1468,11 +1481,28 @@ a, a:hover {
    align-self:center !important;
    margin-right: 7%;
   }
+ .postcard .postcard__img {
+  max-height: 250px;
+  object-fit: cover;
+  
+}
+.postcard{
+  margin-bottom:0rem;
+}
+.blue{
+  align-content: center;
+  justify-content: center;
+}
 }
 @media (max-width: 576px) {
  .postcard .btn{
    align-self:center !important;
    margin-right: 10%;
+  }
+  .postcard .postcard__img {
+    max-height: 250px;
+    object-fit: cover;
+    
   }
 }
 
@@ -1487,12 +1517,67 @@ a, a:hover {
 .blue .postcard__bar {
   background-color: #0076bd;
 }
-.blue::before {
-  background-image: linear-gradient(30deg, rgba(0, 118, 189, 0.1), transparent 50%);
-}
-@media screen and (min-width: 769px) {
+
+@media screen and (min-width: 768px) {
   .blue::before {
     background-image: linear-gradient(80deg, rgba(0, 118, 189, 0.1), transparent 50%);
  }
  
+}
+/* Event Details */
+.portfolio-details {
+  padding-top: 40px;
+}
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #4154f1;
+}
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
+  background-color: #4154f1;
+}
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+  padding: 0;
 }

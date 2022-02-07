@@ -9,8 +9,8 @@
     <div class="container">
 
       <ol>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="/landingpage">Home</a></li>
+        <li><a href="/articles">Blog</a></li>
         <li>Blog Single</li>
       </ol>
       <h2>Blog Single</h2>

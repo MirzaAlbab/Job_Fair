@@ -36,15 +36,14 @@
 
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide"><a href="#"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/dpkka.png" class="img-fluid" alt=""></div>
       </div>
      
     </div>
@@ -162,21 +161,19 @@
         <p>Partisipan AOCF 2022</p>
       </header>
       <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-6">
-            <a href="#"><img src="assets/img/clients/client-1.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-2.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-3.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-4.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-5.png" class="img-fluid" style="max-width:100px" alt=""></a>
+        <div class="row d-flex flex-column text-center participant">
+          <div class="col">
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></a>
+          
           </div>
-          <div class="col-md-6">
-            <a href="#"><img src="assets/img/clients/client-6.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-7.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-8.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-7.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          <a href="#"><img src="assets/img/clients/client-8.png" class="img-fluid" style="max-width:100px" alt=""></a>
-          </div>
+          
           
           
         </div>
