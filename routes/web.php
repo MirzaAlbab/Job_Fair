@@ -96,6 +96,10 @@ Route::get('/event-view', function () {
     return view('admin.event-view');
 })->name('event-view');
 
+Route::get('/login', function () {
+    return view('admin.login');
+})->name('login');
+
 Route::get('/test', function () {
     return view('admin.test');
 })->name('test');

@@ -37,7 +37,7 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Company</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
                   </tr>
@@ -45,8 +45,8 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td class="align-middle">Brandon Jacob</td>
-                    <td class="align-middle">Designer</td>
+                    <td class="align-middle">Webinar 5</td>
+                    <td class="align-middle">17/02/2022</td>
                     <td class="align-middle"><span class="badge rounded-pill bg-primary">Active</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('event-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
@@ -59,11 +59,11 @@
                           <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                               <div class="modal-header">
-                              <h5 class="modal-title">Delete Event</h5>
+                              <h5 class="modal-title">Delete Career Fair</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                              Are you sure you want to delete this Event?
+                              Are you sure you want to delete this Career Fair?
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -76,9 +76,9 @@
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td>Bridie Kessler</td>
-                    <td>Developer</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td class="align-middle">Webinar 4</td>
+                    <td class="align-middle">17/02/2022</td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('event-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('event-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -90,11 +90,11 @@
                           <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                               <div class="modal-header">
-                              <h5 class="modal-title">Delete Event</h5>
+                              <h5 class="modal-title">Delete Career Fair</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                              Are you sure you want to delete this Event?
+                              Are you sure you want to delete this Career Fair?
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -107,9 +107,9 @@
                   </tr>
                   <tr>
                     <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td class="align-middle">Webinar 3</td>
+                    <td class="align-middle">17/02/2022</td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('event-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('event-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -121,11 +121,11 @@
                           <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                               <div class="modal-header">
-                              <h5 class="modal-title">Delete Event</h5>
+                              <h5 class="modal-title">Delete Career Fair</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                              Are you sure you want to delete this Event?
+                              Are you sure you want to delete this Career Fair?
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -138,9 +138,9 @@
                   </tr>
                   <tr>
                     <th scope="row">4</th>
-                    <td>Angus Grady</td>
-                    <td>HR</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td class="align-middle">Webinar 2</td>
+                    <td class="align-middle">17/02/2022</td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('event-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('event-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -152,11 +152,11 @@
                           <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                               <div class="modal-header">
-                              <h5 class="modal-title">Delete Event</h5>
+                              <h5 class="modal-title">Delete Career Fair</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                              Are you sure you want to delete this Event?
+                              Are you sure you want to delete this Career Fair?
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -169,9 +169,9 @@
                   </tr>
                   <tr>
                     <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
-                    <td>Dynamic Division Officer</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td class="align-middle">Webinar 1</td>
+                    <td class="align-middle">17/02/2022</td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('event-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('event-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -183,11 +183,11 @@
                           <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                               <div class="modal-header">
-                              <h5 class="modal-title">Delete Event</h5>
+                              <h5 class="modal-title">Delete Career Fair</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                              Are you sure you want to delete this Event?
+                              Are you sure you want to delete this Career Fair?
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -201,7 +201,6 @@
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
-
             </div>
           </div>
 
