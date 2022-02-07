@@ -38,7 +38,7 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Company</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
                   </tr>
@@ -46,8 +46,8 @@
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td class="align-middle">Brandon Jacob</td>
-                    <td class="align-middle">Designer</td>
+                    <td class="align-middle">Article 5</td>
+                    <td class="align-middle">Main</td>
                     <td class="align-middle"><span class="badge rounded-pill bg-primary">Active</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('article-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
@@ -77,9 +77,9 @@
                   </tr>
                   <tr>
                     <th scope="row">2</th>
-                    <td>Bridie Kessler</td>
-                    <td>Developer</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td class="align-middle">Article 4</td>
+                    <td class="align-middle">Default</td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('article-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('article-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -108,9 +108,9 @@
                   </tr>
                   <tr>
                     <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td class="align-middle">Article 3</td>
+                    <td class="align-middle">Default</td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('article-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('article-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -139,9 +139,9 @@
                   </tr>
                   <tr>
                     <th scope="row">4</th>
-                    <td>Angus Grady</td>
+                    <td class="align-middle">Article 2</td>
                     <td>HR</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('article-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('article-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
@@ -170,9 +170,9 @@
                   </tr>
                   <tr>
                     <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
+                    <td class="align-middle">Article 1</td>
                     <td>Dynamic Division Officer</td>
-                    <td><span class="badge rounded-pill bg-secondary">Disabled</span></td>
+                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
                       <a href="{{ route('article-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('article-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
