@@ -397,7 +397,7 @@ section {
   width: 100%;
   height: 100vh;
   background: url(../../img/hero-bg.png) no-repeat;
-  background-size:contain;
+  background-size:cover;
 }
 .hero h1 {
   margin: 0;
@@ -1387,11 +1387,14 @@ a, a:hover {
 .postcard .postcard__img {
   height: 150%;
   width: 100%;
-  
   position: relative;
+}
+.postcard:hover .postcard__img_link img {
+  transform: scale(1.05);
 }
 .postcard .postcard__img_link {
   display: contents;
+  
 }
 .postcard .postcard__bar {
   width: 50px;

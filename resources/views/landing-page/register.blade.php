@@ -5,9 +5,7 @@
 <div class="container">
 <!-- ======= Big Clients Section ======= -->
   <section id="clients" class="clients bg-white mt-5">
-
     <div class="container" data-aos="fade-up">
-
       <div class="clients-slider2 swiper">
         <div class="swiper-wrapper align-items-center" >
           <div class="swiper-slide"><a href="#"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></a></div>
@@ -20,7 +18,6 @@
           <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
           <div class="swiper-slide"><img src="assets/img/clients/dpkka.png" class="img-fluid" alt=""></div>
         </div>
-      
       </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
@@ -28,11 +25,10 @@
 
   </section>
   <!-- End Big Clients Section -->
+  
+  <!-- Jobseeker Employer Tabs -->
   <div class="card">
     <div class="card-body">
-      
-  
-      <!-- Bordered Tabs Justified -->
       <ul class="nav nav-tabs nav-tabs-bordered d-flex" id="borderedTabJustified" role="tablist">
         <li class="nav-item flex-fill" role="presentation">
           <button class="nav-link w-100 active" id="home-tab" data-bs-toggle="tab" data-bs-target="#bordered-justified-home" type="button" role="tab" aria-controls="home" aria-selected="true">Jobseeker</button>
@@ -117,19 +113,16 @@
             </li>
           </ul>
         </div>
-        
-      </div><!-- End Bordered Tabs Justified -->
-
-
-        
+      </div>
+      
       </div>
     </div>
   </div>
+  <!-- End Jobseeker Employer Tabs -->
+
   <!-- ======= Clients Section ======= -->
   <section id="clients" class="">
-
     <div class="container" data-aos="fade-up">
-
       <header class="section-header">
         <h2>AOCF</h2>
         <p>Partisipan AOCF 2022</p>
@@ -145,15 +138,10 @@
             <a href="#"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></a>
             <a href="#"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></a>
             <a href="#"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></a>
-          </div>
-          
-          
-          
+          </div>  
         </div>
-      </div>
-      
+      </div> 
     </div>
-
   </section>
   <!-- End Clients Section -->
 </div>

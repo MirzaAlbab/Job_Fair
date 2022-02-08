@@ -18,9 +18,8 @@
 <!-- ======= Event Section ======= -->
 <section class="light">
 	<div class="container">
-
 		<article class="postcard light blue">
-			<a class="postcard__img_link" href="https://picsum.photos/1000/1000" data-lightbox="image-1">
+			<a class="postcard__img_link">
 				<img class="postcard__img rounded"  src="https://picsum.photos/1000/1000" alt="" />
 			</a>
 			<div class="postcard__text t-dark" >
