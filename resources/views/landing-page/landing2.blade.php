@@ -4,7 +4,6 @@
 @section('container')
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex align-items-center">
-
   <div class="container">
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
@@ -12,7 +11,7 @@
         <h2 data-aos="fade-up" data-aos-delay="400">Raih impian dan mulai bangun jenjang karirmu</h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
-            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+            <a href="/register" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
               <span>Get Started</span>
               <i class="bi bi-arrow-right"></i>
             </a>
@@ -36,10 +35,10 @@
 
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>

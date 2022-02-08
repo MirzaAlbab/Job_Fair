@@ -37,6 +37,9 @@ Route::get('/events', function () {
 Route::get('/eventdetail', function () {
     return view('landing-page.event-details');
 });
+Route::get('/register', function () {
+    return view('landing-page.register');
+});
 
 
 // route: admin

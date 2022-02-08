@@ -36,7 +36,7 @@
 					<li class="tag__item"><i class="fas fa-map-marker-alt ml-2"></i> Zoom Meeting</li>
 					
 				</ul>
-        <a class="btn btn-primary d-flex align-self-start mt-3 text-white" href="#" role="button">Details</a>
+        <a class="btn btn-primary d-flex align-self-start mt-3 text-white" href="/eventdetail" role="button">Details</a>
 			</div>
 		</article>
 		
