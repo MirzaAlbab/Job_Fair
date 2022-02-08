@@ -4,7 +4,6 @@
 @section('container')
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex align-items-center">
-
   <div class="container">
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
@@ -12,7 +11,7 @@
         <h2 data-aos="fade-up" data-aos-delay="400">Raih impian dan mulai bangun jenjang karirmu</h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
-            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+            <a href="/register" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
               <span>Get Started</span>
               <i class="bi bi-arrow-right"></i>
             </a>
@@ -31,26 +30,22 @@
 
 <!-- ======= Big Clients Section ======= -->
 <section id="clients" class="clients bg-white">
-
   <div class="container" data-aos="fade-up">
-
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
       </div>
-     
     </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
-
 </section>
 <!-- End Big Clients Section -->
 
@@ -58,16 +53,12 @@
 <main id="main">
 <!-- ======= Values Section ======= -->
     <section id="values" class="values">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>AOCF</h2>
           <p>What's On AOCF</p>
         </header>
-
         <div class="row">
-
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
               <img src="assets/img/values-1.png" class="img-fluid" alt="">
@@ -99,6 +90,7 @@
 
     </section>
     <!-- End Values Section -->
+
   <!-- ======= Counts Section ======= -->
   <section id="counts" class="counts">
     <div class="container" data-aos="fade-up">
@@ -153,9 +145,7 @@
   
   <!-- ======= Clients Section ======= -->
   <section id="clients" class="">
-
     <div class="container" data-aos="fade-up">
-
       <header class="section-header">
         <h2>AOCF</h2>
         <p>Partisipan AOCF 2022</p>
@@ -171,16 +161,10 @@
             <a href="#"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></a>
             <a href="#"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></a>
             <a href="#"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></a>
-          
           </div>
-          
-          
-          
         </div>
-      </div>
-      
+      </div> 
     </div>
-
   </section>
   <!-- End Clients Section -->
 
@@ -293,7 +277,6 @@
 
   </section>
   <!-- End F.A.Q Section -->
-
 
   <!-- ======= Recent Blog Posts Section ======= -->
   <section id="recent-blog-posts" class="recent-blog-posts">
