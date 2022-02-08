@@ -13,7 +13,8 @@
       <h1>Logo</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li>
+          {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
+          <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
           <li class="breadcrumb-item"><a href="{{ route('logo') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Logo</a></li>
           <li class="breadcrumb-item active">Update Logo</li>

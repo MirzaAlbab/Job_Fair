@@ -13,7 +13,8 @@
       <h1>Career Fair</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li>
+          {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
+          <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
           <li class="breadcrumb-item"><a href="{{ route('career') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Career Fair</a></li>
 
@@ -109,19 +110,18 @@
                         </div>
                         </div>
                     </div><!-- End Vertically centered Modal-->
-                </div>
-                <div class="col-sm-10 text-end">
+                  </div>
+                  <div class="col-sm-10 text-end">
                     <button type="reset" class="btn btn-secondary">Reset</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
+                </div>
+                
+              </form><!-- End General Form Elements -->
+              
             </div>
-    
-          </form><!-- End General Form Elements -->
-    
-        </div>
-      </div>
-    </section>
-
-  </main>
-    
+          </div>
+        </section>
+        
+      </main>   
 @endsection
