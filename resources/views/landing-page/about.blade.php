@@ -51,8 +51,6 @@
 
         <div class="col-lg-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content ">
-            <h2 class="text-center">Airlangga Online Career Fair 2022</h2>
-            <img src="{{ asset('assets/img/banner.png') }}" class="img-fluid " alt="">
             <p>
               Airlangga Online Career Fair (AOCF) 2022 merupakan salah satu wahana strategis bagi kepentingan perusahaan/corporation dan jobseeker. Pada tahun 2022 ini, Airlangga Online Career Fair (AOCF) diadakan secara online/virtual melalui web DPKKA mengingat kondisi saat ini yang masih dalam pandemic COVID-19. Dalam hal ini, Corporation memiliki kemudahan untuk mencari talent yang sesuai dengan kualifikasi yang dibutuhkan untuk mempercepat growth dan pengembangan bisnis utamanya.
             </p>

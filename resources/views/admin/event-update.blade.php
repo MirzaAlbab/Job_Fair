@@ -49,7 +49,7 @@
             <div class="row mb-3">
               <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
               <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="datetime-local" class="form-control">
               </div>
             </div>
 

@@ -4,7 +4,6 @@
 @section('container')
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex align-items-center">
-
   <div class="container">
     <div class="row">
       <div class="col-lg-6 d-flex flex-column justify-content-center">
@@ -20,7 +19,7 @@
         </div>
       </div>
       <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="{{ asset('assets/img/hero-img.png') }}" class="img-fluid" alt="">
+        <img src="{{ asset('assets/img/banner.png') }}" class="img-fluid" alt="">
       </div>
     </div>
   </div>
@@ -31,27 +30,22 @@
 
 <!-- ======= Big Clients Section ======= -->
 <section id="clients" class="clients bg-white">
-
   <div class="container" data-aos="fade-up">
-
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide"><a href="#"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
         <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/dpkka.png" class="img-fluid" alt=""></div>
       </div>
-     
     </div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
-
 </section>
 <!-- End Big Clients Section -->
 
@@ -59,16 +53,12 @@
 <main id="main">
 <!-- ======= Values Section ======= -->
     <section id="values" class="values">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>AOCF</h2>
           <p>What's On AOCF</p>
         </header>
-
         <div class="row">
-
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
               <img src="assets/img/values-1.png" class="img-fluid" alt="">
@@ -100,6 +90,7 @@
 
     </section>
     <!-- End Values Section -->
+
   <!-- ======= Counts Section ======= -->
   <section id="counts" class="counts">
     <div class="container" data-aos="fade-up">
@@ -153,30 +144,27 @@
   <!-- End Counts Section -->
   
   <!-- ======= Clients Section ======= -->
-  <section id="clients" class="clients">
-
+  <section id="clients" class="">
     <div class="container" data-aos="fade-up">
-
       <header class="section-header">
         <h2>AOCF</h2>
         <p>Partisipan AOCF 2022</p>
       </header>
-
-      <div class="clients-slider swiper">
-        <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+      <div class="container">
+        <div class="row d-flex flex-column text-center participant">
+          <div class="col">
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></a>
+          </div>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
+      </div> 
     </div>
-
   </section>
   <!-- End Clients Section -->
 
@@ -290,7 +278,6 @@
   </section>
   <!-- End F.A.Q Section -->
 
-
   <!-- ======= Recent Blog Posts Section ======= -->
   <section id="recent-blog-posts" class="recent-blog-posts">
 
@@ -308,7 +295,7 @@
             <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div>
             <span class="post-date">Tue, September 15</span>
             <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-            <a href="/singlearticle" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
 
@@ -317,7 +304,7 @@
             <div class="post-img"><img src="assets/img/blog/blog-2.jpg" class="img-fluid" alt=""></div>
             <span class="post-date">Fri, August 28</span>
             <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
-            <a href="/singlearticle" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
 
@@ -326,7 +313,7 @@
             <div class="post-img"><img src="assets/img/blog/blog-3.jpg" class="img-fluid" alt=""></div>
             <span class="post-date">Mon, July 11</span>
             <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
-            <a href="/singlearticle" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
 
