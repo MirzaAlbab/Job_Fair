@@ -47,6 +47,19 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
 
+Route::get('/faq', function () {
+    return view('admin.faq');
+})->name('faq');
+Route::get('/faq-new', function () {
+    return view('admin.faq-new');
+})->name('faq-new');
+Route::get('/faq-update', function () {
+    return view('admin.faq-update');
+})->name('faq-update');
+Route::get('/faq-view', function () {
+    return view('admin.faq-view');
+})->name('faq-view');
+
 Route::get('/career-fair', function () {
     return view('admin.career-fair');
 })->name('career');

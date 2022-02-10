@@ -179,35 +179,21 @@
         </ul>
       </li><!-- End Icons Nav --> --}}
 
-      {{-- <li class="nav-heading">Landing Page</li>
+      <li class="nav-heading">Landing Page</li>
+      
+      {{-- <li class="nav-item">
+        <a class="nav-link @yield('rundown', 'collapsed')" href="{{ route('rundown') }}">
+          <i class="bi bi-layout-text-window-reverse"></i>
+          <span>Rundown</span>
+        </a>
+      </li><!-- End Rundown Page Nav --> --}}
       
       <li class="nav-item">
-        <a class="nav-link @yield('career-fair', 'collapsed')" href="{{ route('career') }}">
+        <a class="nav-link @yield('faq', 'collapsed')" href="{{ route('faq') }}">
           <i class="bi bi-layout-text-window-reverse"></i>
-          <span>Career Fair</span>
+          <span>FAQ</span>
         </a>
-      </li><!-- End Career Fair Page Nav -->
-      
-      <li class="nav-item">
-        <a class="nav-link @yield('career-fair', 'collapsed')" href="{{ route('career') }}">
-          <i class="bi bi-layout-text-window-reverse"></i>
-          <span>Career Fair</span>
-        </a>
-      </li><!-- End Career Fair Page Nav -->
-      
-      <li class="nav-item">
-        <a class="nav-link @yield('career-fair', 'collapsed')" href="{{ route('career') }}">
-          <i class="bi bi-layout-text-window-reverse"></i>
-          <span>Career Fair</span>
-        </a>
-      </li><!-- End Career Fair Page Nav -->
-      
-      <li class="nav-item">
-        <a class="nav-link @yield('career-fair', 'collapsed')" href="{{ route('career') }}">
-          <i class="bi bi-layout-text-window-reverse"></i>
-          <span>Career Fair</span>
-        </a>
-      </li><!-- End Career Fair Page Nav --> --}}
+      </li><!-- End FAQ Page Nav -->
 
       <li class="nav-heading">Pages</li>
 
