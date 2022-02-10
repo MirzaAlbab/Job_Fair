@@ -86,6 +86,19 @@ Route::get('/article-view', function () {
     return view('admin.article-view');
 })->name('article-view');
 
+Route::get('/partner', function () {
+    return view('admin.partner');
+})->name('partner');
+Route::get('/partner-new', function () {
+    return view('admin.partner-new');
+})->name('partner-new');
+Route::get('/partner-update', function () {
+    return view('admin.partner-update');
+})->name('partner-update');
+Route::get('/partner-view', function () {
+    return view('admin.partner-view');
+})->name('partner-view');
+
 Route::get('/event', function () {
     return view('admin.event');
 })->name('event');
