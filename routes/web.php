@@ -25,11 +25,11 @@ Route::get('/landingpage2', function () {
 Route::get('/about', function () {
     return view('landing-page.about');
 });
-Route::get('/articles', function () {
-    return view('landing-page.articles');
+Route::get('/partners', function () {
+    return view('landing-page.partners');
 });
 Route::get('/singlearticle', function () {
-    return view('landing-page.single-article');
+    return view('landing-page.single-partner');
 });
 Route::get('/events', function () {
     return view('landing-page.event');

@@ -54,7 +54,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="/landingpage">Home</a></li>
           <li><a class="nav-link scrollto" href="/about">About</a></li>
-          <li><a class="nav-link scrollto" href="/articles">Articles</a></li>
+          <li><a class="nav-link scrollto" href="/partners">Partners</a></li>
           <li><a class="nav-link scrollto" href="/events">Events</a></li>
           <li><a class="getstarted scrollto" href="/register">Register</a></li>
         </ul>

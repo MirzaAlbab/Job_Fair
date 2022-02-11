@@ -1,5 +1,5 @@
 @extends('layout.front')
-@section('title', 'Articles')
+@section('title', 'Partners')
 @section('container')
 <main id="main">
 
@@ -9,14 +9,14 @@
 
       <ol>
         <li><a href="/landingpage">Home</a></li>
-        <li>Blog</li>
+        <li>Partners</li>
       </ol>
-      <h2>Blog</h2>
+      <h2>Partners</h2>
 
     </div>
   </section><!-- End Breadcrumbs -->
 
-  <!-- ======= Blog Section ======= -->
+  <!-- ======= Company Section ======= -->
   <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
 
@@ -31,7 +31,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/singlearticle">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              <a href="/singlearticle">Telkomsel</a>
             </h2>
 
             <div class="entry-meta">
@@ -61,7 +61,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/singlearticle">Nisi magni odit consequatur autem nulla dolorem</a>
+              <a href="/singlearticle">Tokopedia</a>
             </h2>
 
             <div class="entry-meta">
@@ -82,7 +82,7 @@
               </div>
             </div>
 
-          </article><!-- End blog entry -->
+          </article><!-- End company entry -->
 
           <article class="entry">
 
@@ -91,7 +91,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/singlearticle">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
+              <a href="/singlearticle">Shopee</a>
             </h2>
 
             <div class="entry-meta">
@@ -112,7 +112,7 @@
               </div>
             </div>
 
-          </article><!-- End blog entry -->
+          </article><!-- End company entry -->
 
           <article class="entry">
 
@@ -121,7 +121,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/singlearticle">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
+              <a href="/singlearticle">Gojek</a>
             </h2>
 
             <div class="entry-meta">
@@ -142,7 +142,7 @@
               </div>
             </div>
 
-          </article><!-- End blog entry -->
+          </article><!-- End company entry -->
 
           <div class="blog-pagination">
             <ul class="justify-content-center">
@@ -152,7 +152,7 @@
             </ul>
           </div>
 
-        </div><!-- End blog entries list -->
+        </div><!-- End company entries list -->
 
         <div class="col-lg-4">
 
@@ -210,16 +210,16 @@
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
 
-            </div><!-- End sidebar recent posts-->
+            </div><!-- End sidebar company-->
 
           </div><!-- End sidebar -->
 
-        </div><!-- End blog sidebar -->
+        </div><!-- End company sidebar -->
 
       </div>
 
     </div>
-  </section><!-- End Blog Section -->
+  </section><!-- End Company Section -->
 
 </main><!-- End #main -->
 @endsection

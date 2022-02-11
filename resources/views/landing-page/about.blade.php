@@ -2,31 +2,29 @@
 @section('title', 'About')
 
 @section('container')
-  <!-- ======= Big Clients Section ======= -->
-  <section id="clients" class="clients bg-white mt-5">
-
-    <div class="container" data-aos="fade-up">
-
-      <div class="clients-slider2 swiper">
-        <div class="swiper-wrapper align-items-center" >
-          <div class="swiper-slide"><a href="#"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/dpkka.png" class="img-fluid" alt=""></div>
-        </div>
-      
+<section id="clients" class="clients bg-white">
+  <div class="container mt-5" data-aos="fade-up">
+    <header class="section-header">
+      <h2>AOCF</h2>
+      <p>Our Partners</p>
+    </header>
+    <div class="clients-slider2 swiper">
+      <div class="swiper-wrapper text-center" >
+        <div class="swiper-slide"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
-
-  </section>
-  <!-- End Big Clients Section -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+<!-- End Big Clients Section -->
     <!-- ======= About Section ======= -->
   <section id="about" class="about">
 
@@ -71,4 +69,29 @@
 
   </section>
   <!-- End About Section -->
+
+  <!-- ======= Clients Section ======= -->
+  <section id="clients" class="">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <h2>AOCF</h2>
+        <p>Partisipan AOCF 2022</p>
+      </header>
+      <div class="container">
+        <div class="row d-flex flex-column text-center participant">
+          <div class="col">
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </section>
+  <!-- End Clients Section -->
 @endsection

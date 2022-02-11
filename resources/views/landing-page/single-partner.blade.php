@@ -1,5 +1,5 @@
 @extends('layout.front')
-@section('title', 'SingleArticle')
+@section('title', 'SinglePartner')
 
 @section('container')
 <main id="main">
@@ -10,10 +10,10 @@
 
       <ol>
         <li><a href="/landingpage">Home</a></li>
-        <li><a href="/articles">Articles</a></li>
-        <li>Single Article</li>
+        <li><a href="/articles">Partners</a></li>
+        <li>Single Partner</li>
       </ol>
-      <h2>Single Article</h2>
+      <h2>Single Partner</h2>
 
     </div>
   </section><!-- End Breadcrumbs -->
