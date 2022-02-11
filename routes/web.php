@@ -47,6 +47,19 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
 
+Route::get('/rundown', function () {
+    return view('admin.rundown');
+})->name('rundown');
+Route::get('/rundown-new', function () {
+    return view('admin.rundown-new');
+})->name('rundown-new');
+Route::get('/rundown-update', function () {
+    return view('admin.rundown-update');
+})->name('rundown-update');
+Route::get('/rundown-view', function () {
+    return view('admin.rundown-view');
+})->name('rundown-view');
+
 Route::get('/faq', function () {
     return view('admin.faq');
 })->name('faq');
