@@ -316,6 +316,4 @@
     }, 200);
   }
 
-  $(document).ready(function() {
-    $('select').selectpicker({
 })();
