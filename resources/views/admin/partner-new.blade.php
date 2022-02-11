@@ -50,7 +50,7 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">Career Fair</label>
               <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select search-select" aria-label="Default select example">
                   <option value=""></option>
                   <option value="1">AOCF 1</option>
                   <option value="2">AOCF 2</option>
@@ -73,7 +73,7 @@
               <label class="col-sm-2 col-form-label">Partner Type</label>
               <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" aria-placeholder="Open this select menu">
-                  <option value=""></option>
+                  <option value="" selected>Select an option</option>
                   <option value="1">Sponsor</option>
                   <option value="2">Participant</option>
                 </select>
