@@ -47,6 +47,19 @@ Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
 
+Route::get('/faq', function () {
+    return view('admin.faq');
+})->name('faq');
+Route::get('/faq-new', function () {
+    return view('admin.faq-new');
+})->name('faq-new');
+Route::get('/faq-update', function () {
+    return view('admin.faq-update');
+})->name('faq-update');
+Route::get('/faq-view', function () {
+    return view('admin.faq-view');
+})->name('faq-view');
+
 Route::get('/career-fair', function () {
     return view('admin.career-fair');
 })->name('career');
@@ -85,6 +98,19 @@ Route::get('/article-update', function () {
 Route::get('/article-view', function () {
     return view('admin.article-view');
 })->name('article-view');
+
+Route::get('/partner', function () {
+    return view('admin.partner');
+})->name('partner');
+Route::get('/partner-new', function () {
+    return view('admin.partner-new');
+})->name('partner-new');
+Route::get('/partner-update', function () {
+    return view('admin.partner-update');
+})->name('partner-update');
+Route::get('/partner-view', function () {
+    return view('admin.partner-view');
+})->name('partner-view');
 
 Route::get('/event', function () {
     return view('admin.event');
