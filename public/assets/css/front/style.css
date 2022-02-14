@@ -624,10 +624,8 @@ section {
   background-size: 100% auto;
   background-position: center;
   width: 20px;
-  height: 20px; 
-  margin-bottom: auto;
-  margin-top: auto;
-  position: absolute;
+  margin-top: 5vh;
+  
   
 }
 .clients .swiper-button-prev::after, .clients .swiper-button-next::after {
@@ -639,15 +637,16 @@ section {
   background-size: 100% auto;
   background-position: center;
   width: 20px;
-  margin-bottom: auto;
-  margin-top: auto;
-  height: 20px; 
+  margin-top: 5vh;
+  
   
 }
 
 @media (max-width: 768px) {
   .clients .swiper-button-next, .clients .swiper-button-prev {
     margin-top: 2 rem;
+    
+
   }
   .clients .clients-slider2 .swiper-slide img {
     width:fit-content;
