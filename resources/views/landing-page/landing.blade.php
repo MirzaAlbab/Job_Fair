@@ -220,7 +220,7 @@
             <div class="col-md-4" data-aos="zoom-out" data-aos-delay="700">
               <div class="feature-box d-flex align-items-center">
                 <i class="ri-number-6"></i>
-                <h3>Selamat registrasi Anda telah berhasil</h3>
+                <h3>Selamat, registrasi Anda telah berhasil</h3>
               </div>
             </div>
 
