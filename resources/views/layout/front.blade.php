@@ -28,7 +28,7 @@
   {{-- Font Awesome --}}
   <script src="https://kit.fontawesome.com/c65c7fe476.js" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="{{ asset('assets/css/front/lightbox.min.css') }}">
+  
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/front/style.css') }}" rel="stylesheet">
 
@@ -56,7 +56,7 @@
           <li><a class="nav-link scrollto" href="/about">About</a></li>
           <li><a class="nav-link scrollto" href="/partners">Partners</a></li>
           <li><a class="nav-link scrollto" href="/events">Events</a></li>
-          <li><a class="getstarted scrollto" href="/register">Register</a></li>
+          <li><a class="getstarted scrollto" href="/register">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -130,8 +130,12 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="{{ asset('assets/js/front/lightbox-plus-jquery.min.js') }}"></script>
   
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+  <script src="{{ asset('assets/js/front/carousel.min.js') }}"></script>
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/front/main.js') }}"></script>
 

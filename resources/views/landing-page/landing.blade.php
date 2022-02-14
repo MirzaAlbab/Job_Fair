@@ -7,7 +7,7 @@
   <div class="container-fluid px-0 py-0">
     <div class="row">
       <img src="{{ asset('assets/img/banner.png') }}" alt="">
-      {{-- <div class="col-lg-6 d-flex flex-column justify-content-center">
+      {{-- {{-- <div class="col-lg-6 d-flex flex-column justify-content-center">
         <h1 data-aos="fade-up">Airlangga Online Career Fair 2022</h1>
         <h2 data-aos="fade-up" data-aos-delay="400">Raih impian dan mulai bangun jenjang karirmu</h2>
         <div data-aos="fade-up" data-aos-delay="600">
@@ -21,8 +21,8 @@
       </div>
       <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
         <img src="{{ asset('assets/img/banner.png') }}" class="img-fluid" alt="">
-      </div>
-    </div> --}}
+      </div> --}}
+    </div>
   </div>
 
 </section>
@@ -34,18 +34,18 @@
   <div class="container" data-aos="fade-up">
     <header class="section-header">
       <h2>AOCF</h2>
-      <p>Our Partners</p>
+      <p>Sponsors</p>
     </header>
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide text-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid sponsors" alt=""></a></div>
-        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid sponsors" alt=""></div>
-        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid sponsors" alt=""></div>
-        <div class="swiper-slide text-center"><img src="assets/img/dummy.png" class="img-fluid sponsors" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid sponsors" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid sponsors" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid sponsors" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid sponsors" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
       </div>
     </div>
     <div class="swiper-button-prev"></div>
@@ -88,7 +88,7 @@
             <a href="">
               <div class="box">
                 <img src="assets/img/values-3.png" class="img-fluid" alt="">
-                <h3>Campus Hiring</h3>
+                <h3>Job Vacancies</h3>
                 <p>Dapatkan informasi tentang lowongan pekerjaan, magang, pelatihan, dan lain sebagainya</p>
               </div>
             </a>
@@ -104,13 +104,14 @@
 
   <!-- ======= Counts Section ======= -->
   
+  <!-- ======= Features Section ======= -->
   <section id="features" class="features">
 
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
         <h2>Schedule</h2>
-        <p>Jadwal AOCF 2022</p>
+        <p>Jadwal AOCF</p>
       </header>
 
       <div class="row">
@@ -163,136 +164,76 @@
            
 
         </div>
-            
-              
-                
-        
-                
-              
-           
-        
-
-          
 
       </div> <!-- / row -->
+      <header class="section-header mt-5">
+        <h2>Registration</h2>
+        <p>Registrasi AOCF</p>
+      </header>
 
-      <!-- Feature Tabs -->
-      <div class="row feture-tabs" data-aos="fade-up">
-        <div class="col-lg-6">
-          <h3>Cara daftar member DPKKA</h3>
+      
+
+      <!-- Feature Icons -->
+      <div class="row">
 
           
 
-          <!-- Tab Content -->
-          <div class="tab-content">
+        <div class="col-lg-12 mt-5 mt-lg-0 d-flex">
+          <div class="row align-self-center gy-4">
 
-            <div class="tab-pane fade show active" id="tab1">
-              <ol>
-                <li>
-                  Mendaftar pada menu "Daftar Sekarang" di website DPKKA atau klik <a href="#">Daftar</a> 
-                </li>
-                <li>
-                  Silahkan Anda mengisi form registrasi, dengan memilih tipe keanggotaan sebagai “Member Jobseeker Lifetime Alumni” atau “Member Jobseeker Lifetime Non Alumni”
-                </li>
-                <li>
-                  Jika NIM Anda belum terdaftar silahkan mengisi form berikut <a href="#">bit.ly/RegistrasiNIMAlumni</a> 
-                </li>
-                <li>
-                  Setelah melakukan registrasi, web akan menampilkan halaman data diri Anda. Lengkapi data diri Anda yang nantinya digunakan sebagai CV Anda
-                </li>
-                <li>
-                  Anda akan mendapatkan pesan melalui email yang sudah didaftarkan (cek spam bila tidak ada di kontak masuk)
-                </li>
-                <li>
-                  Selamat registrasi Anda telah berhasil.
-                </li>
-              </ol>
-            </div><!-- End Tab 1 Content -->
-
-            
-
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-          <img src="assets/img/features-2.png" class="img-fluid" alt="">
-        </div>
-
-      </div><!-- End Feature Tabs -->
-
-      <!-- Feature Icons -->
-      <div class="row feature-icons" data-aos="fade-up">
-        <h3>Ratione mollitia eos ab laudantium rerum beatae quo</h3>
-
-        <div class="row">
-
-          <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/features-3.png" class="img-fluid p-4" alt="">
-          </div>
-
-          <div class="col-xl-8 d-flex content">
-            <div class="row align-self-center gy-4">
-
-              <div class="col-md-6 icon-box" data-aos="fade-up">
-                <i class="ri-line-chart-line"></i>
-                <div>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
+            <div class="col-md-4" data-aos="zoom-out" data-aos-delay="200">
+              <div class="feature-box d-flex align-items-center">
+                <i class="ri-number-1"></i>
+                <h3>Mendaftar pada menu "Daftar Sekarang" di website DPKKA atau klik <a href="#">Daftar</a> </h3>
+                
               </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i class="ri-stack-line"></i>
-                <div>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                <i class="ri-brush-4-line"></i>
-                <div>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                <i class="ri-magic-line"></i>
-                <div>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                <i class="ri-command-line"></i>
-                <div>
-                  <h4>Molestiae dolor</h4>
-                  <p>Et fuga et deserunt et enim. Dolorem architecto ratione tensa raptor marte</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                <i class="ri-radar-line"></i>
-                <div>
-                  <h4>Explicabo consectetur</h4>
-                  <p>Est autem dicta beatae suscipit. Sint veritatis et sit quasi ab aut inventore</p>
-                </div>
-              </div>
-
             </div>
-          </div>
 
+            <div class="col-md-4" data-aos="zoom-out" data-aos-delay="300">
+              <div class="feature-box d-flex align-items-center">
+                <i class="ri-number-2"></i>
+                <h3>Mengisi form registrasi dengan memilih tipe keanggotaan sebagai “Mahasiswa/Alumni” atau “Umum”</h3>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-out" data-aos-delay="400">
+              <div class="feature-box d-flex align-items-center">
+                <i class="ri-number-3"></i>
+                <h3>Jika NIM Anda belum terdaftar silahkan mengisi form berikut <a href="#">bit.ly/RegistrasiNIMAlumni</a></h3>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-out" data-aos-delay="500">
+              <div class="feature-box d-flex align-items-center">
+                <i class="ri-number-4"></i>
+                <h3>Setelah melakukan registrasi, lengkapi data diri Anda yang nantinya digunakan sebagai CV Anda</h3>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-out" data-aos-delay="600">
+              <div class="feature-box d-flex align-items-center">
+                <i class="ri-number-5"></i>
+                <h3>Anda akan mendapatkan pesan melalui email yang sudah didaftarkan (cek spam bila tidak ada di kontak masuk)</h3>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="zoom-out" data-aos-delay="700">
+              <div class="feature-box d-flex align-items-center">
+                <i class="ri-number-6"></i>
+                <h3>Selamat registrasi Anda telah berhasil</h3>
+              </div>
+            </div>
+
+          </div>
         </div>
 
-      </div><!-- End Feature Icons -->
+      </div> <!-- / row -->
 
     </div>
 
   </section><!-- End Features Section -->
 
+  <!-- ======= Counts Section ======= -->
   <section id="counts" class="counts">
     <div class="container" data-aos="fade-up">
 
@@ -325,29 +266,31 @@
   <!-- End Counts Section -->
   
   <!-- ======= Clients Section ======= -->
-  <section id="clients" class="">
+  <section id="clients" class="clients">
+  
     <div class="container" data-aos="fade-up">
+  
       <header class="section-header">
-        <h2>AOCF</h2>
-        <p>Partisipan AOCF 2022</p>
+        <h2>Our Clients</h2>
+        <p>Partisipan AOCF</p>
       </header>
-      <div class="container">
-        <div class="row d-flex flex-column text-center participant">
-          <div class="col">
-            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
-            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
-            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
-            <a href="#"><img src="assets/img/comson.png" class="img-fluid" alt=""></a>
-            <a href="#"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></a>
-            <a href="#"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></a>
-            <a href="#"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></a>
-            <a href="#"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></a>
-          </div>
+  
+      <div class="clients-slider swiper">
+        <div class="swiper-wrapper align-items-center mb-5">
+          
+          <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
         </div>
-      </div> 
+        <div class="swiper-pagination"></div>
+      </div>
     </div>
-  </section>
-  <!-- End Clients Section -->
+  
+  </section><!-- End Clients Section -->
 
   <!-- ======= F.A.Q Section ======= -->
   <section id="faq" class="faq">
@@ -453,48 +396,13 @@
         </div>
 
       </div>
-
+      
     </div>
-
+    
   </section>
   <!-- End F.A.Q Section -->
-
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients">
-
-        <div class="container" data-aos="fade-up">
   
-          <header class="section-header">
-            <h2>Our Clients</h2>
-            <p>Temporibus omnis officia</p>
-          </header>
   
-          <div class="clients-slider swiper">
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide">
-                <div class="card">
-                  <img class="card-img-top img-fluid" src="assets/img/blog/blog-1.jpg" alt="">
-                  <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-  
-      </section><!-- End Clients Section -->
-
 </main>
 <!-- End #main -->
     
