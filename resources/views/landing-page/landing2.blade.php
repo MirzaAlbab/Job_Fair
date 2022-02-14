@@ -80,7 +80,7 @@
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
               <img src="assets/img/values-2.png" class="img-fluid" alt="">
-              <h3>Career Workshop</h3>
+              <h3><a href="/events") }}">Career Workshop</a></h3>
               <p>Sharing session bareng narasumber profesional seputar dunia karir.</p>
             </div>
           </div>
@@ -88,7 +88,7 @@
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="box">
               <img src="assets/img/values-3.png" class="img-fluid" alt="">
-              <h3>Campus Hiring</h3>
+              <h3><a href="https://dpkka.unair.ac.id/vacancy/lowongan-" target="_blank" rel="noopener noreferrer">Job Vacancies</a></h3>
               <p>Dapatkan informasi tentang lowongan pekerjaan, magang, pelatihan, dan lain sebagainya</p>
             </div>
           </div>
