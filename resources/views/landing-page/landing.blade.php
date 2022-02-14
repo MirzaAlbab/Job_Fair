@@ -85,10 +85,10 @@
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-            <a href="">
+            <a href="https://dpkka.unair.ac.id/vacancy/lowongan-">
               <div class="box">
                 <img src="assets/img/values-3.png" class="img-fluid" alt="">
-                <h3>Campus Hiring</h3>
+                <h3>Job Vacancies</h3>
                 <p>Dapatkan informasi tentang lowongan pekerjaan, magang, pelatihan, dan lain sebagainya</p>
               </div>
             </a>
