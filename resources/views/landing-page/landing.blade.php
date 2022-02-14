@@ -85,7 +85,7 @@
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-            <a href="">
+            <a href="https://dpkka.unair.ac.id/vacancy/lowongan-">
               <div class="box">
                 <img src="assets/img/values-3.png" class="img-fluid" alt="">
                 <h3>Job Vacancies</h3>
