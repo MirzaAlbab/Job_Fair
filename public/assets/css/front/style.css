@@ -625,7 +625,8 @@ section {
   background-position: center;
   width: 20px;
   height: 20px; 
-  margin-top: 4%;
+  margin-bottom: auto;
+  margin-top: auto;
   position: absolute;
   
 }
@@ -638,7 +639,8 @@ section {
   background-size: 100% auto;
   background-position: center;
   width: 20px;
-  margin-top: 4%;
+  margin-bottom: auto;
+  margin-top: auto;
   height: 20px; 
   
 }
