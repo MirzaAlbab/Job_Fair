@@ -192,14 +192,14 @@
             <div class="col-md-4" data-aos="zoom-out" data-aos-delay="300">
               <div class="feature-box d-flex align-items-center">
                 <i class="ri-number-2"></i>
-                <h3>Mengisi form registrasi dengan memilih tipe keanggotaan sebagai “Mahasiswa/Alumni” atau “Umum”</h3>
+                <h3>Mengisi form registrasi dengan memilih tipe keanggotaan sebagai “Mahasiswa / Alumni” atau “Umum”</h3>
               </div>
             </div>
 
             <div class="col-md-4" data-aos="zoom-out" data-aos-delay="400">
               <div class="feature-box d-flex align-items-center">
                 <i class="ri-number-3"></i>
-                <h3>Jika NIM Anda belum terdaftar silahkan mengisi form berikut <a href="#">bit.ly/RegistrasiNIMAlumni</a></h3>
+                <h3>Jika NIM Anda belum terdaftar silahkan mengisi form <a href="/bit.ly/RegistrasiNIMAlumni">berikut</a></h3>
               </div>
             </div>
 
