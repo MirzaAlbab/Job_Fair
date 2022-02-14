@@ -40,6 +40,9 @@ Route::get('/eventdetail', function () {
 Route::get('/register', function () {
     return view('landing-page.register');
 });
+Route::get('/gallery', function () {
+    return view('landing-page.gallery');
+});
 
 
 // route: admin

@@ -56,6 +56,7 @@
           <li><a class="nav-link scrollto" href="/about">About</a></li>
           <li><a class="nav-link scrollto" href="/partners">Partners</a></li>
           <li><a class="nav-link scrollto" href="/events">Events</a></li>
+          <li><a class="nav-link scrollto" href="/gallery">Gallery</a></li>
           <li><a class="getstarted scrollto" href="/register">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

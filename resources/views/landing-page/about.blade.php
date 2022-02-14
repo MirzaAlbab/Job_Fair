@@ -2,6 +2,18 @@
 @section('title', 'About')
 
 @section('container')
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <ol>
+      <li><a href="/landingpage">Home</a></li>
+      <li>About</li>
+    </ol>
+    <h2>About</h2>
+
+  </div>
+</section><!-- End Breadcrumbs -->
 <section id="clients" class="clients bg-white">
   <div class="container mt-5" data-aos="fade-up">
     <header class="section-header">
