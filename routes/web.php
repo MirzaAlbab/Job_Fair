@@ -25,11 +25,11 @@ Route::get('/landingpage2', function () {
 Route::get('/about', function () {
     return view('landing-page.about');
 });
-Route::get('/articles', function () {
-    return view('landing-page.articles');
+Route::get('/partners', function () {
+    return view('landing-page.partners');
 });
 Route::get('/singlearticle', function () {
-    return view('landing-page.single-article');
+    return view('landing-page.single-partner');
 });
 Route::get('/events', function () {
     return view('landing-page.event');
@@ -37,12 +37,41 @@ Route::get('/events', function () {
 Route::get('/eventdetail', function () {
     return view('landing-page.event-details');
 });
+Route::get('/register', function () {
+    return view('landing-page.register');
+});
 
 
 // route: admin
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->name('dashboard');
+
+Route::get('/rundown', function () {
+    return view('admin.rundown');
+})->name('rundown');
+Route::get('/rundown-new', function () {
+    return view('admin.rundown-new');
+})->name('rundown-new');
+Route::get('/rundown-update', function () {
+    return view('admin.rundown-update');
+})->name('rundown-update');
+Route::get('/rundown-view', function () {
+    return view('admin.rundown-view');
+})->name('rundown-view');
+
+Route::get('/faq', function () {
+    return view('admin.faq');
+})->name('faq');
+Route::get('/faq-new', function () {
+    return view('admin.faq-new');
+})->name('faq-new');
+Route::get('/faq-update', function () {
+    return view('admin.faq-update');
+})->name('faq-update');
+Route::get('/faq-view', function () {
+    return view('admin.faq-view');
+})->name('faq-view');
 
 Route::get('/career-fair', function () {
     return view('admin.career-fair');
@@ -82,6 +111,19 @@ Route::get('/article-update', function () {
 Route::get('/article-view', function () {
     return view('admin.article-view');
 })->name('article-view');
+
+Route::get('/partner', function () {
+    return view('admin.partner');
+})->name('partner');
+Route::get('/partner-new', function () {
+    return view('admin.partner-new');
+})->name('partner-new');
+Route::get('/partner-update', function () {
+    return view('admin.partner-update');
+})->name('partner-update');
+Route::get('/partner-view', function () {
+    return view('admin.partner-view');
+})->name('partner-view');
 
 Route::get('/event', function () {
     return view('admin.event');

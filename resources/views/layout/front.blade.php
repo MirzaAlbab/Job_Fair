@@ -54,36 +54,22 @@
         <ul>
           <li><a class="nav-link scrollto active" href="/landingpage">Home</a></li>
           <li><a class="nav-link scrollto" href="/about">About</a></li>
-          <li><a class="nav-link scrollto" href="/articles">Articles</a></li>
+          <li><a class="nav-link scrollto" href="/partners">Partners</a></li>
           <li><a class="nav-link scrollto" href="/events">Events</a></li>
           <li><a class="getstarted scrollto" href="/register">Register</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
+      <!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
+
   @yield('container')
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-    
-
-    <!-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4 justify-content-center">
@@ -91,9 +77,7 @@
             <img class="img-fluid logo d-flex align-items-center" src="{{ asset('assets/img/DPKKA_T.png') }}" alt="">
           </div>
           <div class="col-lg-5 col-md-12 footer-info text-center">
-              <h5>Direktorat Pengembangan Karir, Inkubasi Kewirausahaan, dan Alumni (DPKKA)</h5>
-              
-            <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p> -->
+            <h5>Direktorat Pengembangan Karir, Inkubasi Kewirausahaan, dan Alumni (DPKKA)</h5>
             <div class="social-links mt-3">
               <a href="https://twitter.com/dpkka_unair" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="https://www.facebook.com/ppkk.unair/" class="facebook"><i class="bi bi-facebook"></i></a>
@@ -102,28 +86,6 @@
               <a href="https://www.youtube.com/channel/UCCK1gd6ZMWf0C0N62h7JSFw" class="youtube"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
-
-          <!-- <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div> -->
-
-          <!-- <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> -->
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
@@ -144,19 +106,20 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span><?= date('Y')?></span></strong>. Universitas Airlangga. All Rights Reserved
+        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer>
   <!-- End Footer -->
 
+  <!-- Scroll Top -->
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->

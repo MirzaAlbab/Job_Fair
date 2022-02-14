@@ -179,6 +179,22 @@
         </ul>
       </li><!-- End Icons Nav --> --}}
 
+      <li class="nav-heading">Landing Page</li>
+      
+        {{-- <li class="nav-item">
+          <a class="nav-link @yield('rundown', 'collapsed')" href="{{ route('rundown') }}">
+            <i class="bi bi-layout-text-window-reverse"></i>
+            <span>Rundown</span>
+          </a>
+        </li><!-- End Rundown Page Nav --> --}}
+      
+      <li class="nav-item">
+        <a class="nav-link @yield('faq', 'collapsed')" href="{{ route('faq') }}">
+          <i class="bi bi-layout-text-window-reverse"></i>
+          <span>FAQ</span>
+        </a>
+      </li><!-- End FAQ Page Nav -->
+
       <li class="nav-heading">Pages</li>
 
       {{-- <li class="nav-item">
@@ -237,7 +253,7 @@
         </a>
       </li><!-- End Career Fair Page Nav -->
       
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link @yield('logo', 'collapsed')" href="{{ route('logo') }}">
           <i class="bi bi-layout-text-window-reverse"></i>
           <span>Logo</span>
@@ -249,7 +265,14 @@
           <i class="bi bi-layout-text-window-reverse"></i>
           <span>Article</span>
         </a>
-      </li><!-- End Artikel Page Nav -->
+      </li><!-- End Article Page Nav --> --}}
+      
+      <li class="nav-item">
+        <a class="nav-link @yield('partner', 'collapsed')" href="{{ route('partner') }}">
+          <i class="bi bi-layout-text-window-reverse"></i>
+          <span>Partner</span>
+        </a>
+      </li><!-- End Partner Page Nav -->
       
       <li class="nav-item">
         <a class="nav-link @yield('event', 'collapsed')" href="{{ route('event') }}">
