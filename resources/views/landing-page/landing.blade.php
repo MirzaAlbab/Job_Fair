@@ -7,24 +7,8 @@
   <div class="container-fluid px-0 py-0">
     <div class="row">
       <img src="{{ asset('assets/img/banner.png') }}" alt="">
-      {{-- {{-- <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <h1 data-aos="fade-up">Airlangga Online Career Fair 2022</h1>
-        <h2 data-aos="fade-up" data-aos-delay="400">Raih impian dan mulai bangun jenjang karirmu</h2>
-        <div data-aos="fade-up" data-aos-delay="600">
-          <div class="text-center text-lg-start">
-            <a href="/register" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Get Started</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-        <img src="{{ asset('assets/img/banner.png') }}" class="img-fluid" alt="">
-      </div> --}}
     </div>
   </div>
-
 </section>
 <!-- End Hero -->
 
@@ -33,7 +17,6 @@
 <section id="clients" class="clients bg-white">
   <div class="container" data-aos="fade-up">
     <header class="section-header">
-      <h2>AOCF</h2>
       <p>Sponsors</p>
     </header>
     <div class="clients-slider2 swiper">
@@ -60,7 +43,6 @@
   <section id="values" class="values">
       <div class="container" data-aos="fade-up">
         <header class="section-header">
-          <h2>AOCF</h2>
           <p>What's On AOCF</p>
         </header>
         <div class="row">
@@ -110,7 +92,6 @@
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Schedule</h2>
         <p>Jadwal AOCF</p>
       </header>
 
@@ -122,10 +103,6 @@
 
         <div class="col-lg-6">
 
-          
-              <h5 class="text-center">Jadwal AOCF</h5>
-
-              <!-- Accordion without outline borders -->
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
@@ -165,19 +142,13 @@
 
         </div>
 
-      </div> <!-- / row -->
+      </div> 
+      <!-- / row -->
       <header class="section-header mt-5">
-        <h2>Registration</h2>
         <p>Registrasi AOCF</p>
       </header>
 
-      
-
-      <!-- Feature Icons -->
       <div class="row">
-
-          
-
         <div class="col-lg-12 mt-5 mt-lg-0 d-flex">
           <div class="row align-self-center gy-4">
 
@@ -227,11 +198,13 @@
           </div>
         </div>
 
-      </div> <!-- / row -->
+      </div> 
+      <!-- / row -->
 
     </div>
 
-  </section><!-- End Features Section -->
+  </section>
+  <!-- End Features Section -->
 
   <!-- ======= Counts Section ======= -->
   <section id="counts" class="counts">
@@ -271,7 +244,6 @@
     <div class="container" data-aos="fade-up">
   
       <header class="section-header">
-        <h2>Partners</h2>
         <p>Partisipan AOCF</p>
       </header>
   
@@ -293,8 +265,8 @@
   </section>
   <!-- End Clients Section -->
 
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
+  <!-- ======= Gallery Section ======= -->
+  <section id="gallery" class="gallery">
 
     <div class="container" data-aos="fade-up">
 
@@ -303,150 +275,47 @@
         <p>Galeri AOCF</p>
       </header>
 
-      <div class="row" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-card">Card</li>
-            <li data-filter=".filter-web">Web</li>
-          </ul>
-        </div>
-      </div>
+      <div class="row gy-4 gallery-container" data-aos="fade-up" data-aos-delay="200">
 
-      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
+        <div class="col-lg-4 col-md-6 gallery-item filter-app">
+          <div class="gallery-wrap">
             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+            <div class="gallery-info">
+              <div class="gallery-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+                <a href="/gallery" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
+        <div class="col-lg-4 col-md-6 gallery-item filter-web">
+          <div class="gallery-wrap">
             <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+            <div class="gallery-info">
+              <div class="gallery-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+                <a href="/gallery" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
+        <div class="col-lg-4 col-md-6 gallery-item filter-app">
+          <div class="gallery-wrap">
             <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+            <div class="gallery-info">
+              <div class="gallery-links">
+                <a href="/gallery" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
     </div>
 
-  </section><!-- End Portfolio Section -->
+  </section><!-- End Gallery Section -->
 
   <!-- ======= F.A.Q Section ======= -->
   <section id="faq" class="faq">

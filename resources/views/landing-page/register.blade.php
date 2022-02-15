@@ -2,33 +2,31 @@
 @section('title', 'Register')
 @section('container')
     
-<div class="container">
-<!-- ======= Big Clients Section ======= -->
-<section id="clients" class="clients bg-white">
-  <div class="container" data-aos="fade-up" style="margin-top: 10vh">
-    <header class="section-header">
-      <h2>AOCF</h2>
-      <p>Sponsors</p>
-    </header>
-    <div class="clients-slider2 swiper">
-      <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+  <!-- ======= Big Clients Section ======= -->
+  <section id="clients" class="clients bg-white mt-5">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <p>Sponsors</p>
+      </header>
+      <div class="clients-slider2 swiper">
+        <div class="swiper-wrapper align-items-center" >
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+        </div>
       </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
-<!-- End Big Clients Section -->
-  
-  <!-- Jobseeker Employer Tabs -->
+  </section>
+  <!-- End Big Clients Section -->
+  <div class="container">
+    <!-- Jobseeker Employer Tabs -->
   <div class="card">
     <div class="card-body">
       <ul class="nav nav-tabs nav-tabs-bordered d-flex" id="borderedTabJustified" role="tablist">
@@ -122,13 +120,15 @@
   </div>
   <!-- End Jobseeker Employer Tabs -->
 
+  </div>
+  
+
   <!-- ======= Clients Section ======= -->
   <section id="clients" class="clients">
   
     <div class="container" data-aos="fade-up">
   
       <header class="section-header">
-        <h2>Partners</h2>
         <p>Partisipan AOCF</p>
       </header>
   
@@ -149,5 +149,4 @@
   
   </section>
   <!-- End Clients Section -->
-</div>
 @endsection

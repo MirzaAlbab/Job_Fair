@@ -15,23 +15,22 @@
       <h2>Event Details</h2>
 
     </div>
-  </section><!-- End Breadcrumbs -->
+  </section>
+  <!-- End Breadcrumbs -->
 
-  <!-- ======= Portfolio Details Section ======= -->
-  <section id="portfolio-details" class="portfolio-details">
+  <!-- ======= Event Details Section ======= -->
+  <section id="event-details" class="event-details">
     <div class="container">
 
       <div class="row gy-4">
 
         <div class="col-lg-8">
-          <div class="portfolio-details-slider swiper">
+          <div class="event-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
 
               <div class="swiper-slide">
                 <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
               </div>
-
-              
 
             </div>
             <div class="swiper-pagination"></div>
@@ -39,7 +38,7 @@
         </div>
 
         <div class="col-lg-4">
-          <div class="portfolio-info">
+          <div class="event-info">
             <h3>Event information</h3>
             <ul>
               <li><strong>Category</strong>: Web design</li>
@@ -48,7 +47,7 @@
               <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
             </ul>
           </div>
-          <div class="portfolio-description">
+          <div class="event-description">
             <h2>Event description</h2>
             <p>
               Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
@@ -59,7 +58,8 @@
       </div>
 
     </div>
-  </section><!-- End Portfolio Details Section -->
+  </section>
+  <!-- Event Details Section -->
 
 </main><!-- End #main -->
 @endsection

@@ -2,67 +2,59 @@
 @section('title', 'About')
 
 @section('container')
-<!-- ======= Breadcrumbs ======= -->
-<section class="breadcrumbs">
-  <div class="container">
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
 
-    <ol>
-      <li><a href="/landingpage">Home</a></li>
-      <li>About</li>
-    </ol>
-    <h2>About</h2>
+      <ol>
+        <li><a href="/landingpage">Home</a></li>
+        <li>About</li>
+      </ol>
+      <h2>About</h2>
 
-  </div>
-</section>
-<!-- End Breadcrumbs -->
-
-<!-- ======= Big Clients Section ======= -->
-<section id="clients" class="clients bg-white">
-  <div class="container" data-aos="fade-up">
-    <header class="section-header">
-      <h2>AOCF</h2>
-      <p>Sponsors</p>
-    </header>
-    <div class="clients-slider2 swiper">
-      <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-      </div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
-<!-- End Big Clients Section -->
+  </section>
+  <!-- End Breadcrumbs -->
+
+  <!-- ======= Big Clients Section ======= -->
+  <section id="clients" class="clients bg-white">
+    <div class="container" data-aos="fade-up">
+      <header class="section-header">
+        <p>Sponsors</p>
+      </header>
+      <div class="clients-slider2 swiper">
+        <div class="swiper-wrapper align-items-center" >
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <!-- End Big Clients Section -->
 
     <!-- ======= About Section ======= -->
   <section id="about" class="about">
 
     <div class="container" data-aos="fade-up">
-      <div class="row gx-0">
-        <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <header class="section-header">
+        <p>Airlangga Online Career Fair</p>
+      </header>
 
-            <h3 class="text-center">AOCF</h3>
-            
-      </div>
-      <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="text-center">Airlangga Online Career Fair 2022</h2>
-      </div>
-      
-      </div>
       <div class="row justify-content-center">
         <div class="col-lg-10" data-aos="zoom-out" data-aos-delay="200">
           <img src="{{ asset('assets/img/banner.png') }}" class="img-fluid" alt="">
         </div>
       </div>
-      <div class="row gx-0">
 
+      <div class="row gx-0">
         <div class="col-lg-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content ">
             <p>
@@ -74,12 +66,8 @@
             <p>
               Selain itu, AOCF 2022 terbuka untuk umum. Tidak hanya lulusan dari Universitas Airlangga, tetapi juga berbagai lulusan dari perguruan tinggi lain baik negeri maupun swasta. Dengan demikian, kegiatan ini sangat strategis untuk dijadikan agenda utama dalam berpartisipasi secara aktif.
             </p>
-            
           </div>
         </div>
-
-        
-
       </div>
     </div>
 
@@ -92,7 +80,6 @@
     <div class="container" data-aos="fade-up">
   
       <header class="section-header">
-        <h2>Partners</h2>
         <p>Partisipan AOCF</p>
       </header>
   
