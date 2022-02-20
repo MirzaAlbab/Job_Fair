@@ -29,11 +29,12 @@
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('faq-update', $faq->id) }}" method="POST">
+            @csrf
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Question</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="question" value="{{ $faq->question }}">
               </div>
             </div>
 
@@ -45,18 +46,19 @@
                 </div>  
               </div>
             </div>
+            
 
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active" @if ($faq->status == 'active') checked @endif>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive" @if ($faq->status == 'inactive') checked @endif>
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>

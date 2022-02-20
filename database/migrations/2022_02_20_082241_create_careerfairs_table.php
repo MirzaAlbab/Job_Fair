@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCareerFairsTable extends Migration
+class CreateCareerfairsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateCareerFairsTable extends Migration
      */
     public function up()
     {
-        Schema::create('career_fairs', function (Blueprint $table) {
+        Schema::create('careerfairs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('description')->nullable()->default(null);
             $table->date('start_date');
             $table->date('end_date');
             $table->string('img')->nullable()->default(null);
-            $table->foreignId('user_id')->constrained();
-            $table->string('status');
+            // $table->foreignId('user_id')->constrained()->default(1);
+            $table->enum('status', ['active', 'inactive'])->default('inactive');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateCareerFairsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('career_fairs');
+        Schema::dropIfExists('careerfairs');
     }
 }

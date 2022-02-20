@@ -29,6 +29,13 @@
               <h5 class="card-title">Datatables</h5>
               
               <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+              @if (session('status'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{ session('status') }}</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                
+              @endif
               <a href="{{ route('faq-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New FAQ</a>
 
               <!-- Table with stripped rows -->
@@ -42,159 +49,52 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($faqs as $faq)
                   <tr>
-                    <th scope="row">1</th>
-                    <td class="align-middle">Non consectetur a erat nam at lectus urna duis?</td>
-                    <td class="align-middle"><span class="badge rounded-pill bg-primary">Active</span></td>
+                        
+                    <th scope="row">{{ $faqs->firstItem()+$loop->index }} </th>
+                    <td class="align-middle">{{ $faq->question }}</td>
+                    <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $faq->status }}</span></td>
                     <td class="align-middle">                       
-                      <a href="{{ route('faq-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('faq-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('faq-view',$faq->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
+                      <a href="{{ route('faq-edit',$faq->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
+                      <a type="button" class="btn btn-danger btn-sm" id="delete-modal"
+                      data-value="{{$faq->id}}"
+                      data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete FAQ</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this FAQ?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('faq') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
+                      </a>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td class="align-middle">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('faq-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('faq-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete FAQ</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this FAQ?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('faq') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td class="align-middle">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('faq-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('faq-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete FAQ</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this FAQ?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('faq') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
-                  <tr>
-                    <th class="align-middle" scope="row">4</th>
-                    <td class="align-middle ">Varius vel pharetra vel turpis nunc eget lorem dolor?</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('faq-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('faq-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete FAQ</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this FAQ?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('faq') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td class="align-middle">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('faq-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('faq-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete FAQ</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this FAQ?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('faq') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
+                  @endforeach
+                  
                 </tbody>
               </table>
+              {{ $faqs->links() }}
               <!-- End Table with stripped rows -->
+              <div class="modal fade" id="deleteFormModal" tabindex="-1" >
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Delete FAQ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    Are you sure you want to delete this FAQ?
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form action="{{ route('faq-delete') }}" method="POST">
+                      <input type="text" id="id" name="id" hidden>
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
+                    
+                    </form>
+                    </div>
+                </div>
+                </div>
+            </div><!-- End Delete Modal-->
 
             </div>
           </div>
@@ -204,4 +104,14 @@
     </section>
 
   </main>
+  
+  <script>
+    $(document).ready(function (e) {
+      $(document).on("click", "#delete-modal", function (e) {
+      var delete_id = $(this).attr('data-value');
+      console.log(delete_id);
+      $('#id').val(delete_id);
+      });
+    });
+  </script>
 @endsection

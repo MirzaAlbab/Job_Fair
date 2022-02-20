@@ -14,7 +14,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::latest()->paginate(10);
+
+        return view('admin.event', compact('events'));
     }
 
     /**
@@ -24,7 +26,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.event-new');
     }
 
     /**
@@ -46,7 +48,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return view('admin.event-view', compact('event'));
     }
 
     /**
@@ -57,7 +59,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        return view('admin.event-update', compact('event'));
     }
 
     /**
