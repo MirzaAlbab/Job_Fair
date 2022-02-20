@@ -20,7 +20,7 @@ class CreateEventsTable extends Migration
             $table->dateTime('time');
             $table->string('link');
             $table->string('location')->nullable()->default(null);
-            $table->string('img');
+            $table->string('img')->nullable()->default(null);
             // $table->foreignId('user_id')->constrained();
             $table->string('status');
             $table->timestamps();

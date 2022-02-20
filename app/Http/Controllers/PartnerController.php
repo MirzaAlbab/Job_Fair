@@ -79,8 +79,10 @@ class PartnerController extends Controller
      * @param  \App\Models\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partner $partner)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->id;
+        Partner::destroy($id);
+        return redirect('/partner')->with('status', 'Partner berhasil dihapus');
     }
 }

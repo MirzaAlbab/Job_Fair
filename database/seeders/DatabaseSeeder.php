@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Faq;
-
+use App\Models\Careerfair;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,20 +15,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        Faq::create([
-            'question' => 'Pertanyaan pertama',
-            'answer' => 'jawaban pertama',
-            'status' => 'active'
+        Careerfair::create([
+            'title' => 'AOCF pertama',
+            'start_date' => '2022-01-01',
+            'end_date' => '2022-01-01',
         ]);
-        Faq::create([
-            'question' => 'Pertanyaan kedua',
-            'answer' => 'jawaban kedua',
-            'status' => 'inactive'
-        ]);
-        Faq::create([
-            'question' => 'Pertanyaan ketiga',
-            'answer' => 'jawaban ketiga',
-            'status' => 'inactive'
+        Careerfair::create([
+            'title' => 'AOCF dua',
+            'start_date' => '2022-01-01',
+            'end_date' => '2022-01-01',
         ]);
     }
 }

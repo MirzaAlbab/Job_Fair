@@ -81,8 +81,10 @@ class CareerfairController extends Controller
      * @param  \App\Models\Careerfair  $careerfair
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Careerfair $careerfair)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->id;
+        Careerfair::destroy($id);
+        return redirect('/career-fair')->with('status', 'Career Fair berhasil dihapus');
     }
 }

@@ -27,8 +27,14 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Datatables</h5>
-              
               <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+              @if (session('status'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{ session('status') }}</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                
+              @endif
               <a href="{{ route('partner-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New Partner</a>
 
               <!-- Table with stripped rows -->
@@ -54,22 +60,27 @@
                       <a href="{{ route('partner-view',$partner->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('partner-edit',$partner->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
+                      <button type="button"  id="delete-modal" data-value="{{ $partner->id }}"class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
                       </button>
                       <div class="modal fade" id="deleteFormModal" tabindex="-1">
                           <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
                               <div class="modal-header">
-                              <h5 class="modal-title">Delete Career Fair</h5>
+                              <h5 class="modal-title">Delete Partner</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                              Are you sure you want to delete this Career Fair?
+                              Are you sure you want to delete this Partner?
                               </div>
                               <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('partner') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <form action="{{ route('partner-delete') }}" method="POST">
+                                  <input type="text" id="id" name="id" hidden>
+                                  @csrf
+                                  @method('DELETE')
+                                  <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
+                                </form>
                               </div>
                           </div>
                           </div>

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Event;
 
 class EventSeeder extends Seeder
 {
@@ -13,6 +14,12 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Event::create([
+            'title' => 'Event kedua',
+            'description' => 'event kedua',
+            'time' => '2020-01-01 17:00:00',
+            'link' => 'disini',
+            'status' => 'inactive'
+        ]);
     }
 }

@@ -29,6 +29,13 @@
               <h5 class="card-title">Datatables</h5>
               
               <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+              @if (session('status'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{ session('status') }}</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                
+              @endif
               <a href="{{ route('career-fair-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New Career Fair</a>
 
               <!-- Table with stripped rows -->
@@ -56,7 +63,7 @@
                       <a href="{{ route('career-fair-view',$career->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('career-fair-edit',$career->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
+                      <button type="button" id="delete-modal" data-value="{{ $career->id }}" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
                       </button>
                       <div class="modal fade" id="deleteFormModal" tabindex="-1">
@@ -71,7 +78,12 @@
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('career') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                              <form action="{{ route('career-fair-delete') }}" method="POST">
+                              <input type="text" id="id" name="id" hidden>
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
+                              </form>
                               </div>
                           </div>
                           </div>

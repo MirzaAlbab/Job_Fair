@@ -19,10 +19,10 @@ class CreatePartnersTable extends Migration
             $table->string('description')->nullable()->default(null);
             $table->date('start_date');
             $table->date('end_date');
-            $table->string('position');
-            $table->string('img');
+            $table->string('position')->nullable();
+            $table->string('img')->nullable();
             // $table->foreignId('user_id')->constrained();
-            $table->string('status');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }
