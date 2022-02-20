@@ -21,7 +21,7 @@ class CreatePartnersTable extends Migration
             $table->date('end_date');
             $table->string('position');
             $table->string('img');
-            $table->foreignId('user_id')->constrained();
+            // $table->foreignId('user_id')->constrained();
             $table->string('status');
             $table->timestamps();
         });

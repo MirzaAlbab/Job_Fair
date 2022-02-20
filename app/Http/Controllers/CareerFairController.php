@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Career_Fair;
+use App\Models\Careerfair;
 use Illuminate\Http\Request;
 
-class CareerFairController extends Controller
+class CareerfairController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class CareerFairController extends Controller
      */
     public function index()
     {
-        //
+        $careers = Careerfair::latest()->paginate(10);
+
+        return view('admin.career-fair', compact('careers'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CareerFairController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.career-fair-new');
     }
 
     /**
@@ -41,33 +43,34 @@ class CareerFairController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Career_Fair  $career_Fair
+     * @param  \App\Models\Careerfair  $careerfair
      * @return \Illuminate\Http\Response
      */
-    public function show(Career_Fair $career_Fair)
+    public function show(Careerfair $careerfair)
     {
-        //
+
+        return view('admin.career-fair-view', compact('careerfair'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Career_Fair  $career_Fair
+     * @param  \App\Models\Careerfair  $careerfair
      * @return \Illuminate\Http\Response
      */
-    public function edit(Career_Fair $career_Fair)
+    public function edit(Careerfair $careerfair)
     {
-        //
+        return view('admin.career-fair-update', compact('careerfair'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Career_Fair  $career_Fair
+     * @param  \App\Models\Careerfair  $careerfair
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Career_Fair $career_Fair)
+    public function update(Request $request, Careerfair $careerfair)
     {
         //
     }
@@ -75,10 +78,10 @@ class CareerFairController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Career_Fair  $career_Fair
+     * @param  \App\Models\Careerfair  $careerfair
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Career_Fair $career_Fair)
+    public function destroy(Careerfair $careerfair)
     {
         //
     }

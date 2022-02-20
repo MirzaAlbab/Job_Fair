@@ -30,34 +30,42 @@
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('faq') }}" method="POST">
+            @csrf
             <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Question</label>
+              <label for="question" class="col-sm-2 col-form-label">Question</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="question" id="question">
               </div>
             </div>
 
+            
             <div class="row mb-5">
-              <label for="inputDescription" class="col-sm-2 col-form-label">Answer</label>
+              <label for="answer" class="col-sm-2 col-form-label">Answer</label>
               <div class="col-sm-10">
                 <div class="quill-editor-default">
+<<<<<<< HEAD
                   <textarea class="form-control" style="min-height: 100px"></textarea>
+=======
+                  <textarea class="form-control" style="min-height: 100px" name="answer" id="answer"></textarea>
+>>>>>>> 94fbb551437ce8888b951562ddf12004c2d06e85
                 </div>  
               </div>
             </div>
-
+            
+            
+            
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active" checked>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive">
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>

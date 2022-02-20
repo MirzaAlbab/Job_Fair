@@ -43,14 +43,16 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach ($partners as $partner)
+                      
                   <tr>
                     <th scope="row">1</th>
-                    <td class="align-middle">Company 5</td>
-                    <td class="align-middle">AOCF 5</td>
-                    <td class="align-middle"><span class="badge rounded-pill bg-primary">Active</span></td>
+                    <td class="align-middle">{{ $partner->company }}</td>
+                    <td class="align-middle">{{ $partner->description }}</td>
+                    <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $partner->status }}</span></td>
                     <td class="align-middle">                       
-                      <a href="{{ route('partner-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('partner-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('partner-view',$partner->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
+                      <a href="{{ route('partner-edit',$partner->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
@@ -74,132 +76,11 @@
                       </div><!-- End Delete Modal-->
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td class="align-middle">Company 4</td>
-                    <td class="align-middle">AOCF 5</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('partner-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('partner-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete Career Fair</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this Career Fair?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('partner') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td class="align-middle">Company 3</td>
-                    <td class="align-middle">AOCF 5</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('partner-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('partner-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete Career Fair</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this Career Fair?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('partner') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td class="align-middle">Company 2</td>
-                    <td class="align-middle">AOCF 5</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('partner-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('partner-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete Career Fair</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this Career Fair?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('partner') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td class="align-middle">Company 1</td>
-                    <td class="align-middle">AOCF 5</td>
-                    <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
-                    <td class="align-middle">                       
-                      <a href="{{ route('partner-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('partner-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
-                      <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete Career Fair</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this Career Fair?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('partner') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
-                    </td>
-                  </tr>
+                  @endforeach
+                  
                 </tbody>
               </table>
+              {{ $partners->links() }}
               <!-- End Table with stripped rows -->
 
             </div>

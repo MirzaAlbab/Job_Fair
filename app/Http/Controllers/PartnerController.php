@@ -14,7 +14,8 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        //
+        $partners = Partner::latest()->paginate(10);
+        return view('admin.partner', compact('partners'));
     }
 
     /**
@@ -24,7 +25,7 @@ class PartnerController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.partner-new');
     }
 
     /**
@@ -46,7 +47,7 @@ class PartnerController extends Controller
      */
     public function show(Partner $partner)
     {
-        //
+        return view('admin.partner-view', compact('partner'));
     }
 
     /**
@@ -57,7 +58,7 @@ class PartnerController extends Controller
      */
     public function edit(Partner $partner)
     {
-        //
+        return view('admin.partner-update', compact('partner'));
     }
 
     /**
