@@ -1,24 +1,23 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>New FAQ | DPKKA - Universitas Airlangga</title>
+    <title>Update Rundown | DPKKA - Universitas Airlangga</title>
 @endsection
 
-@section('faq', '')
+@section('rundown', '')
 
 @section('main')
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>FAQ</h1>
+      <h1>Rundown</h1>
       <nav>
         <ol class="breadcrumb">
           {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item"><a href="{{ route('faq') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">FAQ</a></li>
-
-          <li class="breadcrumb-item active">New FAQ</li>
+          <li class="breadcrumb-item"><a href="{{ route('rundown') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Rundown</a></li>
+          <li class="breadcrumb-item active">Update Rundown</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -26,7 +25,7 @@
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">New FAQ</h5>
+          <h5 class="card-title">Update Rundown</h5>
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
@@ -42,7 +41,7 @@
               <label for="inputDescription" class="col-sm-2 col-form-label">Answer</label>
               <div class="col-sm-10">
                 <div class="quill-editor-default">
-                  <textarea class="form-control" style="min-height: 100px"></textarea>
+                    <textarea class="form-control" style="min-height: 100px"></textarea>
                 </div>  
               </div>
             </div>
@@ -84,7 +83,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('faq') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
+                              <a href="{{ route('rundown') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
                             </div>
                         </div>
                       </div>
@@ -96,9 +95,11 @@
               </div>
             </div>
           </form><!-- End General Form Elements -->
+    
         </div>
       </div>
     </section>
-        
-</main>   
+
+  </main>
+    
 @endsection

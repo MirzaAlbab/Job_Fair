@@ -47,7 +47,7 @@
             </div>
             
             <div class="row mb-3">
-              <label class="col-sm-2 col-form-label">Career Fair</label>
+              <label class="col-sm-2 col-form-label">AOCF Period</label>
               <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example">
                   <option value=""></option>
