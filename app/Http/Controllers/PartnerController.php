@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\CloudinaryStorage;
 use App\Models\Partner;
 use Illuminate\Http\Request;
 
@@ -36,7 +36,21 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'periode' => 'required',
+            'jenis' => 'required',
+            'status' => 'required',
+        ]);
+        $image  = $request->file('logo');
+        $result = CloudinaryStorage::upload($image->getRealPath(), $image->getClientOriginalName());
+
+        Partner::create([
+            'company' => $request->nama,
+            'position' => $request->jenis,
+            'img' => $result,
+        ]);
+        return redirect('/partner')->with('status', 'Partner berhasil ditambah');
     }
 
     /**
@@ -70,7 +84,20 @@ class PartnerController extends Controller
      */
     public function update(Request $request, Partner $partner)
     {
-        //
+        if($request->file('logo')){
+            $file   = $request->file('logo');
+            $result = CloudinaryStorage::replace($partner->img, $file->getRealPath(), $file->getClientOriginalName());
+        } else {
+            $result = $partner->img;
+        }
+        Partner::where('id', $partner->id)
+                ->update([
+                    'company' => $request->nama,
+                    'position' => $request->jenis,
+                    'img' => $result,
+                ]);
+        return redirect('/partner')->with('status', 'Partner berhasil diperbarui');
+       
     }
 
     /**
@@ -82,6 +109,8 @@ class PartnerController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->id;
+        CloudinaryStorage::delete($image->image);
+        $image->delete();
         Partner::destroy($id);
         return redirect('/partner')->with('status', 'Partner berhasil dihapus');
     }

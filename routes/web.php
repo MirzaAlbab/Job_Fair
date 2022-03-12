@@ -1,12 +1,15 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\CareerfairController;
-use App\Http\Controllers\EventController;
-use App\Http\Controllers\FaqController;
-use App\Http\Controllers\PartnerController;
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PartnerController;
+
+use App\Http\Controllers\CareerfairController;
+use function PHPUnit\Framework\throwException;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +31,7 @@ Route::get('/landingpage', function () {
 Route::get('/about', function () {
     return view('landing-page.about');
 })->name('user-about');
-Route::get('/partners', function () {
-    return view('landing-page.partners');
-})->name('user-partners');
+Route::get('/partners', [FrontController::class, 'partner'])->name('user-partners');
 Route::get('/singlearticle', function () {
     return view('landing-page.single-partner');
 })->name('user-singlepartner');
@@ -123,4 +124,7 @@ Route::get('/register', function () {
 Route::get('/test', function () {
     return view('admin.test');
 })->name('test');
+Route::get('/error', function () {
+    throw new Exception('User not found by ID ');
+});
 // end route: admin

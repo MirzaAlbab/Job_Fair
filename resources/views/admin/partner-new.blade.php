@@ -30,11 +30,12 @@
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('partner-store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Partner Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="nama">
               </div>
             </div>
 
@@ -42,7 +43,7 @@
               <label for="inputDescription" class="col-sm-2 col-form-label">Partner Profile</label>
               <div class="col-sm-10">
                 <div class="quill-editor-default">
-                    <textarea class="form-control" style="min-height: 100px"></textarea>
+                    <textarea class="form-control" style="min-height: 100px" name="deskripsi"></textarea>
                 </div>  
               </div>
             </div>
@@ -50,7 +51,7 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">AOCF Period</label>
               <div class="col-sm-10">
-                <select class="form-select search-select" aria-label="Default select example">
+                <select class="form-select search-select" aria-label="Default select example" name="periode">
                   <option value=""></option>
                   <option value="1">AOCF 1</option>
                   <option value="2">AOCF 2</option>
@@ -64,7 +65,7 @@
             <div class="row mb-3">
               <label for="inputImage" class="col-sm-2 col-form-label">Upload Partner Logo</label>
               <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" id="formFile" name="logo">
               </div>
             </div>
             
@@ -72,7 +73,7 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">Partner Type</label>
               <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example" aria-placeholder="Open this select menu">
+                <select class="form-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="jenis">
                   <option value="" selected>Select an option</option>
                   <option value="1">Sponsor</option>
                   <option value="2">Participant</option>
@@ -84,13 +85,13 @@
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="option1" checked>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="option2">
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>

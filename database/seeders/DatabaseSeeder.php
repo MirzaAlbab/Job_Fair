@@ -25,5 +25,10 @@ class DatabaseSeeder extends Seeder
             'start_date' => '2022-01-01',
             'end_date' => '2022-01-01',
         ]);
+        $this->call([
+            EventSeeder::class,
+            FaqSeeder::class,
+            PartnerSeeder::class,
+        ]);
     }
 }
