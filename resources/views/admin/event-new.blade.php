@@ -30,11 +30,12 @@
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('event-store') }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="judul">
               </div>
             </div>
 
@@ -50,35 +51,35 @@
             <div class="row mb-3">
               <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
               <div class="col-sm-10">
-                <input type="datetime-local" class="form-control">
+                <input type="datetime-local" class="form-control" name="waktu">
               </div>
             </div>
 
             <div class="row mb-3">
               <label for="inputImage" class="col-sm-2 col-form-label">Upload Poster</label>
               <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" id="formFile" name="poster">
               </div>
             </div>
             
             <div class="row mb-3">
               <label for="inputLink" class="col-sm-2 col-form-label">Link Meeting</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="link">
               </div>
             </div>
 
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active" checked>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive">
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>

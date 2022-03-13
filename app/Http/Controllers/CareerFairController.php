@@ -15,7 +15,6 @@ class CareerfairController extends Controller
     public function index()
     {
         $careers = Careerfair::latest()->paginate(10);
-
         return view('admin.career-fair', compact('careers'));
     }
 
@@ -37,7 +36,23 @@ class CareerfairController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'judul' => 'required',
+            'tglmulai' => 'required',
+            'tglselesai' => 'required',
+            'status' => 'required',
+        ]);
+        $image  = $request->file('poster');
+        $result = CloudinaryStorage::upload($image->getRealPath(), $image->getClientOriginalName());
+
+        Careerfair::create([
+            'title' => $request->judul,
+            'start_date' => $request->tglmulai,
+            'end_date' => $request->tglselesai,
+            'img' => $result,
+            'status' => $request->status,
+        ]);
+        return redirect('/career-fair')->with('status', 'Career Fair berhasil ditambah');
     }
 
     /**
@@ -72,7 +87,21 @@ class CareerfairController extends Controller
      */
     public function update(Request $request, Careerfair $careerfair)
     {
-        //
+        if($request->file('poster')){
+            $file   = $request->file('poster');
+            $result = CloudinaryStorage::replace($careerfair->img, $file->getRealPath(), $file->getClientOriginalName());
+        } else {
+            $result = $careerfair->img;
+        }
+        Careerfair::where('id', $careerfair->id)
+                ->update([
+                    'title' => $request->judul,
+                    'start_date' => $request->tglmulai,
+                    'end_date' => $request->tglselesai,
+                    'img' => $result,
+                    'status' => $request->status,
+                ]);
+        return redirect('/career-fair')->with('status', 'Career Fair berhasil diperbarui');
     }
 
     /**

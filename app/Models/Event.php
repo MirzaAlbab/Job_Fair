@@ -2,11 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Event extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'time', 'link', 'status'];
+    protected $fillable = ['title', 'description', 'time', 'link','location', 'img','status'];
+
+
+    public function getDateStartAttribute($value)
+{
+    return Carbon::parse($value)->format('Y-m-d\TH:i');
+}
+
 }

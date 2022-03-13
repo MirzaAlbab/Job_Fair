@@ -15,7 +15,7 @@ class CreateCareerfairsTable extends Migration
     {
         Schema::create('careerfairs', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->default('Career Fair');
             $table->string('description')->nullable()->default(null);
             $table->date('start_date');
             $table->date('end_date');

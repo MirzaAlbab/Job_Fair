@@ -49,6 +49,7 @@ class PartnerController extends Controller
             'company' => $request->nama,
             'position' => $request->jenis,
             'img' => $result,
+            'status' => $request->status,
         ]);
         return redirect('/partner')->with('status', 'Partner berhasil ditambah');
     }
@@ -95,6 +96,7 @@ class PartnerController extends Controller
                     'company' => $request->nama,
                     'position' => $request->jenis,
                     'img' => $result,
+                    'status' => $request->status,
                 ]);
         return redirect('/partner')->with('status', 'Partner berhasil diperbarui');
        
@@ -109,8 +111,6 @@ class PartnerController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->id;
-        CloudinaryStorage::delete($image->image);
-        $image->delete();
         Partner::destroy($id);
         return redirect('/partner')->with('status', 'Partner berhasil dihapus');
     }

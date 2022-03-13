@@ -37,7 +37,24 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'judul' => 'required',
+            'waktu' => 'required',
+            'link' => 'required',
+            'status' => 'required',
+        ]);
+        $image  = $request->file('poster');
+        $result = CloudinaryStorage::upload($image->getRealPath(), $image->getClientOriginalName());
+
+        Event::create([
+            'title' => $request->judul,
+            'time' => $request->waktu,
+            'link' => $request->link,
+            'img' => $result,
+            'status' => $request->status,
+        ]);
+        return redirect('/event')->with('status', 'Event berhasil ditambah');
     }
 
     /**
@@ -71,7 +88,21 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
-        //
+        if($request->file('poster')){
+            $file   = $request->file('poster');
+            $result = CloudinaryStorage::replace($event->img, $file->getRealPath(), $file->getClientOriginalName());
+        } else {
+            $result = $event->img;
+        }
+        Event::where('id', $event->id)
+                ->update([
+                    'title' => $request->judul,
+                    'time' => $request->waktu,
+                    'link' => $request->link,
+                    'img' => $result,
+                    'status' => $request->status,
+                ]);
+        return redirect('/event')->with('status', 'Event berhasil diperbarui');
     }
 
     /**

@@ -25,25 +25,14 @@ use function PHPUnit\Framework\throwException;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/landingpage', function () {
-    return view('landing-page.landing');
-})->name('user-landing');
-Route::get('/about', function () {
-    return view('landing-page.about');
-})->name('user-about');
+
+Route::get('/landingpage', [FrontController::class, 'index'])->name('user-landing');
+Route::get('/about', [FrontController::class, 'about'])->name('user-about');
 Route::get('/partners', [FrontController::class, 'partner'])->name('user-partners');
-Route::get('/singlearticle', function () {
-    return view('landing-page.single-partner');
-})->name('user-singlepartner');
-Route::get('/events', function () {
-    return view('landing-page.event');
-})->name('user-events');
-Route::get('/eventdetail', function () {
-    return view('landing-page.event-details');
-})->name('user-eventdetail');
-Route::get('/gallery', function () {
-    return view('landing-page.gallery');
-})->name('user-gallery');
+Route::get('/singlepartner', [FrontController::class, 'singlepartner'])->name('user-singlepartner');
+Route::get('/events', [FrontController::class, 'events'])->name('user-events');
+Route::get('/events-detail', [FrontController::class, 'eventdetail'])->name('user-event-detail');
+Route::get('/gallery', [FrontController::class, 'gallery'])->name('user-gallery');
 
 
 // route: admin
