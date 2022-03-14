@@ -7,7 +7,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PartnerController;
-
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\RundownController;
 use App\Http\Controllers\CareerfairController;
 use function PHPUnit\Framework\throwException;
 
@@ -32,7 +33,7 @@ Route::get('/partners', [FrontController::class, 'partner'])->name('user-partner
 Route::get('/singlepartner', [FrontController::class, 'singlepartner'])->name('user-singlepartner');
 Route::get('/events', [FrontController::class, 'events'])->name('user-events');
 Route::get('/events-detail', [FrontController::class, 'eventdetail'])->name('user-event-detail');
-Route::get('/gallery', [FrontController::class, 'gallery'])->name('user-gallery');
+Route::get('/galleryy', [FrontController::class, 'gallery'])->name('user-gallery');
 
 
 // route: admin
@@ -41,13 +42,13 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 // route: admin/rundown
-// Route::get('/rundown', [RundownController::class, 'index'])->name('rundown');
-// Route::post('/rundown', [Rundown::class, 'store'])->name('rundown-store');
-// Route::get('/rundown-new', [Rundown::class, 'create'])->name('rundown-new');
-// Route::get('/rundown-view/{rundown}', [Rundown::class, 'show'])->name('rundown-view');
-// Route::get('/rundown-update/{rundown}/edit', [Rundown::class, 'edit'])->name('rundown-edit');
-// Route::post('/rundown-update/{rundown}', [Rundown::class, 'update'])->name('rundown-update');
-// Route::delete('/rundown/delete', [Rundown::class, 'destroy'])->name('rundown-delete');
+Route::get('/rundown', [RundownController::class, 'index'])->name('rundown');
+Route::post('/rundown', [RundownController::class, 'store'])->name('rundown-store');
+Route::get('/rundown-new', [RundownController::class, 'create'])->name('rundown-new');
+Route::get('/rundown-view/{rundown}', [RundownController::class, 'show'])->name('rundown-view');
+Route::get('/rundown-update/{rundown}/edit', [RundownController::class, 'edit'])->name('rundown-edit');
+Route::post('/rundown-update/{rundown}', [RundownController::class, 'update'])->name('rundown-update');
+Route::delete('/rundown/delete', [RundownController::class, 'destroy'])->name('rundown-delete');
 
 // route: admin/faq
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
@@ -102,6 +103,15 @@ Route::get('/event-view/{event}', [EventController::class, 'show'])->name('event
 Route::get('/event-update/{event}/edit', [EventController::class, 'edit'])->name('event-edit');
 Route::post('/event-update/{event}', [EventController::class, 'update'])->name('event-update');
 Route::delete('/event/delete', [EventController::class, 'destroy'])->name('event-delete');
+
+// route: admin/gallery
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
+Route::post('/gallery', [GalleryController::class, 'store'])->name('gallery-store');
+Route::get('/gallery-new', [GalleryController::class, 'create'])->name('gallery-new');
+Route::get('/gallery-view/{gallery}', [GalleryController::class, 'show'])->name('gallery-view');
+Route::get('/gallery-update/{gallery}/edit', [GalleryController::class, 'edit'])->name('gallery-edit');
+Route::post('/gallery-update/{gallery}', [GalleryController::class, 'update'])->name('gallery-update');
+Route::delete('/gallery/delete', [GalleryController::class, 'destroy'])->name('gallery-delete');
 
 Route::get('/login', function () {
     return view('admin.login');

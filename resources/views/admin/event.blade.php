@@ -61,31 +61,11 @@
                       <a href="{{ route('event-view',$event->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('event-edit',$event->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
-                      <button type="button" id="delete-modal" data-value="{{ $event->id }}" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
+                      <a type="button" class="btn btn-danger btn-sm" id="delete-modal"
+                      data-value="{{$event->id}}"
+                      data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
-                      </button>
-                      <div class="modal fade" id="deleteFormModal" tabindex="-1">
-                          <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                              <h5 class="modal-title">Delete Event</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                              Are you sure you want to delete this Event?
-                              </div>
-                              <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <form action="{{ route('event-delete') }}" method="POST">
-                              @csrf
-                              @method('DELETE')
-                              <input type="text" id="id" name="id" hidden>
-                              <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
-                              </form>
-                              </div>
-                          </div>
-                          </div>
-                      </div><!-- End Delete Modal-->
+                      </a>
                     </td>
                   </tr>
                   @endforeach
@@ -93,7 +73,36 @@
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
+
+              {{-- Pagination --}}
               {{ $events->links() }}
+              {{-- End Pagination --}}
+
+              <!-- Delete Modal -->
+              <div class="modal fade" id="deleteFormModal" tabindex="-1" >
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title">Delete Event</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    Are you sure you want to delete this Event?
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <form action="{{ route('event-delete') }}" method="POST">
+                      <input type="text" id="id" name="id" hidden>
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
+                    
+                    </form>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+             <!-- End Delete Modal-->
             </div>
           </div>
 

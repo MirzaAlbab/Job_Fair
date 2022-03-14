@@ -194,6 +194,12 @@
           <span>FAQ</span>
         </a>
       </li><!-- End FAQ Page Nav -->
+      <li class="nav-item">
+        <a class="nav-link @yield('rundown', 'collapsed')" href="{{ route('rundown') }}">
+          <i class="bi bi-layout-text-window-reverse"></i>
+          <span>Rundown</span>
+        </a>
+      </li><!-- End Rundown Page Nav -->
 
       <li class="nav-heading">Pages</li>
 
@@ -280,6 +286,15 @@
           <span>Event</span>
         </a>
       </li><!-- End Event Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link @yield('gallery', 'collapsed')" href="{{ route('gallery') }}">
+          <i class="bi bi-layout-text-window-reverse"></i>
+          <span>Gallery</span>
+        </a>
+      </li><!-- End Gallery Page Nav -->
+
+      
       
     </ul>
 

@@ -92,9 +92,10 @@
                     
                     </form>
                     </div>
-                </div>
-                </div>
-            </div><!-- End Delete Modal-->
+                  </div>
+                  </div>
+              </div>
+             <!-- End Delete Modal-->
 
             </div>
           </div>

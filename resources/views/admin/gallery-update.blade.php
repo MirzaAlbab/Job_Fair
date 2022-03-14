@@ -1,23 +1,23 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>Update Rundown | DPKKA - Universitas Airlangga</title>
+    <title>Update Gallery | DPKKA - Universitas Airlangga</title>
 @endsection
 
-@section('rundown', '')
+@section('gallery', '')
 
 @section('main')
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Rundown</h1>
+      <h1>Gallery</h1>
       <nav>
         <ol class="breadcrumb">
           {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item"><a href="{{ route('rundown') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Rundown</a></li>
-          <li class="breadcrumb-item active">Update Rundown</li>
+          <li class="breadcrumb-item"><a href="{{ route('gallery') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Gallery</a></li>
+          <li class="breadcrumb-item active">Update Gallery</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -25,24 +25,26 @@
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Update Rundown</h5>
+          <h5 class="card-title">Update Gallery</h5>
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('gallery-update', $gallery->id) }}" method="POST" enctype="multipart/form-data">
+            @csrf
             <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Question</label>
+              <label for="inputText" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="judul" value="{{ $gallery->title }}">
               </div>
             </div>
 
-            <div class="row mb-5">
-              <label for="inputDescription" class="col-sm-2 col-form-label">Answer</label>
+            <div class="row mb-3">
+              <label for="inputImage" class="col-sm-2 col-form-label">Upload Image</label>
               <div class="col-sm-10">
-                <div class="quill-editor-default">
-                    <textarea class="form-control" style="min-height: 100px"></textarea>
-                </div>  
+                <input class="form-control" type="file" id="formFile" name="dokumentasi">
+                @if ($gallery->img)
+                <img src="{{ $gallery->img }}" alt="{{ $gallery->img }}" width="300px">
+                @endif
               </div>
             </div>
 
@@ -50,13 +52,13 @@
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active" @if ($gallery->status == 'active') checked @endif>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive" @if ($gallery->status == 'inactive') checked @endif>
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>
@@ -83,7 +85,7 @@
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('rundown') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
+                              <a href="{{ route('gallery') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
                             </div>
                         </div>
                       </div>
