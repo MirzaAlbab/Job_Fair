@@ -25,9 +25,18 @@
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Lorem Ipsum</h5>
-          <img src="{{ asset('assets/img/DPKKA-image.png') }}" class="img-fluid" alt="...">
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          <div class="accordion-item m-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                {{ $faq->question }}
+              </button>
+            </h2>
+            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+              <div class="accordion-body">
+                {{ $faq->answer }}
+              </div>
+            </div>
+          </div>
           <div class="text-center">
             <a href="{{ route('faq') }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
           </div>
