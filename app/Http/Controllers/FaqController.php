@@ -37,7 +37,7 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        // dd($request);
         $request->validate([
             'question' => 'required',
             'answer' => 'required',
