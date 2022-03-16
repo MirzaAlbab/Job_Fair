@@ -33,7 +33,7 @@
             </h2>
             <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
               <div class="accordion-body">
-                {{ $faq->answer }}
+                {!! $faq->answer !!}
               </div>
             </div>
           </div>
