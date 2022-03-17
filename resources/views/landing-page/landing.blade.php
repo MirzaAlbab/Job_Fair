@@ -47,7 +47,7 @@
         </header>
         <div class="row">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <a href="/partners">
+            <a href="{{ route('user-partners') }}">
               <div class="box">
                 <img src="assets/img/values-1.png" class="img-fluid" alt="">
                 <h3>Company Profile</h3>
@@ -57,7 +57,7 @@
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-            <a href="/events">
+            <a href="{{ route('user-events') }}">
               <div class="box">
                 <img src="assets/img/values-2.png" class="img-fluid" alt="">
                 <h3>Career Workshop</h3>
@@ -283,7 +283,7 @@
             <div class="gallery-info">
               <div class="gallery-links">
                 <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
-                <a href="/gallery" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
           </div>
@@ -295,7 +295,7 @@
             <div class="gallery-info">
               <div class="gallery-links">
                 <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
-                <a href="/gallery" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
           </div>
@@ -306,7 +306,7 @@
             <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
             <div class="gallery-info">
               <div class="gallery-links">
-                <a href="/gallery" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
           </div>

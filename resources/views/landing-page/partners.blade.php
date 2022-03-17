@@ -8,7 +8,7 @@
     <div class="container">
 
       <ol>
-        <li><a href="/landingpage">Home</a></li>
+        <li><a href="{{ route('user-landing') }}">Home</a></li>
         <li>Partners</li>
       </ol>
       <h2>Partners</h2>
@@ -32,13 +32,13 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/singlearticle">Telkomsel</a>
+              <a href="{{ route('user-singlepartner') }}">Telkomsel</a>
             </h2>
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ route('user-singlepartner') }}">John Doe</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ route('user-singlepartner') }}"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
               </ul>
             </div>
 
@@ -48,7 +48,7 @@
                 Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
               </p>
               <div class="read-more">
-                <a href="/singlearticle">Read More</a>
+                <a href="{{ route('user-singlepartner') }}">Read More</a>
               </div>
             </div>
 
@@ -97,31 +97,31 @@
             <div class="sidebar-item recent-posts">
               <div class="post-item clearfix">
                 <img src="assets/img/blog/blog-recent-1.jpg" alt="">
-                <h4><a href="blog-single.html">Telomsel</a></h4>
+                <h4><a href="{{ route('user-singlepartner') }}">Telomsel</a></h4>
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
 
               <div class="post-item clearfix">
                 <img src="assets/img/blog/blog-recent-2.jpg" alt="">
-                <h4><a href="blog-single.html">Gojek</a></h4>
+                <h4><a href="{{ route('user-singlepartner') }}">Gojek</a></h4>
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
 
               <div class="post-item clearfix">
                 <img src="assets/img/blog/blog-recent-3.jpg" alt="">
-                <h4><a href="blog-single.html">Tokopedia</a></h4>
+                <h4><a href="{{ route('user-singlepartner') }}">Tokopedia</a></h4>
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
 
               <div class="post-item clearfix">
                 <img src="assets/img/blog/blog-recent-4.jpg" alt="">
-                <h4><a href="blog-single.html">Astra</a></h4>
+                <h4><a href="{{ route('user-singlepartner') }}">Astra</a></h4>
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
 
               <div class="post-item clearfix">
                 <img src="assets/img/blog/blog-recent-5.jpg" alt="">
-                <h4><a href="blog-single.html">Indochito</a></h4>
+                <h4><a href="{{ route('user-singlepartner') }}">Indochito</a></h4>
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
 

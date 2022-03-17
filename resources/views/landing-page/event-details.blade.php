@@ -8,8 +8,8 @@
     <div class="container">
 
       <ol>
-        <li><a href="/landingpage">Home</a></li>
-        <li><a href="/events">Events</a></li>
+        <li><a href="{{ route('user-landing') }}">Home</a></li>
+        <li><a href="{{ route('user-events') }}">Events</a></li>
         <li>Event Details</li>
       </ol>
       <h2>Event Details</h2>
