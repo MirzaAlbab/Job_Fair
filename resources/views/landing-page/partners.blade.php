@@ -32,7 +32,7 @@
             </div>
 
             <h2 class="entry-title">
-              <a href="/singlearticle">Telkomsel</a>
+              <a href="/singlepartner">Telkomsel</a>
             </h2>
 
             <div class="entry-meta">
@@ -48,7 +48,7 @@
                 Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
               </p>
               <div class="read-more">
-                <a href="/singlearticle">Read More</a>
+                <a href="/singlepartner">Read More</a>
               </div>
             </div>
 
