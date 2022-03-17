@@ -52,7 +52,7 @@
                   @foreach ($partners as $partner)
                       
                   <tr>
-                    <th scope="row">1 </th>
+                    <th scope="row">{{ $partners->firstItem()+$loop->index }} </th>
                     <td class="align-middle">{{ $partner->company }}</td>
                     <td class="align-middle">{{ $partner->description }}</td>
                     @if($partner->status == 'active')
