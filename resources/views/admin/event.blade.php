@@ -53,10 +53,14 @@
                   @foreach ($events as $event)
                       
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{ $events->firstItem()+$loop->index }} </th>
                     <td class="align-middle">{{ $event->title }} </td>
                     <td class="align-middle">{{ $event->time }}</td>
-                    <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $event->status }}</span></td>
+                    @if($event->status == 'active')
+                      <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $event->status }}</span></td>
+                    @else
+                      <td class="align-middle"><span class="badge rounded-pill bg-secondary">{{ $event->status }}</span></td>
+                    @endif
                     <td class="align-middle">                       
                       <a href="{{ route('event-view',$event->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('event-edit',$event->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>

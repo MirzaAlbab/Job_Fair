@@ -38,11 +38,11 @@
               </div>
             </div>
 
-            <div class="row mb-5">
-              <label for="inputDescription" class="col-sm-2 col-form-label">Answer</label>
+            <div class="row mb-3">
+              <label for="answer" class="col-sm-2 col-form-label">Answer</label>
               <div class="col-sm-10">
-                <div class="quill-editor-default">
-                    <textarea class="form-control" style="min-height: 100px"></textarea>
+                <div>
+                  <textarea class="form-control"  name="answer" id="editor">{!! $faq->answer !!}</textarea>
                 </div>  
               </div>
             </div>

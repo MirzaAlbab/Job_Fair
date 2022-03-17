@@ -54,7 +54,11 @@
                         
                     <th scope="row">{{ $faqs->firstItem()+$loop->index }} </th>
                     <td class="align-middle">{{ $faq->question }}</td>
-                    <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $faq->status }}</span></td>
+                    @if($faq->status == 'active')
+                      <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $faq->status }}</span></td>
+                    @else
+                      <td class="align-middle"><span class="badge rounded-pill bg-secondary">{{ $faq->status }}</span></td>
+                    @endif
                     <td class="align-middle">                       
                       <a href="{{ route('faq-view',$faq->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('faq-edit',$faq->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>

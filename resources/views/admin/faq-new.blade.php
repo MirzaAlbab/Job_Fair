@@ -23,12 +23,14 @@
       </nav>
     </div><!-- End Page Title -->
 
+
+
     <section class="section">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">New FAQ</h5>
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
-    
+          
           <!-- General Form Elements -->
           <form action="{{ route('faq') }}" method="POST">
             @csrf
@@ -38,22 +40,15 @@
                 <input type="text" class="form-control" name="question" id="question">
               </div>
             </div>
-
             
-            <div class="row mb-5">
+            <div class="row mb-3">
               <label for="answer" class="col-sm-2 col-form-label">Answer</label>
               <div class="col-sm-10">
-                <div class="quill-editor-default">
-<<<<<<< HEAD
-                  <textarea class="form-control" style="min-height: 100px"></textarea>
-=======
-                  <textarea class="form-control" style="min-height: 100px" name="answer" id="answer"></textarea>
->>>>>>> 94fbb551437ce8888b951562ddf12004c2d06e85
+                <div>
+                  <textarea class="form-control"  name="answer" id="editor"></textarea>
                 </div>  
               </div>
             </div>
-            
-            
             
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
@@ -107,6 +102,5 @@
         </div>
       </div>
     </section>
-        
 </main>   
 @endsection

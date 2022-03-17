@@ -52,17 +52,19 @@
                   @foreach ($partners as $partner)
                       
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{ $partners->firstItem()+$loop->index }} </th>
                     <td class="align-middle">{{ $partner->company }}</td>
                     <td class="align-middle">{{ $partner->description }}</td>
-                    <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $partner->status }}</span></td>
+                    @if($partner->status == 'active')
+                      <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $partner->status }}</span></td>
+                    @else
+                      <td class="align-middle"><span class="badge rounded-pill bg-secondary">{{ $partner->status }}</span></td>
+                    @endif
                     <td class="align-middle">                       
                       <a href="{{ route('partner-view',$partner->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('partner-edit',$partner->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
-                      <a type="button" class="btn btn-danger btn-sm" id="delete-modal"
-                      data-value="{{$partner->id}}"
-                      data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
+                      <a type="button" class="btn btn-danger btn-sm" id="delete-modal" data-value="{{$partner->id}}" data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
                       </a>
                       

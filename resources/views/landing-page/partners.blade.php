@@ -54,9 +54,6 @@
 
           </article>
 
-          
-          
-
           <!-- End company entry -->
 
           <div class="partner-pagination">
