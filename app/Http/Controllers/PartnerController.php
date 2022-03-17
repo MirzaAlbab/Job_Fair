@@ -36,6 +36,7 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $request->validate([
             'nama' => 'required',
             'periode' => 'required',

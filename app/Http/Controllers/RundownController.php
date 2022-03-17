@@ -25,7 +25,7 @@ class RundownController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.rundown-new');
     }
 
     /**
@@ -47,7 +47,7 @@ class RundownController extends Controller
      */
     public function show(Rundown $rundown)
     {
-        //
+        return view('admin.rundown-view', compact('rundown'));
     }
 
     /**
@@ -58,7 +58,7 @@ class RundownController extends Controller
      */
     public function edit(Rundown $rundown)
     {
-        //
+        return view('admin.rundown-update', compact('rundown'));
     }
 
     /**

@@ -38,11 +38,11 @@
               </div>
             </div>
 
-            <div class="row mb-5">
+            <div class="row mb-3">
               <label for="inputDescription" class="col-sm-2 col-form-label">Partner Profile</label>
               <div class="col-sm-10">
-                <div class="quill-editor-default">
-                    <textarea class="form-control" style="min-height: 100px"></textarea>
+                <div>
+                    <textarea class="form-control" id="editor" name="profile"></textarea>
                 </div>  
               </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">AOCF Period</label>
               <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example" name="periode">
+                <select class="form-select search-select" aria-label="Default select example" name="periode">
                   <option value=""></option>
                   <option value="1">AOCF 1</option>
                   <option value="2">AOCF 2</option>
@@ -75,7 +75,7 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">Partner Type</label>
               <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="jenis">
+                <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="jenis">
                   <option value=""></option>
                   <option value="1">Sponsor</option>
                   <option value="2">Participant</option>

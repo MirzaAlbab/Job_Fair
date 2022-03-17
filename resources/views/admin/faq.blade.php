@@ -54,7 +54,6 @@
                         
                     <th scope="row">{{ $faqs->firstItem()+$loop->index }} </th>
                     <td class="align-middle">{{ $faq->question }}</td>
-                    {{-- <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $faq->status }}</span></td> --}}
                     @if($faq->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $faq->status }}</span></td>
                     @else
