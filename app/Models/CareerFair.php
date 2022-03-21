@@ -12,7 +12,7 @@ class Careerfair extends Model
 
     public function Partnership()
     {
-        return $this->belongsTo(Partner::class);
+        return $this->hasMany(Partner::class);
     }
     
 }

@@ -11,6 +11,6 @@ class Partner extends Model
 
     public function AOCF()
     {
-        return $this->hasMany(Careerfair::class, 'id', 'careerfair_id');
+        return $this->hasOne(Careerfair::class, 'id', 'careerfair_id');
     }
 }
