@@ -50,11 +50,15 @@
                 </thead>
                 <tbody>
                   @foreach ($partners as $partner)
+                  
                       
                   <tr>
                     <th scope="row">{{ $partners->firstItem()+$loop->index }} </th>
                     <td class="align-middle">{{ $partner->company }}</td>
-                    <td class="align-middle">{{ $partner->AOCF->title }}</td>
+                    {{-- <td class="align-middle">{{ $partner->AOCF[0]->title }}</td> --}}
+                    @foreach ($partner->AOCF as $item)
+                        <td>{{ $item->title }}</td>
+                    @endforeach
                     @if($partner->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $partner->status }}</span></td>
                     @else
