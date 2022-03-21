@@ -27,23 +27,24 @@
         <div class="card-body">
           <h5 class="card-title">Update Career Fair</h5>
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
-          @php
+          {{-- @php
               dd($careerfair->id)
-          @endphp
+          @endphp --}}
           <!-- General Form Elements -->
           <form action="{{ route('career-fair-update', $careerfair->id) }}" method="POST">
+            @csrf
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="judul" {{ $careerfair->title }}>
+                <input type="text" class="form-control" name="judul" value="{{ $careerfair->title }}">
               </div>
             </div>
 
-            <div class="row mb-5">
+            <div class="row mb-3">
               <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="deskripsi"></textarea>
+                    <textarea class="form-control" id="editor" name="deskripsi">{!! $careerfair->description !!}</textarea>
                 </div>  
               </div>
             </div>

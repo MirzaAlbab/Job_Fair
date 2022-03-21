@@ -73,9 +73,11 @@ class CareerfairController extends Controller
      * @param  \App\Models\Careerfair  $careerfair
      * @return \Illuminate\Http\Response
      */
-    public function edit(Careerfair $careerfair)
+    public function edit(Request $request)
     {
-        dd($careerfair);
+        $id = $request->id;
+        $careerfair = Careerfair::find($id);
+        // dd($request->id);
         return view('admin.career-fair-update', compact('careerfair'));
     }
 
