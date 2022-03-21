@@ -53,11 +53,11 @@
               <div class="col-sm-10">
                 <select class="form-select search-select" aria-label="Default select example" name="periode">
                   <option value=""></option>
-                  <option value="1">AOCF 1</option>
-                  <option value="2">AOCF 2</option>
-                  <option value="3">AOCF 3</option>
-                  <option value="4">AOCF 4</option>
-                  <option value="5">AOCF 5</option>
+                  @foreach ($careers as $car)
+                      
+                  <option value="{{ $car->id }}">{{ $car->title }}</option>
+                  @endforeach
+                  
                 </select>
               </div>
             </div>

@@ -9,4 +9,10 @@ class Careerfair extends Model
 {
     use HasFactory;
     protected $fillable = ['title', 'description', 'start_date', 'end_date','img', 'status'];
+
+    public function Partnership()
+    {
+        return $this->hasMany(Partner::class);
+    }
+    
 }

@@ -19,6 +19,7 @@ class CreatePartnersTable extends Migration
             $table->string('description')->nullable()->default(null);
             $table->string('position')->nullable();
             $table->string('img')->nullable();
+            $table->foreignId('careerfair_id');
             // $table->foreignId('user_id')->constrained();
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
