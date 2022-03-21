@@ -40,6 +40,7 @@ class EventController extends Controller
 
         $request->validate([
             'judul' => 'required',
+            'deskripsi' => 'required',
             'waktu' => 'required',
             'link' => 'required',
             'status' => 'required',
@@ -49,6 +50,7 @@ class EventController extends Controller
 
         Event::create([
             'title' => $request->judul,
+            'description' => $request->deskripsi,
             'time' => $request->waktu,
             'link' => $request->link,
             'img' => $result,
@@ -97,6 +99,7 @@ class EventController extends Controller
         Event::where('id', $event->id)
                 ->update([
                     'title' => $request->judul,
+                    'description' => $request->deskripsi,
                     'time' => $request->waktu,
                     'link' => $request->link,
                     'img' => $result,

@@ -29,34 +29,30 @@
 
             <div class="row gy-4 m-3">
       
-              <div class="col-lg-8">
-                <div class="event-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
+              <div class="col-lg-6">
+                <div class="">
+                  <div class=" align-items-center">
       
-                    <div class="swiper-slide">
-                      <img src="{{ $event->img }}" alt="">
+                    <div class="">
+                      <img class="img-fluid" src="{{ $event->img }}" alt="">
                     </div>
       
                   </div>
-                  <div class="swiper-pagination"></div>
                 </div>
               </div>
       
-              <div class="col-lg-4">
+              <div class="col-lg-6">
                 <div class="event-info">
                   <h3>Event information</h3>
                   <ul>
-                    <li><strong>Category</strong>: Web design</li>
-                    <li><strong>Client</strong>: Telkomsel</li>
-                    <li><strong>Project date</strong>: 01 March, 2020</li>
-                    <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                    <li><strong>Name</strong>: {{ $event->title }}</li>
+                    <li><strong>Event date</strong>: {{ $event->time }}</li>
+                    <li><strong>Meeting URL</strong>: <a href="{{ $event->link }}">{{ $event->link }}</a></li>
                   </ul>
                 </div>
                 <div class="event-description">
                   <h2>Event description</h2>
-                  <p>
-                    Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-                  </p>
+                  {!! $event->description !!}
                 </div>
               </div>
       

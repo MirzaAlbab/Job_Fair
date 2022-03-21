@@ -42,7 +42,7 @@
               <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="deskripsi">{{ $event->description }}</textarea>
+                    <textarea class="form-control" id="editor" name="deskripsi">{!! $event->description !!}</textarea>
                 </div>  
               </div>
             </div>

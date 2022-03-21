@@ -79,6 +79,7 @@ class PartnerController extends Controller
      */
     public function edit(Partner $partner)
     {
+        dd($partner);
         return view('admin.partner-update', compact('partner'));
     }
 

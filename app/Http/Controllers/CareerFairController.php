@@ -75,7 +75,7 @@ class CareerfairController extends Controller
      */
     public function edit(Careerfair $careerfair)
     {
-        // dd($careerfair);
+        dd($careerfair);
         return view('admin.career-fair-update', compact('careerfair'));
     }
 

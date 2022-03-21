@@ -39,11 +39,11 @@
               </div>
             </div>
 
-            <div class="row mb-5">
+            <div class="row mb-3">
               <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
               <div class="col-sm-10">
-                <div class="quill-editor-default">
-                    <textarea class="form-control" style="min-height: 100px" name="deskripsi"></textarea>
+                <div>
+                    <textarea class="form-control" id="editor" name="deskripsi"></textarea>
                 </div>  
               </div>
             </div>
