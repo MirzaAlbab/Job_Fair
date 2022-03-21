@@ -71,6 +71,7 @@ class FaqController extends Controller
      */
     public function edit(Faq $faq)
     {
+
         return view('admin.faq-update', compact('faq'));
     }
 

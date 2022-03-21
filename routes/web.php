@@ -62,8 +62,8 @@ Route::delete('/faq/delete', [FaqController::class, 'destroy'])->name('faq-delet
 // route: admin/careerfair
 Route::get('/career-fair', [CareerfairController::class, 'index'])->name('career');
 Route::get('/career-fair-new', [CareerfairController::class, 'create'])->name('career-fair-new');
-Route::get('/career-fair-view/{career_fair}', [CareerfairController::class, 'show'])->name('career-fair-view');
 Route::post('/career-fair', [CareerfairController::class, 'store'])->name('career-fair-store');
+Route::get('/career-fair-view/{career_fair}', [CareerfairController::class, 'show'])->name('career-fair-view');
 Route::get('/career-fair-update/{career_fair}/edit', [CareerfairController::class, 'edit'])->name('career-fair-edit');
 Route::post('/career-fair-update/{career_fair}', [CareerfairController::class, 'update'])->name('career-fair-update');
 Route::delete('/career-fair/delete', [CareerfairController::class, 'destroy'])->name('career-fair-delete');
