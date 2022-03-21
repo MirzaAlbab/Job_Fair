@@ -44,6 +44,7 @@ class PartnerController extends Controller
             'status' => 'required',
         ]);
         $image  = $request->file('logo');
+        dd($image);
         $result = CloudinaryStorage::upload($image->getRealPath(), $image->getClientOriginalName());
 
         Partner::create([
