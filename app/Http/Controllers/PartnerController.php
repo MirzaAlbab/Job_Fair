@@ -93,7 +93,7 @@ class PartnerController extends Controller
     {
         if($request->file('logo')){
             $file   = $request->file('logo');
-            $result = CloudinaryStorage::replace($partner->img, $file->getRealPath(), $file->getClientOriginalName());
+            $result = CloudinaryStorage::replace($partner->img, $file->getPathname(), $file->getClientOriginalName());
         } else {
             $result = $partner->img;
         }

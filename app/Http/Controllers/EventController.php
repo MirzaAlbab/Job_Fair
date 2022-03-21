@@ -90,7 +90,7 @@ class EventController extends Controller
     {
         if($request->file('poster')){
             $file   = $request->file('poster');
-            $result = CloudinaryStorage::replace($event->img, $file->getRealPath(), $file->getClientOriginalName());
+            $result = CloudinaryStorage::replace($event->img, $file->getPathname(), $file->getClientOriginalName());
         } else {
             $result = $event->img;
         }
