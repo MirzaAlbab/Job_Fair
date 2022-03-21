@@ -29,7 +29,7 @@
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
-          <form action="{{ route('career-fair-update') }}" method="POST">
+          <form action="{{ route('career-fair-update', $careerfair->id) }}" method="POST">
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">

@@ -59,7 +59,8 @@
                     <td class="align-middle">{{ $career->start_date }}</td>
                     <td class="align-middle">{{ $career->end_date }}</td>
                     <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $career->status }}</span></td>
-                    <td class="align-middle">                       
+                    <td class="align-middle">   
+                      <a href="">{{ $career->id }}</a>                    
                       <a href="{{ route('career-fair-view',$career->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('career-fair-edit',$career->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
