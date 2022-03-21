@@ -42,7 +42,7 @@
               <label for="inputDescription" class="col-sm-2 col-form-label">Partner Profile</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="profile"></textarea>
+                    <textarea class="form-control" id="editor" name="deskripsi"></textarea>
                 </div>  
               </div>
             </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\CloudinaryStorage;
+use App\Models\Careerfair;
 use App\Models\Partner;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class PartnerController extends Controller
      */
     public function create()
     {
-        return view('admin.partner-new');
+        $careers = Careerfair::all();
+        return view('admin.partner-new', compact('careers'));
     }
 
     /**
@@ -36,18 +38,21 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         $request->validate([
             'nama' => 'required',
+            'deskripsi'=> 'required',
             'periode' => 'required',
             'jenis' => 'required',
             'status' => 'required',
         ]);
         $image  = $request->file('logo');
-        $result = CloudinaryStorage::upload($image->getRealPath(), $image->getClientOriginalName());
+        // dd($image);
+        $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
 
         Partner::create([
             'company' => $request->nama,
+            'description'=> $request->deskripsi,
+            'careerfair_id' => $request->periode,
             'position' => $request->jenis,
             'img' => $result,
             'status' => $request->status,
@@ -95,6 +100,7 @@ class PartnerController extends Controller
         Partner::where('id', $partner->id)
                 ->update([
                     'company' => $request->nama,
+                    'description'=> $request->deskripsi,
                     'position' => $request->jenis,
                     'img' => $result,
                     'status' => $request->status,
