@@ -45,7 +45,7 @@ class EventController extends Controller
             'status' => 'required',
         ]);
         $image  = $request->file('poster');
-        $result = CloudinaryStorage::upload($image->getRealPath(), $image->getClientOriginalName());
+        $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
 
         Event::create([
             'title' => $request->judul,
