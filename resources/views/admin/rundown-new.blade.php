@@ -30,19 +30,20 @@
           <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('rundown') }}" method="POST">
+            @csrf
             <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Question</label>
+              <label for="hari_tanggal" class="col-sm-2 col-form-label">Hari, Tanggal</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="hari_tanggal" id="hari_tanggal">
               </div>
             </div>
 
-            <div class="row mb-5">
-              <label for="inputDescription" class="col-sm-2 col-form-label">Answer</label>
+            <div class="row mb-3">
+              <label for="rincian" class="col-sm-2 col-form-label">Rincian</label>
               <div class="col-sm-10">
-                <div class="quill-editor-default">
-                    <textarea class="form-control" style="min-height: 100px"></textarea>
+                <div>
+                    <textarea class="form-control" id="editor" name="rincian"></textarea>
                 </div>  
               </div>
             </div>

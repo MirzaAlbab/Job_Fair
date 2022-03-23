@@ -78,13 +78,13 @@ Route::delete('/career-fair/delete', [CareerfairController::class, 'destroy'])->
 // Route::delete('/logo/delete', [LogoController::class, 'destroy'])->name('logo-delete');
 
 // route: admin/article
-Route::get('/article', [ArticleController::class, 'index'])->name('article');
-Route::post('/article', [ArticleController::class, 'store'])->name('article-store');
-Route::get('/article-new', [ArticleController::class, 'create'])->name('article-new');
-Route::get('/article-view/{article}', [ArticleController::class, 'show'])->name('article-view');
-Route::get('/article-update/{article}/edit', [ArticleController::class, 'edit'])->name('article-edit');
-Route::post('/article-update/{article}', [ArticleController::class, 'update'])->name('article-update');
-Route::delete('/article/delete', [ArticleController::class, 'destroy'])->name('article-delete');
+// Route::get('/article', [ArticleController::class, 'index'])->name('article');
+// Route::post('/article', [ArticleController::class, 'store'])->name('article-store');
+// Route::get('/article-new', [ArticleController::class, 'create'])->name('article-new');
+// Route::get('/article-view/{article}', [ArticleController::class, 'show'])->name('article-view');
+// Route::get('/article-update/{article}/edit', [ArticleController::class, 'edit'])->name('article-edit');
+// Route::post('/article-update/{article}', [ArticleController::class, 'update'])->name('article-update');
+// Route::delete('/article/delete', [ArticleController::class, 'destroy'])->name('article-delete');
 
 // route: admin/partner
 Route::get('/partner', [PartnerController::class, 'index'])->name('partner');
