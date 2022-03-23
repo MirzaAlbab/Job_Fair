@@ -41,7 +41,7 @@ class GalleryController extends Controller
             'status' => 'required',
         ]);
         $image  = $request->file('dokumentasi');
-        $result = CloudinaryStorage::upload($image->getRealPath(), $image->getClientOriginalName());
+        $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
 
         Gallery::create([
             'title' => $request->judul,
@@ -84,7 +84,7 @@ class GalleryController extends Controller
     {
         if($request->file('dokumentasi')){
             $file   = $request->file('dokumentasi');
-            $result = CloudinaryStorage::replace($gallery->img, $file->getRealPath(), $file->getClientOriginalName());
+            $result = CloudinaryStorage::replace($gallery->img, $file->getPathname(), $file->getClientOriginalName());
         } else {
             $result = $gallery->img;
         }

@@ -25,11 +25,10 @@
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Lorem Ipsum</h5>
-          <img src="{{ asset('assets/img/DPKKA-image.png') }}" class="img-fluid" alt="...">
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          <h5 class="card-title">{{ $gallery->title }}</h5>
+          <img  src="{{ $gallery->img }}" class="img-fluid mb-3" alt="...">
           <div class="text-center">
-            <a href="{{ route('rundown') }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
+            <a href="{{ route('gallery') }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
           </div>
         </div>
       </div>

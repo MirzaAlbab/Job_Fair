@@ -54,7 +54,11 @@
                   <tr>
                     <th scope="row">1</th>
                     <td class="align-middle">{{ $ga->title }}</td>
-                    <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $ga->status }}</span></td>
+                    @if($ga->status == 'active')
+                      <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $ga->status }}</span></td>
+                    @else
+                      <td class="align-middle"><span class="badge rounded-pill bg-secondary">{{ $ga->status }}</span></td>
+                    @endif
                     <td class="align-middle">                       
                       <a href="{{ route('gallery-view', $ga->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('gallery-edit', $ga->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
