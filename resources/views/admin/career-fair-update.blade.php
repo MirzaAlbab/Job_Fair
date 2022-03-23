@@ -31,7 +31,7 @@
               dd($careerfair->id)
           @endphp --}}
           <!-- General Form Elements -->
-          <form action="{{ route('career-fair-update', $careerfair->id) }}" method="POST">
+          <form action="{{ route('career-fair-update', $careerfair->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Title</label>
