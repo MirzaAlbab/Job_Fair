@@ -60,9 +60,9 @@
                 </select> --}}
                 <select class="form-select search-select" aria-label="Default select example" name="periode">
                   <option value=""></option>
-                  <option value="{{ $partner->careerfair_id }}" selected="selected">{{ $partner->AOCF->title }}</option>
                   @foreach ($careers as $car)
-                    <option value="{{ $car->id }}">{{ $car->title }}</option>
+                  <option value="{{ $car->id }}" {{$car->id == $partner->careerfair_id  ? 'selected' : ''}}>{{ $car->title }}</option>
+                    
                   @endforeach
                 </select>
               </div>
@@ -83,9 +83,8 @@
               <label class="col-sm-2 col-form-label">Partner Type</label>
               <div class="col-sm-10">
                 <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="jenis">
-                  <option value=""></option>
-                  <option value="1">Sponsor</option>
-                  <option value="2">Participant</option>
+                  <option value="1" {{ ($partner->position == 1) ? 'selected' : '' }}>Sponsor</option>
+                  <option value="2" {{ ($partner->position == 2) ? 'selected' : '' }}>Participant</option>
                 </select>
               </div>
             </div>
