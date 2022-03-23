@@ -92,15 +92,17 @@ class CareerfairController extends Controller
      */
     public function update(Request $request, Careerfair $careerfair)
     {
+        dd($careerfair);
         if($request->file('poster')){
             $file   = $request->file('poster');
-            $result = CloudinaryStorage::replace($careerfair->img, $file->getRealPath(), $file->getClientOriginalName());
+            $result = CloudinaryStorage::replace($careerfair->img, $file->getPathname(), $file->getClientOriginalName());
         } else {
             $result = $careerfair->img;
         }
         Careerfair::where('id', $careerfair->id)
                 ->update([
                     'title' => $request->judul,
+                    'description' => $request->deskripsi,
                     'start_date' => $request->tglmulai,
                     'end_date' => $request->tglselesai,
                     'img' => $result,
