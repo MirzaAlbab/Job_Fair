@@ -54,10 +54,8 @@
                 <select class="form-select search-select" aria-label="Default select example" name="periode">
                   <option value=""></option>
                   @foreach ($careers as $car)
-                      
-                  <option value="{{ $car->id }}">{{ $car->title }}</option>
+                    <option value="{{ $car->id }}">{{ $car->title }}</option>
                   @endforeach
-                  
                 </select>
               </div>
             </div>

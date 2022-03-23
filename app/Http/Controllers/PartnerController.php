@@ -79,8 +79,9 @@ class PartnerController extends Controller
      */
     public function edit(Partner $partner)
     {
-        dd($partner);
-        return view('admin.partner-update', compact('partner'));
+        $partner = Partner::find($partner->id);
+        $careers = Careerfair::all();
+        return view('admin.partner-update', compact('partner', 'careers'));
     }
 
     /**
@@ -92,6 +93,7 @@ class PartnerController extends Controller
      */
     public function update(Request $request, Partner $partner)
     {
+        dd($request);
         if($request->file('logo')){
             $file   = $request->file('logo');
             $result = CloudinaryStorage::replace($partner->img, $file->getPathname(), $file->getClientOriginalName());

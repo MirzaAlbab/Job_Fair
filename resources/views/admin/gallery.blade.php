@@ -52,7 +52,7 @@
                   @foreach ($gallery as $ga)
                       
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">{{ $gallery->firstItem()+$loop->index }} </th>
                     <td class="align-middle">{{ $ga->title }}</td>
                     @if($ga->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $ga->status }}</span></td>

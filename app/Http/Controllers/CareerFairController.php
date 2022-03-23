@@ -39,6 +39,7 @@ class CareerfairController extends Controller
         $request->validate([
             'judul' => 'required',
             'tglmulai' => 'required',
+            'deskripsi' => 'required',
             'tglselesai' => 'required',
             'status' => 'required',
         ]);
@@ -47,6 +48,7 @@ class CareerfairController extends Controller
 
         Careerfair::create([
             'title' => $request->judul,
+            'description' => $request->deskripsi,
             'start_date' => $request->tglmulai,
             'end_date' => $request->tglselesai,
             'img' => $result,
