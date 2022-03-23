@@ -93,6 +93,7 @@ class PartnerController extends Controller
      */
     public function update(Request $request, Partner $partner)
     {
+        
         if($request->file('logo')){
             $file   = $request->file('logo');
             $result = CloudinaryStorage::replace($partner->img, $file->getPathname(), $file->getClientOriginalName());

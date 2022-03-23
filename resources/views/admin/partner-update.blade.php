@@ -60,12 +60,9 @@
                 </select> --}}
                 <select class="form-select search-select" aria-label="Default select example" name="periode">
                   <option value=""></option>
+                  <option value="{{ $partner->careerfair_id }}" selected="selected">{{ $partner->AOCF->title }}</option>
                   @foreach ($careers as $car)
-                    @if ($car->id == $partner->career_id)
-                      <option value="{{ $car->id }}" selected="selected">{{ $car->title }}</option>
-                    @else
-                      <option value="{{ $car->id }}">{{ $car->title }}</option>
-                    @endif
+                    <option value="{{ $car->id }}">{{ $car->title }}</option>
                   @endforeach
                 </select>
               </div>
