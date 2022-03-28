@@ -21,13 +21,19 @@
         </ol>
       </nav>
     </div><!-- End Page Title -->
-
+    
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Lorem Ipsum</h5>
-          <img src="{{ asset('assets/img/DPKKA-image.png') }}" class="img-fluid" alt="...">
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          <h5 class="card-title text-center">{{ $careerfair->title }}</h5>
+          <div class="text-center">
+            <img class="img-fluid mb-3" src="{{ $careerfair->img }}" alt="...">
+          </div>
+          <div class="card-text">
+            <p>{!! $careerfair->description !!}</p>
+          </div>
+          
+        
           <div class="text-center">
             <a href="{{ route('career') }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
           </div>

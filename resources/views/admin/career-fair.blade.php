@@ -82,7 +82,7 @@
               <!-- End Table with stripped rows -->
 
               {{-- Pagination --}}
-              {{-- {{ $careers->links() }} --}}
+              {{ $careers->links() }}
               {{-- End Pagination --}}
 
               <!-- Delete Modal -->
