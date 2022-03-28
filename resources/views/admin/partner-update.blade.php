@@ -50,14 +50,6 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">AOCF Period</label>
               <div class="col-sm-10">
-                {{-- <select class="form-select search-select" aria-label="Default select example" name="periode">
-                  <option value=""></option>
-                  <option value="1">AOCF 1</option>
-                  <option value="2">AOCF 2</option>
-                  <option value="3">AOCF 3</option>
-                  <option value="4">AOCF 4</option>
-                  <option value="5">AOCF 5</option>
-                </select> --}}
                 <select class="form-select search-select" aria-label="Default select example" name="periode">
                   <option value=""></option>
                   @foreach ($careers as $car)

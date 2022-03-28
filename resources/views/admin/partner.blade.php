@@ -78,7 +78,7 @@
               <!-- End Table with stripped rows -->
               
               {{-- Pagination --}}
-              {{ $partners->links() }}
+              {{-- {{ $partners->links() }} --}}
               {{-- End Pagination --}}
 
               <!-- Delete Modal -->
