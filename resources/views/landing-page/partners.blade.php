@@ -23,36 +23,35 @@
       <div class="row">
         <div class="col-lg-8 entries">
           @foreach ($partners as $partner)
-          <img src="{{ $partner->img }}" alt="">
-              
-          @endforeach
+          
+          
           <article class="entry">
             <div class="entry-img">
-              <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              <img src="{{ $partner->img }}" alt="" class="img-fluid">
             </div>
 
             <h2 class="entry-title">
-              <a href="{{ route('user-singlepartner') }}">Telkomsel</a>
+              <a href="{{ route('user-singlepartner', $partner->id) }}">{{ $partner->company }}</a>
             </h2>
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{ route('user-singlepartner') }}">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{ route('user-singlepartner') }}"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i>John Doe</li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">Jan 1, 2020</time></li>
               </ul>
             </div>
 
             <div class="entry-content">
               <p>
-                Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                {!! $partner->description !!}
               </p>
               <div class="read-more">
-                <a href="{{ route('user-singlepartner') }}">Read More</a>
+                <a href="{{ route('user-singlepartner', $partner->id) }}">Read More</a>
               </div>
             </div>
 
           </article>
+          @endforeach
 
           <!-- End company entry -->
 
@@ -89,40 +88,18 @@
                 <li><a href="#">Educaion <span>(14)</span></a></li>
               </ul>
             </div><!-- End sidebar categories-->
-
+            
             <h3 class="sidebar-title">Recent Partners</h3>
+            @foreach ($partners as $partner)
             <div class="sidebar-item recent-posts">
               <div class="post-item clearfix">
-                <img src="assets/img/blog/blog-recent-1.jpg" alt="">
-                <h4><a href="{{ route('user-singlepartner') }}">Telomsel</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-              <div class="post-item clearfix">
-                <img src="assets/img/blog/blog-recent-2.jpg" alt="">
-                <h4><a href="{{ route('user-singlepartner') }}">Gojek</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-              <div class="post-item clearfix">
-                <img src="assets/img/blog/blog-recent-3.jpg" alt="">
-                <h4><a href="{{ route('user-singlepartner') }}">Tokopedia</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-              <div class="post-item clearfix">
-                <img src="assets/img/blog/blog-recent-4.jpg" alt="">
-                <h4><a href="{{ route('user-singlepartner') }}">Astra</a></h4>
-                <time datetime="2020-01-01">Jan 1, 2020</time>
-              </div>
-
-              <div class="post-item clearfix">
-                <img src="assets/img/blog/blog-recent-5.jpg" alt="">
-                <h4><a href="{{ route('user-singlepartner') }}">Indochito</a></h4>
+                <img src="{{ $partner->img }}" alt="">
+                <h4><a href="{{ route('user-singlepartner', $partner->id) }}">{{ $partner->company }}</a></h4>
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
 
             </div>
+            @endforeach
             <!-- End sidebar company-->
 
           </div>

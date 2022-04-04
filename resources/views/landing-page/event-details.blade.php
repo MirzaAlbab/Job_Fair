@@ -29,7 +29,7 @@
             <div class="swiper-wrapper align-items-center">
 
               <div class="swiper-slide">
-                <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                <img src="{{ $event->img }}" alt="">
               </div>
 
             </div>
@@ -41,17 +41,15 @@
           <div class="event-info">
             <h3>Event information</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: Telkomsel</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>Kategori</strong>: Webinar</li>
+              <li><strong>Judul</strong>: {{ $event->title }}</li>
+              <li><strong>Waktu</strong>: {{ $event->time }}</li>
+              <li><strong>Link</strong>: <a href="#">{{ $event->link }}</a></li>
             </ul>
           </div>
           <div class="event-description">
             <h2>Event description</h2>
-            <p>
-              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-            </p>
+            {!! $event->description !!}   
           </div>
         </div>
 

@@ -6,7 +6,7 @@
 <section id="hero" class="hero d-flex align-items-center">
   <div class="container-fluid px-0 py-0">
     <div class="row">
-      <img src="{{ asset('assets/img/banner.png') }}" alt="">
+      <img src="{{ $aocf->img }}" alt="">
     </div>
   </div>
 </section>
@@ -21,14 +21,11 @@
     </header>
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="assets/img/dummy.png" class="img-fluid" alt=""></a></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+        @foreach ($partners as $sponsor)
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
+        {{-- <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
+         --}}
+        @endforeach
       </div>
     </div>
     <div class="swiper-button-prev"></div>
@@ -216,7 +213,7 @@
           <div class="count-box">
             <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
             <div>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countpartner }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Perusahaan</p>
             </div>
           </div>
@@ -276,42 +273,19 @@
       </header>
 
       <div class="row gy-4 gallery-container" data-aos="fade-up" data-aos-delay="200">
-
+        @foreach($gallery as $g)
         <div class="col-lg-4 col-md-6 gallery-item filter-app">
           <div class="gallery-wrap">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <img src="{{ $g->img }}" class="img-fluid" alt="">
             <div class="gallery-info">
               <div class="gallery-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+                <a href="{{ $g->img }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
                 <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link"></i></a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 gallery-item filter-web">
-          <div class="gallery-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="gallery-info">
-              <div class="gallery-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
-                <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 gallery-item filter-app">
-          <div class="gallery-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="gallery-info">
-              <div class="gallery-links">
-                <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        @endforeach
 
     </div>
 

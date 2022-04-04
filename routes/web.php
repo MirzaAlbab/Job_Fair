@@ -30,9 +30,9 @@ Route::get('/', function () {
 Route::get('/landingpage', [FrontController::class, 'index'])->name('user-landing');
 Route::get('/about', [FrontController::class, 'about'])->name('user-about');
 Route::get('/partners', [FrontController::class, 'partner'])->name('user-partners');
-Route::get('/singlepartner', [FrontController::class, 'singlepartner'])->name('user-singlepartner');
+Route::get('/singlepartner/{id}', [FrontController::class, 'singlepartner'])->name('user-singlepartner');
 Route::get('/events', [FrontController::class, 'events'])->name('user-events');
-Route::get('/events-detail', [FrontController::class, 'eventdetail'])->name('user-event-detail');
+Route::get('/events-detail/{id}', [FrontController::class, 'eventdetail'])->name('user-event-detail');
 Route::get('/galleryy', [FrontController::class, 'gallery'])->name('user-gallery');
 
 
@@ -88,6 +88,7 @@ Route::delete('/career-fair/delete', [CareerfairController::class, 'destroy'])->
 
 // route: admin/partner
 Route::get('/partner', [PartnerController::class, 'index'])->name('partner');
+Route::get('/partner/getPartners/', [PartnerController::class, "getPartners"])->name('partner.getPartners');
 Route::post('/partner', [PartnerController::class, 'store'])->name('partner-store');
 Route::get('/partner-new', [PartnerController::class, 'create'])->name('partner-new');
 Route::get('/partner-view/{partner}', [PartnerController::class, 'show'])->name('partner-view');

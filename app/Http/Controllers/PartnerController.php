@@ -18,6 +18,7 @@ class PartnerController extends Controller
         $partners = Partner::latest()->paginate(10);
         return view('admin.partner', compact('partners'));
     }
+    
 
     /**
      * Show the form for creating a new resource.

@@ -17,8 +17,7 @@ class PartnerSeeder extends Seeder
         Partner::create([
             'company' => 'perusahaan satu',
             'description' => 'perusahaan ke-satu',
-            // 'start_date' => '2020-01-01',
-            // 'end_date' => '2020-01-01',
+            'careerfair_id' => 1,
             'position' => 'top',
             'img' => 'halo',
             'status' => 'inactive'

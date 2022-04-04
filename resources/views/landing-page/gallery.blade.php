@@ -21,37 +21,19 @@
   <div class="container" data-aos="fade-up">
 
     <div class="row gy-4 gallery-container" data-aos="fade-up" data-aos-delay="200">
-
+      @foreach ($gallery as $gallery)
       <div class="col-lg-4 col-md-6 gallery-item filter-app">
         <div class="gallery-wrap">
-          <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+          <img src="{{ $gallery->img }}" class="img-fluid" alt="">
           <div class="gallery-info">
             <div class="gallery-links">
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+              <a href="{{ $gallery->img }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 gallery-item filter-app">
-        <div class="gallery-wrap">
-          <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-          <div class="gallery-info">
-            <div class="gallery-links">
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 gallery-item filter-app">
-        <div class="gallery-wrap">
-          <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-          <div class="gallery-info">
-            <div class="gallery-links">
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
+      @endforeach
+      
 
     </div>
 
