@@ -53,7 +53,7 @@
                   @foreach ($rundowns as $rd)
                       
                   <tr>
-                    <th scope="row" class="align-middle">{{ $rundowns->firstItem()+$loop->index }} </th>
+                    <th scope="row" class="align-middle">{{ $loop->iteration }} </th>
                     <td class="align-middle">{{ $rd->time }}</td>
                     <td class="align-middle">{!! $rd->event !!}</td>
                     @if($rd->status == 'active')
