@@ -26,7 +26,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Update Gallery</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
           <form action="{{ route('gallery-update', $gallery->id) }}" method="POST" enctype="multipart/form-data">
@@ -34,16 +34,21 @@
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="judul" value="{{ $gallery->title }}">
+                <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul" value="{{ old('judul', $gallery->title) }}">
+                @error('judul')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
               <label for="inputImage" class="col-sm-2 col-form-label">Upload Image</label>
               <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile" name="dokumentasi">
+                <input class="form-control " type="file" id="formFile" name="dokumentasi">
                 @if ($gallery->img)
-                <img src="{{ $gallery->img }}" alt="{{ $gallery->img }}" width="300px">
+                  <img src="{{ $gallery->img }}" alt="{{ $gallery->img }}" width="300px">
                 @endif
               </div>
             </div>
