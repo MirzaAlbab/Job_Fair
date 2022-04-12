@@ -54,7 +54,7 @@ class RundownController extends Controller
             'careerfair_id' => $request->periode,
             'status' => $request->status,
         ]);
-        return redirect('/rundown')->with('status', 'Status berhasil ditambah');
+        return redirect('/rundown')->with('status', 'Rundown berhasil ditambah');
     }
 
     /**
