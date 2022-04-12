@@ -5,9 +5,9 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero d-flex align-items-center">
   <div class="container-fluid px-0 py-0">
-    <div class="row">
-      <img src="{{ $aocf->img }}" alt="">
-    </div>
+      <div class="row">
+        <img src="{{ $aocf->img }}" alt="">
+      </div>
   </div>
 </section>
 <!-- End Hero -->
@@ -227,14 +227,12 @@
   
       <div class="clients-slider swiper">
         <div class="swiper-wrapper align-items-center mb-5">
+          @foreach ($participant as $partici)
+          <div class="swiper-slide"><img src="{{ $partici->img }}" class="img-fluid" alt=""></div>
+        
+         @endforeach
           
-          <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -284,9 +282,14 @@
 
       <div class="row">
         <div class="col-lg-6">
+         {{-- @php
+             dd(($faqs->split($faqs->count()/2)));
+         @endphp --}}
           <!-- F.A.Q List 1-->
-          @foreach($faqs as $faq)
-          @if ($loop->odd)
+          @foreach ($faqs as $faq)
+              
+         
+          
           <div class="accordion accordion-flush" id="faqlist1">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -301,14 +304,15 @@
               </div>
             </div>
           </div>
-          
+          @endforeach
+         
         </div>
 
         <div class="col-lg-6">
-
+          
           <!-- F.A.Q List 2-->
           <div class="accordion accordion-flush" id="faqlist2">
-            @else
+            
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
@@ -323,11 +327,12 @@
             </div>
 
             
-
+           
           </div>
         </div>
-        @endif
-        @endforeach
+       
+        
+     
 
       </div>
       

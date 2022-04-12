@@ -43,11 +43,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="{{ route('user-landing') }}">Home</a></li>
-          <li><a class="nav-link scrollto" href="{{ route('user-about') }}">About</a></li>
-          <li><a class="nav-link scrollto" href="{{ route('user-partners') }}">Partners</a></li>
-          <li><a class="nav-link scrollto" href="{{ route('user-events') }}">Events</a></li>
-          <li><a class="nav-link scrollto" href="{{ route('user-gallery') }}">Gallery</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('landingpage')) ? 'active' : '' }}"  href="{{ route('user-landing') }}">Home</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('about')) ? 'active' : '' }}" href="{{ route('user-about') }}">About</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('partners')) ? 'active' : '' }}" href="{{ route('user-partners') }}">Partners</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('events')) ? 'active' : '' }}" href="{{ route('user-events') }}">Events</a></li>
+          <li><a class="nav-link scrollto {{ (request()->is('galleryy')) ? 'active' : '' }}" href="{{ route('user-gallery') }}">Gallery</a></li>
           <li><a class="getstarted scrollto" href="/register">Contact Us</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

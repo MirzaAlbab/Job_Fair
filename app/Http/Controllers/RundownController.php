@@ -45,11 +45,10 @@ class RundownController extends Controller
             'periode' => 'required',
             'status' => 'required',
         ]);
-        $date = Carbon::parse($request->hari_tanggal);
-        $date = $date->isoFormat('dddd, D MMMM Y');
+        
         
         Rundown::create([
-            'time' => $date,
+            'time' => $request->hari_tanggal,
             'event'=> $request->rincian,
             'careerfair_id' => $request->periode,
             'status' => $request->status,
