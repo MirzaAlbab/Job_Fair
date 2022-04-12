@@ -54,7 +54,8 @@
                       
                   <tr>
                     <th scope="row" class="align-middle">{{ $loop->iteration }} </th>
-                    <td class="align-middle">{{ $rd->time }}</td>
+                    <td class="align-middle">{{ $rd->time }}</td> 
+                   
                     <td class="align-middle">{!! $rd->event !!}</td>
                     @if($rd->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $rd->status }}</span></td>

@@ -16,6 +16,11 @@ class RundownController extends Controller
     public function index()
     {
         $rundowns = Rundown::latest()->get();
+        $rundowns->map(function ($rundown) {
+            $rundown->time = Carbon::parse($rundown->time)->format('l, d M Y');
+            return $rundown;
+        });
+        
         return view('admin.rundown', compact('rundowns'));
     }
 
