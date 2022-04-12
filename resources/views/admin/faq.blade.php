@@ -64,10 +64,34 @@
                       <a href="{{ route('faq-edit',$faq->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <a type="button" class="btn btn-danger btn-sm" id="delete-modal"
-                      data-value="{{$faq->id}}"
-                      data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
+                        data-value="{{$faq->id}}"
+                        data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
                       </a>
+                      <div class="modal fade" id="deleteFormModal" tabindex="-1" >
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Delete FAQ</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            Are you sure you want to delete this FAQ?
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <form action="{{ route('faq-delete') }}" method="POST">
+                              <input type="text" id="id" name="id" hidden>
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
+                            
+                            </form>
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                      <!-- End Delete Modal-->
                     </td>
                   </tr>
                   @endforeach
@@ -76,30 +100,6 @@
               </table>
               {{-- {{ $faqs->links() }} --}}
               <!-- End Table with stripped rows -->
-              <div class="modal fade" id="deleteFormModal" tabindex="-1" >
-                <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title">Delete FAQ</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    Are you sure you want to delete this FAQ?
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form action="{{ route('faq-delete') }}" method="POST">
-                      <input type="text" id="id" name="id" hidden>
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
-                    
-                    </form>
-                    </div>
-                  </div>
-                  </div>
-              </div>
-             <!-- End Delete Modal-->
 
             </div>
           </div>

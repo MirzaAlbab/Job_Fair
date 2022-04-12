@@ -107,8 +107,10 @@ class RundownController extends Controller
      * @param  \App\Models\Rundown  $rundown
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rundown $rundown)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->id;
+        Rundown::destroy($id);
+        return redirect('/rundown')->with('status', 'Rundown berhasil dihapus');
     }
 }

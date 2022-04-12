@@ -25,9 +25,17 @@
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Lorem Ipsum</h5>
-          <img src="{{ asset('assets/img/DPKKA-image.png') }}" class="img-fluid" alt="...">
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          <div class="accordion-item m-3">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                {{ $rundown->time }}
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">{!! $rundown->event !!}</div>
+              
+            </div>
+          </div>
           <div class="text-center">
             <a href="{{ route('rundown') }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
           </div>

@@ -65,9 +65,11 @@
                       <a href="{{ route('rundown-view',$rd->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('rundown-edit',$rd->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
-                      <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
+                      <a type="button" class="btn btn-danger btn-sm" id="delete-modal"
+                        data-value="{{$rd->id}}"
+                        data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
-                      </button>
+                      </a>
                       <div class="modal fade" id="deleteFormModal" tabindex="-1">
                           <div class="modal-dialog modal-dialog-centered">
                           <div class="modal-content">
@@ -80,7 +82,13 @@
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('rundown') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                              <form action="{{ route('rundown-delete') }}" method="POST">
+                                <input type="text" id="id" name="id" hidden>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
+                              
+                              </form>
                               </div>
                           </div>
                           </div>
