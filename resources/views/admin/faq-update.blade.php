@@ -33,7 +33,12 @@
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Question</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="question" value="{{ $faq->question }}">
+                <input type="text" class="form-control @error('question') is-invalid @enderror" name="question" value="{{ old('question', $faq->question) }}">
+                @error('question')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                @enderror
               </div>
             </div>
 
@@ -41,7 +46,10 @@
               <label for="answer" class="col-sm-2 col-form-label">Answer</label>
               <div class="col-sm-10">
                 <div>
-                  <textarea class="form-control"  name="answer" id="editor">{!! $faq->answer !!}</textarea>
+                  <textarea class="form-control"  name="answer" id="editor">{!! old('answer', $faq->answer ) !!}</textarea>
+                  @error('answer')
+                    <p class="text-danger">{{ $message }}</p>
+                  @enderror
                 </div>  
               </div>
             </div>

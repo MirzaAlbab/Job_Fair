@@ -52,7 +52,7 @@
                   @foreach ($gallery as $ga)
                       
                   <tr>
-                    <th scope="row">{{ $gallery->firstItem()+$loop->index }} </th>
+                    <th scope="row">{{ $loop->iteration }} </th>
                     <td class="align-middle">{{ $ga->title }}</td>
                     @if($ga->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $ga->status }}</span></td>
@@ -75,7 +75,7 @@
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
-              {{ $gallery->links() }}
+              {{-- {{ $gallery->links() }} --}}
 
               <!-- Delete Modal -->
               <div class="modal fade" id="deleteFormModal" tabindex="-1" >

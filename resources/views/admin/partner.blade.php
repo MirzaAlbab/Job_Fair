@@ -53,7 +53,8 @@
                   
                       
                   <tr>
-                    <th scope="row">{{ $partners->firstItem()+$loop->index }} </th>
+                    {{-- <th scope="row">{{ $partners->firstItem()+$loop->index }} </th> --}}
+                    <th scope="row">{{ $loop->iteration }} </th>
                     <td class="align-middle">{{ $partner->company }}</td>
                     <td class="align-middle">{{ $partner->AOCF->title }}</td>
                     @if($partner->status == 'active')

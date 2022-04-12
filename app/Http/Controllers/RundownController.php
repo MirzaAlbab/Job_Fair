@@ -15,7 +15,7 @@ class RundownController extends Controller
      */
     public function index()
     {
-        $rundowns = Rundown::latest()->paginate(10);
+        $rundowns = Rundown::latest()->get();
         return view('admin.rundown', compact('rundowns'));
     }
 
@@ -54,7 +54,7 @@ class RundownController extends Controller
             'careerfair_id' => $request->periode,
             'status' => $request->status,
         ]);
-        return redirect('/rundown')->with('status', 'Status berhasil ditambah');
+        return redirect('/rundown')->with('status', 'Rundown berhasil ditambah');
     }
 
     /**
@@ -107,8 +107,10 @@ class RundownController extends Controller
      * @param  \App\Models\Rundown  $rundown
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Rundown $rundown)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->id;
+        Rundown::destroy($id);
+        return redirect('/rundown')->with('status', 'Rundown berhasil dihapus');
     }
 }

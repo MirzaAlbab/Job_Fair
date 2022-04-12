@@ -14,7 +14,7 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $faqs = Faq::latest()->paginate(10);
+        $faqs = Faq::latest()->get();
 
         return view('admin.faq', compact('faqs'));
     }
@@ -84,6 +84,11 @@ class FaqController extends Controller
      */
     public function update(Request $request, Faq $faq)
     {
+        $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'status' => 'required'
+        ]);
         Faq::where('id', $faq->id)
             ->update([
                 'question' => $request->question,
