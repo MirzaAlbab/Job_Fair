@@ -38,6 +38,7 @@ class GalleryController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+            'dokumentasi' => 'required',
             'status' => 'required',
         ]);
         $image  = $request->file('dokumentasi');
@@ -82,6 +83,10 @@ class GalleryController extends Controller
      */
     public function update(Request $request, Gallery $gallery)
     {
+        $request->validate([
+            'judul' => 'required',
+            'status' => 'required',
+        ]);
         if($request->file('dokumentasi')){
             $file   = $request->file('dokumentasi');
             $result = CloudinaryStorage::replace($gallery->img, $file->getPathname(), $file->getClientOriginalName());

@@ -27,7 +27,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">New Rundown</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
           <form action="{{ route('rundown') }}" method="POST">
@@ -35,7 +35,10 @@
             <div class="row mb-3">
               <label for="hari_tanggal" class="col-sm-2 col-form-label">Hari, Tanggal</label>
               <div class="col-sm-10">
-                <input type="date" class="form-control" name="hari_tanggal" id="hari_tanggal">
+                <input type="date" class="form-control" name="hari_tanggal" id="hari_tanggal" value="{{ old('hari_tanggal') }}">
+                @error('hari_tanggal')
+                  <p class="text-danger">{{ $message }}</p>
+                @enderror
               </div>
             </div>
 
@@ -43,7 +46,10 @@
               <label for="rincian" class="col-sm-2 col-form-label">Rincian</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="rincian"></textarea>
+                    <textarea class="form-control" id="editor" name="rincian">{{ old('rincian') }}</textarea>
+                    @error('rincian')
+                        <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>  
               </div>
             </div>
@@ -51,12 +57,15 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">AOCF Period</label>
               <div class="col-sm-10">
-                <select class="form-select search-select" aria-label="Default select example" name="periode">
+                <select class="form-select search-select" aria-label="Default select example" name="periode"">
                   <option value=""></option>
                   @foreach ($careers as $car)
                     <option value="{{ $car->id }}">{{ $car->title }}</option>
                   @endforeach
                 </select>
+                @error('periode')
+                  <p class="text-danger">{{ $message }}</p>
+                @enderror
               </div>
             </div>
 
