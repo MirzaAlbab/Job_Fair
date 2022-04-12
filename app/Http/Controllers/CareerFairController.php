@@ -14,7 +14,9 @@ class CareerfairController extends Controller
      */
     public function index()
     {
-        $careers = Careerfair::latest()->paginate(10);
+        // $careers = Careerfair::latest()->paginate(10);
+        $careers = Careerfair::latest()->get();
+        // dd($careers);
         return view('admin.career-fair', compact('careers'));
     }
 

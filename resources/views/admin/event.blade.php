@@ -28,7 +28,7 @@
             <div class="card-body">
               <h5 class="card-title">Datatables</h5>
               
-              <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+              {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
               @if (session('status'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                   <strong>{{ session('status') }}</strong>
@@ -53,7 +53,7 @@
                   @foreach ($events as $event)
                       
                   <tr>
-                    <th scope="row">{{ $events->firstItem()+$loop->index }} </th>
+                    <th scope="row">{{ $loop->iteration }} </th>
                     <td class="align-middle">{{ $event->title }} </td>
                     <td class="align-middle">{{ $event->time }}</td>
                     @if($event->status == 'active')
@@ -79,7 +79,7 @@
               <!-- End Table with stripped rows -->
 
               {{-- Pagination --}}
-              {{ $events->links() }}
+              {{-- {{ $events->links() }} --}}
               {{-- End Pagination --}}
 
               <!-- Delete Modal -->

@@ -14,7 +14,7 @@ class RundownController extends Controller
      */
     public function index()
     {
-        $rundowns = Rundown::latest()->paginate(10);
+        $rundowns = Rundown::latest()->get();
         return view('admin.rundown', compact('rundowns'));
     }
 

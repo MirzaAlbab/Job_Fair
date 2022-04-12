@@ -52,7 +52,7 @@
                   @foreach ($faqs as $faq)
                   <tr>
                         
-                    <th scope="row">{{ $faqs->firstItem()+$loop->index }} </th>
+                    <th scope="row">{{ $loop->iteration }} </th>
                     <td class="align-middle">{{ $faq->question }}</td>
                     @if($faq->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $faq->status }}</span></td>
@@ -74,7 +74,7 @@
                   
                 </tbody>
               </table>
-              {{ $faqs->links() }}
+              {{-- {{ $faqs->links() }} --}}
               <!-- End Table with stripped rows -->
               <div class="modal fade" id="deleteFormModal" tabindex="-1" >
                 <div class="modal-dialog modal-dialog-centered">

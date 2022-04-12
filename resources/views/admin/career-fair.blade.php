@@ -54,7 +54,7 @@
                   @foreach ($careers as $career)
                       
                   <tr>
-                    <th scope="row">{{ $careers->firstItem()+$loop->index }} </th>
+                    <th scope="row">{{ $loop->iteration }} </th>
                     <td class="align-middle">{{ $career->title }}</td>
                     <td class="align-middle">{{ $career->start_date }}</td>
                     <td class="align-middle">{{ $career->end_date }}</td>
@@ -82,7 +82,7 @@
               <!-- End Table with stripped rows -->
 
               {{-- Pagination --}}
-              {{ $careers->links() }}
+              {{-- {{ $careers->links() }} --}}
               {{-- End Pagination --}}
 
               <!-- Delete Modal -->

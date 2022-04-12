@@ -79,7 +79,7 @@
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
-              {{ $rundowns->links() }}
+              {{-- {{ $rundowns->links() }} --}}
             </div>
           </div>
 
