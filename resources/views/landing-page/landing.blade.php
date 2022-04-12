@@ -282,8 +282,13 @@
 
       <div class="row">
         <div class="col-lg-6">
+         {{-- @php
+             dd(($faqs->split($faqs->count()/2)));
+         @endphp --}}
           <!-- F.A.Q List 1-->
-          @foreach($faqs as $faq)
+          @foreach ($faqs as $faq)
+              
+         
           
           <div class="accordion accordion-flush" id="faqlist1">
             <div class="accordion-item">
@@ -299,11 +304,12 @@
               </div>
             </div>
           </div>
-          
+          @endforeach
+         
         </div>
 
         <div class="col-lg-6">
-
+          
           <!-- F.A.Q List 2-->
           <div class="accordion accordion-flush" id="faqlist2">
             
@@ -321,11 +327,12 @@
             </div>
 
             
-
+           
           </div>
         </div>
        
-        @endforeach
+        
+     
 
       </div>
       

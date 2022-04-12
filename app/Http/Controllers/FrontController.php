@@ -33,6 +33,9 @@ class FrontController extends Controller
             ['status', 'active'],
             ['careerfair_id', $aocf->id],
         ])->get();
+      
+        
+         
        
         $countpartner = Partner::where('status', 'active')->count();
         $countevent = Event::where('status', 'active')->count();
