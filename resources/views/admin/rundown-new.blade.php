@@ -35,7 +35,7 @@
             <div class="row mb-3">
               <label for="hari_tanggal" class="col-sm-2 col-form-label">Hari, Tanggal</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="hari_tanggal" id="hari_tanggal">
+                <input type="date" class="form-control" name="hari_tanggal" id="hari_tanggal">
               </div>
             </div>
 
@@ -48,17 +48,29 @@
               </div>
             </div>
 
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">AOCF Period</label>
+              <div class="col-sm-10">
+                <select class="form-select search-select" aria-label="Default select example" name="periode">
+                  <option value=""></option>
+                  @foreach ($careers as $car)
+                    <option value="{{ $car->id }}">{{ $car->title }}</option>
+                  @endforeach
+                </select>
+              </div>
+            </div>
+
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active" checked>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive">
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>

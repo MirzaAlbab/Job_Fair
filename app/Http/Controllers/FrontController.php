@@ -24,7 +24,11 @@ class FrontController extends Controller
             ['position', '1'],
             ['careerfair_id', $aocf->id],
         ])->get();
-        $rundown = Rundown::all();
+        $rundown = Rundown::where([
+            ['status', 'active'],
+            ['careerfair_id', $aocf->id],
+        ])->get();
+       
         $countpartner = Partner::where('status', 'active')->count();
         $countevent = Event::where('status', 'active')->count();
         $gallery = Gallery::where('status', 'active')->take(3)->get();

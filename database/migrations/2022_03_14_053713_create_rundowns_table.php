@@ -15,8 +15,10 @@ class CreateRundownsTable extends Migration
     {
         Schema::create('rundowns', function (Blueprint $table) {
             $table->id();
-            $table->date('time');
-            $table->date('event');
+            $table->string('time');
+            $table->string('event');
+            $table->foreignId('careerfair_id');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }
