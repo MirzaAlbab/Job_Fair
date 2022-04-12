@@ -26,7 +26,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Update Rundown</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
           <form action="{{ route('rundown-update', $rundown->id) }}" method="POST">
@@ -34,7 +34,10 @@
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Time</label>
               <div class="col-sm-10">
-                <input type="date" class="form-control" value="{{ $rundown->time }}" name="hari_tanggal">
+                <input type="date" class="form-control @error('hari_tanggal') is_invalid @enderror" value="{{ old('hari_tanggal', $rundown->time) }}" name="hari_tanggal">
+                @error('hari_tanggal')
+                  <p class="text-danger">{{ $message }}</p>
+                @enderror
               </div>
             </div>
 
@@ -42,7 +45,10 @@
               <label for="inputDescription" class="col-sm-2 col-form-label">Event</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="rincian">{!! $rundown->event !!}</textarea>
+                  <textarea class="form-control" id="editor" name="rincian">{!! old('rincian', $rundown->event) !!}</textarea>
+                  @error('rincian')
+                    <p class="text-danger">{{ $message }}</p>
+                  @enderror
                 </div>  
               </div>
             </div>
@@ -55,6 +61,9 @@
                   @foreach ($careers as $car)
                   <option value="{{ $car->id }}" {{$car->id == $rundown->careerfair_id  ? 'selected' : ''}}>{{ $car->title }}</option>
                   @endforeach
+                  @error('periode')
+                    <p class="text-danger">{{ $message }}</p>
+                  @enderror
                 </select>
               </div>
             </div>

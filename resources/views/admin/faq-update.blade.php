@@ -26,7 +26,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Update FAQ</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
           <!-- General Form Elements -->
           <form action="{{ route('faq-update', $faq->id) }}" method="POST">
             @csrf

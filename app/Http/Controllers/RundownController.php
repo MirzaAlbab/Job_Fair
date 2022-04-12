@@ -90,7 +90,12 @@ class RundownController extends Controller
      */
     public function update(Request $request, Rundown $rundown)
     {
-        
+        $request->validate([
+            'hari_tanggal' => 'required',
+            'rincian'=> 'required',
+            'periode' => 'required',
+            'status' => 'required',
+        ]);
         Rundown::where('id', $rundown->id)
                 ->update([
                     'time' => $request->hari_tanggal,
