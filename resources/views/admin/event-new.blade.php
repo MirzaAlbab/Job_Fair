@@ -27,7 +27,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">New Event</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
           <form action="{{ route('event-store') }}" method="POST" enctype="multipart/form-data">
@@ -35,7 +35,12 @@
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="judul">
+                <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul" value="{{ old('judul') }}">
+                @error('judul')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
@@ -43,7 +48,10 @@
               <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
               <div class="col-sm-10">
                 <div>
-                  <textarea class="form-control" id="editor" name="deskripsi"></textarea>
+                  <textarea class="form-control" id="editor" name="deskripsi">{{ old('deskripsi') }}</textarea>
+                  @error('deskripsi')
+                    <p class="text-danger">{{ $message }}</p>
+                  @enderror
                 </div>  
               </div>
             </div>
@@ -51,21 +59,36 @@
             <div class="row mb-3">
               <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
               <div class="col-sm-10">
-                <input type="datetime-local" class="form-control" name="waktu">
+                <input type="datetime-local" class="form-control @error('waktu') is-invalid @enderror" name="waktu" value="{{ old('waktu') }}">
+                @error('waktu')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
               <label for="inputImage" class="col-sm-2 col-form-label">Upload Poster</label>
               <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile" name="poster">
+                <input class="form-control @error('poster') is-invalid @enderror" type="file" id="formFile" name="poster">
+                @error('poster')
+                  <div class="invalid-feedback">
+                      {{ $message }}
+                  </div>
+                @enderror
               </div>
             </div>
             
             <div class="row mb-3">
               <label for="inputLink" class="col-sm-2 col-form-label">Link Meeting</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="link">
+                <input type="text" class="form-control @error('link') is-invalid @enderror" name="link" value="{{ old('link') }}">
+                @error('link')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
