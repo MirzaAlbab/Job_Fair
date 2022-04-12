@@ -84,6 +84,11 @@ class FaqController extends Controller
      */
     public function update(Request $request, Faq $faq)
     {
+        $request->validate([
+            'question' => 'required',
+            'answer' => 'required',
+            'status' => 'required'
+        ]);
         Faq::where('id', $faq->id)
             ->update([
                 'question' => $request->question,
