@@ -15,15 +15,20 @@ class FrontController extends Controller
     
     public function index()
     {
-        $aocf = Careerfair::where('status', 'active')->first();
-        // $partners = Partner::where(
-        //     ['status','active'],
-        //     [Partner::AOCF->status,'active'])->get();
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
         $partners = Partner::where([
             ['status', 'active'],
             ['position', '1'],
             ['careerfair_id', $aocf->id],
         ])->get();
+        
+
+        $participant = Partner::where([
+            ['status', 'active'],
+            ['position', '2'],
+            ['careerfair_id', $aocf->id],
+        ])->get();
+        
         $rundown = Rundown::where([
             ['status', 'active'],
             ['careerfair_id', $aocf->id],
@@ -33,20 +38,24 @@ class FrontController extends Controller
         $countevent = Event::where('status', 'active')->count();
         $gallery = Gallery::where('status', 'active')->take(3)->get();
         $faqs = Faq::where('status', 'active')->get();
-        
-
-        return view('landing-page.landing', compact('aocf', 'partners', 'rundown', 'countpartner', 'countevent', 'gallery', 'faqs'));
+        return view('landing-page.landing', compact('aocf', 'partners', 'rundown', 'countpartner', 'countevent', 'gallery', 'faqs', 'participant'));
         
     }
     public function about()
     {
-        $aocf = Careerfair::where('status', 'active')->first();
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
+        
         $partners = Partner::where([
             ['status', 'active'],
             ['position', '1'],
             ['careerfair_id', $aocf->id],
         ])->get();
-        return view('landing-page.about',compact('partners'));
+        $participant = Partner::where([
+            ['status', 'active'],
+            ['position', '2'],
+            ['careerfair_id', $aocf->id],
+        ])->get();
+        return view('landing-page.about',compact('aocf', 'partners', 'participant'));
     }
     public function partner()
     {

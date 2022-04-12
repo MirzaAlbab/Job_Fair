@@ -46,22 +46,14 @@
 
       <div class="row justify-content-center">
         <div class="col-lg-10" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{ asset('assets/img/banner.png') }}" class="img-fluid" alt="">
+          <img src="{{ $aocf->img }}" class="img-fluid" alt="">
         </div>
       </div>
 
       <div class="row gx-0">
         <div class="col-lg-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content ">
-            <p>
-              Airlangga Online Career Fair (AOCF) 2022 merupakan salah satu wahana strategis bagi kepentingan perusahaan/corporation dan jobseeker. Pada tahun 2022 ini, Airlangga Online Career Fair (AOCF) diadakan secara online/virtual melalui web DPKKA mengingat kondisi saat ini yang masih dalam pandemic COVID-19. Dalam hal ini, Corporation memiliki kemudahan untuk mencari talent yang sesuai dengan kualifikasi yang dibutuhkan untuk mempercepat growth dan pengembangan bisnis utamanya.
-            </p>
-            <p>
-              Sedangkan bagi jobseeker, dalam event AOCF ini dapat dijadikan peluang dalam melamar pekerjaan ditengah kondisi pandemic COVID-19 terhadap jenis perusahaan dan bidang yang menjadi passion personalnya.
-            </p>
-            <p>
-              Selain itu, AOCF 2022 terbuka untuk umum. Tidak hanya lulusan dari Universitas Airlangga, tetapi juga berbagai lulusan dari perguruan tinggi lain baik negeri maupun swasta. Dengan demikian, kegiatan ini sangat strategis untuk dijadikan agenda utama dalam berpartisipasi secara aktif.
-            </p>
+            {!! $aocf->description !!}
           </div>
         </div>
       </div>
@@ -81,14 +73,11 @@
   
       <div class="clients-slider swiper">
         <div class="swiper-wrapper align-items-center mb-5">
+          @foreach ($participant as $partici)
+          <div class="swiper-slide"><img src="{{ $partici->img }}" class="img-fluid" alt=""></div>
+        
+         @endforeach
           
-          <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
