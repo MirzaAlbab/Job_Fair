@@ -29,6 +29,13 @@
               <h5 class="card-title">Datatables</h5>
               
               <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+              @if (session('status'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{ session('status') }}</strong>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                
+              @endif
               <a href="{{ route('rundown-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New Rundown</a>
 
               <!-- Table with stripped rows -->
@@ -38,6 +45,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Time</th>
                     <th scope="col">Event</th>
+                    <th scope="col">Status</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -45,12 +53,17 @@
                   @foreach ($rundowns as $rd)
                       
                   <tr>
-                    <th scope="row">1</th>
-                    <td class="align-middle">Non consectetur a erat nam at lectus urna duis?</td>
-                    <td class="align-middle"><span class="badge rounded-pill bg-primary">Active</span></td>
+                    <th scope="row" class="align-middle">{{ $rundowns->firstItem()+$loop->index }} </th>
+                    <td class="align-middle">{{ $rd->time }}</td>
+                    <td class="align-middle">{!! $rd->event !!}</td>
+                    @if($rd->status == 'active')
+                      <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $rd->status }}</span></td>
+                    @else
+                      <td class="align-middle"><span class="badge rounded-pill bg-secondary">{{ $rd->status }}</span></td>
+                    @endif
                     <td class="align-middle">                       
                       <a href="{{ route('rundown-view',$rd->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('rundown-update',$rd->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('rundown-edit',$rd->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>

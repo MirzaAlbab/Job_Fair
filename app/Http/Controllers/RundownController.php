@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Careerfair;
 use App\Models\Rundown;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class RundownController extends Controller
@@ -25,7 +26,8 @@ class RundownController extends Controller
      */
     public function create()
     {
-        return view('admin.rundown-new');
+        $careers = Careerfair::all();
+        return view('admin.rundown-new', compact('careers'));
     }
 
     /**
@@ -36,7 +38,23 @@ class RundownController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $request->validate([
+            'hari_tanggal' => 'required',
+            'rincian'=> 'required',
+            'periode' => 'required',
+            'status' => 'required',
+        ]);
+        $date = Carbon::parse($request->hari_tanggal);
+        $date = $date->isoFormat('dddd, D MMMM Y');
+        
+        Rundown::create([
+            'time' => $date,
+            'event'=> $request->rincian,
+            'careerfair_id' => $request->periode,
+            'status' => $request->status,
+        ]);
+        return redirect('/rundown')->with('status', 'Status berhasil ditambah');
     }
 
     /**
@@ -58,7 +76,9 @@ class RundownController extends Controller
      */
     public function edit(Rundown $rundown)
     {
-        return view('admin.rundown-update', compact('rundown'));
+        $rundown = Rundown::find($rundown->id);
+        $careers = Careerfair::all();
+        return view('admin.rundown-update', compact('rundown', 'careers'));
     }
 
     /**
@@ -70,7 +90,15 @@ class RundownController extends Controller
      */
     public function update(Request $request, Rundown $rundown)
     {
-        //
+        
+        Rundown::where('id', $rundown->id)
+                ->update([
+                    'time' => $request->hari_tanggal,
+                    'event'=> $request->rincian,
+                    'careerfair_id' => $request->periode,
+                    'status' => $request->status,
+                ]);
+        return redirect('/rundown')->with('status', 'Rundown berhasil diperbarui');
     }
 
     /**
