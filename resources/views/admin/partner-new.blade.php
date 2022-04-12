@@ -27,7 +27,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">New Partner</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
           <form action="{{ route('partner-store') }}" method="POST" enctype="multipart/form-data">
@@ -35,7 +35,12 @@
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Partner Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="nama">
+                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}">
+                @error('nama')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+                @enderror
               </div>
             </div>
 
@@ -43,7 +48,10 @@
               <label for="inputDescription" class="col-sm-2 col-form-label">Partner Profile</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="deskripsi"></textarea>
+                  <textarea class="form-control" id="editor" name="deskripsi">{{ old('deskripsi') }}</textarea>
+                  @error('deskripsi')
+                    <p class="text-danger">{{ $message }}</p>
+                  @enderror
                 </div>  
               </div>
             </div>
@@ -57,6 +65,9 @@
                     <option value="{{ $car->id }}">{{ $car->title }}</option>
                   @endforeach
                 </select>
+                @error('periode')
+                  <p class="text-danger">{{ $message }}</p>
+                @enderror
               </div>
             </div>
             
@@ -64,6 +75,11 @@
               <label for="inputImage" class="col-sm-2 col-form-label">Upload Partner Logo</label>
               <div class="col-sm-10">
                 <input class="form-control" type="file" id="formFile" name="logo">
+                @error('logo')
+                  <p class="text-danger">
+                    {{ $message }}
+                  </p>
+                @enderror
               </div>
             </div>
             
@@ -76,6 +92,9 @@
                   <option value="1">Sponsor</option>
                   <option value="2">Participant</option>
                 </select>
+                @error('jenis')
+                  <p class="text-danger">{{ $message }}</p>
+                @enderror
               </div>
             </div>
 
