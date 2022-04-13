@@ -270,77 +270,67 @@
 
   </section><!-- End Gallery Section -->
 
-  <!-- ======= F.A.Q Section ======= -->
-  <section id="faq" class="faq">
-    
-    <div class="container" data-aos="fade-up">
+ <!-- ======= F.A.Q Section ======= -->
+ <section id="faq" class="faq">
 
-      <header class="section-header">
-        <h2>F.A.Q</h2>
-        <p>Frequently Asked Questions</p>
-      </header>
+  <div class="container" data-aos="fade-up">
 
-      <div class="row">
-        <div class="col-lg-6">
-         {{-- @php
-             dd(($faqs->split($faqs->count()/2)));
-         @endphp --}}
-          <!-- F.A.Q List 1-->
-          @foreach ($faqs as $faq)
-              
-         
-          
-          <div class="accordion accordion-flush" id="faqlist1">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-{{ $faq->id }}">
-                  {{ $faq->question }}
-                </button>
-              </h2>
-              
-              <div id="faq-content-{{ $faq->id }}" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                <div class="accordion-body">
-                 {!! $faq->answer !!}
-                </div>
+    <header class="section-header">
+      <h2>F.A.Q</h2>
+      <p>Frequently Asked Questions</p>
+    </header>
+
+    <div class="row">
+      <div class="col-lg-6">
+        @foreach($faqs as $f)
+        <!-- F.A.Q List 1-->
+        <div class="accordion accordion-flush" id="faqlist1">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-{{ $f->id }}">
+                {{ $f->question }}
+              </button>
+            </h2>
+            <div id="faq-content-{{ $f->id }}" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+              <div class="accordion-body">
+                {!! $f->answer !!}
               </div>
             </div>
           </div>
-          @endforeach
-         
-        </div>
 
-        <div class="col-lg-6">
           
-          <!-- F.A.Q List 2-->
-          <div class="accordion accordion-flush" id="faqlist2">
-            
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                  {{ $faq->question }}
-                </button>
-              </h2>
-              <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                <div class="accordion-body">
-                 {!! $faq->answer !!}
-                </div>
-              </div>
-            </div>
 
-            
-           
-          </div>
         </div>
-       
-        
-     
-
       </div>
-      
+
+      <div class="col-lg-6">
+
+        <!-- F.A.Q List 2-->
+        <div class="accordion accordion-flush" id="faqlist2">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+                Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+              </button>
+            </h2>
+            <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+              <div class="accordion-body">
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+
+        </div>
+      </div>
+
     </div>
-    
-  </section>
-  <!-- End F.A.Q Section -->
+
+  </div>
+
+</section><!-- End F.A.Q Section -->
   
   
 </main>
