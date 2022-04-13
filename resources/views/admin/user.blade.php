@@ -1,21 +1,21 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>Logo | DPKKA - Universitas Airlangga</title>
+    <title>User | DPKKA - Universitas Airlangga</title>
 @endsection
 
-@section('logo', '')
+@section('user', '')
 
 @section('main')
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Logo</h1>
+      <h1>User</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
           <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item active">Logo</li>
+          <li class="breadcrumb-item active">User</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -28,8 +28,8 @@
             <div class="card-body">
               <h5 class="card-title">Datatables</h5>
               
-              <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
-              <a href="{{ route('logo-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New Logo</a>
+              {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
+              <a href="{{ route('user-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New User</a>
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
@@ -51,8 +51,8 @@
                     <td class="align-middle">17/02/2023</td>
                     <td class="align-middle"><span class="badge rounded-pill bg-primary">Active</span></td>
                     <td class="align-middle">                       
-                      <a href="{{ route('logo-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('logo-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('user-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
+                      <a href="{{ route('user-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
@@ -69,7 +69,7 @@
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('logo') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                              <a href="{{ route('user') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
                               </div>
                           </div>
                           </div>
@@ -83,8 +83,8 @@
                     <td class="align-middle">17/02/2023</td>
                     <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
-                      <a href="{{ route('logo-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('logo-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('user-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
+                      <a href="{{ route('user-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
@@ -101,7 +101,7 @@
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('logo') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                              <a href="{{ route('user') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
                               </div>
                           </div>
                           </div>
@@ -115,8 +115,8 @@
                     <td class="align-middle">17/02/2023</td>
                     <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
-                      <a href="{{ route('logo-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('logo-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('user-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
+                      <a href="{{ route('user-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
@@ -133,7 +133,7 @@
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('logo') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                              <a href="{{ route('user') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
                               </div>
                           </div>
                           </div>
@@ -147,8 +147,8 @@
                     <td class="align-middle">17/02/2023</td>
                     <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
-                      <a href="{{ route('logo-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('logo-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('user-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
+                      <a href="{{ route('user-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
@@ -165,7 +165,7 @@
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('logo') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                              <a href="{{ route('user') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
                               </div>
                           </div>
                           </div>
@@ -179,8 +179,8 @@
                     <td class="align-middle">17/02/2023</td>
                     <td><span class="badge rounded-pill bg-secondary">Inactive</span></td>
                     <td class="align-middle">                       
-                      <a href="{{ route('logo-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
-                      <a href="{{ route('logo-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                      <a href="{{ route('user-view') }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
+                      <a href="{{ route('user-update') }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
                       <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteFormModal">
                         <i class="bi bi-trash"></i>
@@ -197,7 +197,7 @@
                               </div>
                               <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('logo') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
+                              <a href="{{ route('user') }}" class="btn btn-danger" role="button" aria-pressed="true">Delete</a>
                               </div>
                           </div>
                           </div>
