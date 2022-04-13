@@ -68,15 +68,6 @@ Route::get('/career-fair-update/{id}/edit', [CareerfairController::class, 'edit'
 Route::post('/career-fair-update/{id}', [CareerfairController::class, 'update'])->name('career-fair-update');
 Route::delete('/career-fair/delete', [CareerfairController::class, 'destroy'])->name('career-fair-delete');
 
-// route: admin/logo
-// Route::get('/logo', [LogoController::class, 'index'])->name('logo');
-// Route::post('/logo', [LogoController::class, 'store'])->name('logo-store');
-// Route::get('/logo-new', [LogoController::class, 'create'])->name('logo-new');
-// Route::get('/logo-view/{logo}', [LogoController::class, 'show'])->name('logo-view');
-// Route::get('/logo-update/{logo}/edit', [LogoController::class, 'edit'])->name('logo-edit');
-// Route::post('/logo-update/{logo}', [LogoController::class, 'update'])->name('logo-update');
-// Route::delete('/logo/delete', [LogoController::class, 'destroy'])->name('logo-delete');
-
 // route: admin/article
 // Route::get('/article', [ArticleController::class, 'index'])->name('article');
 // Route::post('/article', [ArticleController::class, 'store'])->name('article-store');
@@ -113,6 +104,15 @@ Route::get('/gallery-view/{gallery}', [GalleryController::class, 'show'])->name(
 Route::get('/gallery-update/{gallery}/edit', [GalleryController::class, 'edit'])->name('gallery-edit');
 Route::post('/gallery-update/{gallery}', [GalleryController::class, 'update'])->name('gallery-update');
 Route::delete('/gallery/delete', [GalleryController::class, 'destroy'])->name('gallery-delete');
+
+// route: admin/user
+// Route::get('/user', [LogoController::class, 'index'])->name('logo');
+// Route::post('/user', [LogoController::class, 'store'])->name('logo-store');
+// Route::get('/user-new', [LogoController::class, 'create'])->name('logo-new');
+// Route::get('/user-view/{user}', [LogoController::class, 'show'])->name('logo-view');
+// Route::get('/user-update/{user}/edit', [LogoController::class, 'edit'])->name('logo-edit');
+// Route::post('/user-update/{user}', [LogoController::class, 'update'])->name('logo-update');
+// Route::delete('/user/delete', [LogoController::class, 'destroy'])->name('logo-delete');
 
 Route::get('/login', function () {
     return view('admin.login');
