@@ -43,6 +43,7 @@ class CareerfairController extends Controller
             'tglmulai' => 'required',
             'deskripsi' => 'required',
             'tglselesai' => 'required',
+            'poster' => 'required',
             'status' => 'required',
         ]);
         $image  = $request->file('poster');
