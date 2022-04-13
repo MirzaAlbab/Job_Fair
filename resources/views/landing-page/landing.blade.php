@@ -22,7 +22,7 @@
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
         @foreach ($partners as $sponsor)
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="{{ route('user-singlepartner', $sponsor->id) }}" target="_blank"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
         {{-- <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
          --}}
         @endforeach
@@ -133,7 +133,7 @@
             <div class="col-md-4" data-aos="zoom-out" data-aos-delay="200">
               <div class="feature-box d-flex align-items-center">
                 <i class="ri-number-1"></i>
-                <h3>Mendaftar pada menu "Daftar Sekarang" di website DPKKA atau klik <a href="#">Daftar</a> </h3>
+                <h3>Mendaftar pada menu "Daftar Sekarang" di website DPKKA atau klik <a href="https://dpkka.unair.ac.id/v2/jobseeker/registration" target="blank">Daftar</a> </h3>
                 
               </div>
             </div>
@@ -228,7 +228,7 @@
       <div class="clients-slider swiper">
         <div class="swiper-wrapper align-items-center mb-5">
           @foreach ($participant as $partici)
-          <div class="swiper-slide"><img src="{{ $partici->img }}" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><a href="{{ route('user-singlepartner', $partici->id) }}" target="_blank"><img src="{{ $partici->img }}" class="img-fluid" alt=""></a></div>
         
          @endforeach
           
@@ -297,6 +297,7 @@
                   {{ $faq->question }}
                 </button>
               </h2>
+              
               <div id="faq-content-{{ $faq->id }}" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
                 <div class="accordion-body">
                  {!! $faq->answer !!}

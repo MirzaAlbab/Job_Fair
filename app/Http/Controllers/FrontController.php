@@ -88,5 +88,22 @@ class FrontController extends Controller
         $gallery = Gallery::where('status', 'active')->latest()->get();
         return view('landing-page.gallery', compact('gallery'));
     }
+    public function register()
+    {
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
+        
+        $partners = Partner::where([
+            ['status', 'active'],
+            ['position', '1'],
+            ['careerfair_id', $aocf->id],
+        ])->get();
+        $participant = Partner::where([
+            ['status', 'active'],
+            ['position', '2'],
+            ['careerfair_id', $aocf->id],
+        ])->get();
+        
+        return view('landing-page.register', compact('aocf', 'partners', 'participant'));
+    }
 
 }

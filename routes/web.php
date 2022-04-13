@@ -34,6 +34,7 @@ Route::get('/singlepartner/{id}', [FrontController::class, 'singlepartner'])->na
 Route::get('/events', [FrontController::class, 'events'])->name('user-events');
 Route::get('/events-detail/{id}', [FrontController::class, 'eventdetail'])->name('user-event-detail');
 Route::get('/galleryy', [FrontController::class, 'gallery'])->name('user-gallery');
+Route::get('/register', [FrontController::class, 'register'])->name('register');
 
 
 // route: admin
@@ -117,9 +118,7 @@ Route::delete('/gallery/delete', [GalleryController::class, 'destroy'])->name('g
 Route::get('/login', function () {
     return view('admin.login');
 })->name('login');
-Route::get('/register', function () {
-    return view('landing-page.register');
-})->name('register');
+
 
 Route::get('/test', function () {
     return view('admin.test');
