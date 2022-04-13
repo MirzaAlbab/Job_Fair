@@ -29,7 +29,7 @@
 
           <article class="entry entry-single">
 
-            <div class="entry-img">
+            <div class="entry-img text-center">
               <img src="{{ $partner->img }}" alt="" class="img-fluid">
             </div>
 
@@ -39,8 +39,7 @@
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i>John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">Jan 1, 2020</time></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ $partner->updated_at }}</time></li>
                 
               </ul>
             </div>
@@ -58,19 +57,6 @@
 
           <div class="sidebar">
 
-            
-
-            <h3 class="sidebar-title">Categories</h3>
-            <div class="sidebar-item categories">
-              <ul>
-                <li><a href="#">General <span>(25)</span></a></li>
-                <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                <li><a href="#">Travel <span>(5)</span></a></li>
-                <li><a href="#">Design <span>(22)</span></a></li>
-                <li><a href="#">Creative <span>(8)</span></a></li>
-                <li><a href="#">Educaion <span>(14)</span></a></li>
-              </ul>
-            </div><!-- End sidebar categories-->
 
             <h3 class="sidebar-title">Recent Partners</h3>
             <div class="sidebar-item recent-posts">

@@ -1,24 +1,24 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>New Logo | DPKKA - Universitas Airlangga</title>
+    <title>New User | DPKKA - Universitas Airlangga</title>
 @endsection
 
-@section('logo', '')
+@section('user', '')
 
 @section('main')
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Logo</h1>
+      <h1>User</h1>
       <nav>
         <ol class="breadcrumb">
           {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item"><a href="{{ route('logo') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Logo</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('user') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">User</a></li>
 
-          <li class="breadcrumb-item active">New Logo</li>
+          <li class="breadcrumb-item active">New User</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -26,8 +26,8 @@
     <section class="section">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">New Logo</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          <h5 class="card-title">New User</h5>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
           <form action="dashboard" method="POST">
@@ -60,14 +60,14 @@
             </div>
 
             <div class="row mb-3">
-              <label for="inputImage" class="col-sm-2 col-form-label">Upload Logo</label>
+              <label for="inputImage" class="col-sm-2 col-form-label">Upload User</label>
               <div class="col-sm-10">
                 <input class="form-control" type="file" id="formFile">
               </div>
             </div>
             
             <div class="row mb-3">
-              <label class="col-sm-2 col-form-label">Logo Position</label>
+              <label class="col-sm-2 col-form-label">User Position</label>
               <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
@@ -114,7 +114,7 @@
                             </div>
                             <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <a href="{{ route('logo') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
+                            <a href="{{ route('user') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
                             </div>
                         </div>
                         </div>

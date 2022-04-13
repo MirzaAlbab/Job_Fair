@@ -83,7 +83,12 @@
             <div class="row mb-3">
               <label for="inputImage" class="col-sm-2 col-form-label">Upload Poster</label>
               <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile" name="poster">
+                <input class="form-control @error('poster') is-invalid @enderror" type="file" id="formFile" name="poster">
+                @error('poster')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                @enderror
               </div>
             </div>
 

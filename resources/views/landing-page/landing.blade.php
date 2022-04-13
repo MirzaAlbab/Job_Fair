@@ -22,7 +22,7 @@
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
         @foreach ($partners as $sponsor)
-        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="{{ route('user-singlepartner', $sponsor->id) }}" target="_blank"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
         {{-- <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
          --}}
         @endforeach
@@ -64,7 +64,7 @@
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
-            <a href="">
+            <a href="https://dpkka.unair.ac.id/vacancy/lowongan-" target="_blank">
               <div class="box">
                 <img src="assets/img/values-3.png" class="img-fluid" alt="">
                 <h3>Job Vacancies</h3>
@@ -103,11 +103,11 @@
               <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $rd->id }}" aria-expanded="false" aria-controls="flush-collapseOne">
                       {{ $rd->time }}
                     </button>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapse{{ $rd->id }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">{!! $rd->event !!}</div>
                     
                   </div>
@@ -133,7 +133,7 @@
             <div class="col-md-4" data-aos="zoom-out" data-aos-delay="200">
               <div class="feature-box d-flex align-items-center">
                 <i class="ri-number-1"></i>
-                <h3>Mendaftar pada menu "Daftar Sekarang" di website DPKKA atau klik <a href="#">Daftar</a> </h3>
+                <h3>Mendaftar pada menu "Daftar Sekarang" di website DPKKA atau klik <a href="https://dpkka.unair.ac.id/v2/jobseeker/registration" target="blank">Daftar</a> </h3>
                 
               </div>
             </div>
@@ -204,7 +204,7 @@
           <div class="count-box">
             <i class="bi bi-headset" style="color: #15be56;"></i>
             <div>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countevent }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Webinar</p>
             </div>
           </div>
@@ -228,7 +228,7 @@
       <div class="clients-slider swiper">
         <div class="swiper-wrapper align-items-center mb-5">
           @foreach ($participant as $partici)
-          <div class="swiper-slide"><img src="{{ $partici->img }}" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><a href="{{ route('user-singlepartner', $partici->id) }}" target="_blank"><img src="{{ $partici->img }}" class="img-fluid" alt=""></a></div>
         
          @endforeach
           
@@ -270,76 +270,67 @@
 
   </section><!-- End Gallery Section -->
 
-  <!-- ======= F.A.Q Section ======= -->
-  <section id="faq" class="faq">
-    
-    <div class="container" data-aos="fade-up">
+ <!-- ======= F.A.Q Section ======= -->
+ <section id="faq" class="faq">
 
-      <header class="section-header">
-        <h2>F.A.Q</h2>
-        <p>Frequently Asked Questions</p>
-      </header>
+  <div class="container" data-aos="fade-up">
 
-      <div class="row">
-        <div class="col-lg-6">
-         {{-- @php
-             dd(($faqs->split($faqs->count()/2)));
-         @endphp --}}
-          <!-- F.A.Q List 1-->
-          @foreach ($faqs as $faq)
-              
-         
-          
-          <div class="accordion accordion-flush" id="faqlist1">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                  {{ $faq->question }}
-                </button>
-              </h2>
-              <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
-                <div class="accordion-body">
-                 {!! $faq->answer !!}
-                </div>
+    <header class="section-header">
+      <h2>F.A.Q</h2>
+      <p>Frequently Asked Questions</p>
+    </header>
+
+    <div class="row">
+      <div class="col-lg-6">
+        @foreach($faqs as $f)
+        <!-- F.A.Q List 1-->
+        <div class="accordion accordion-flush" id="faqlist1">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-{{ $f->id }}">
+                {{ $f->question }}
+              </button>
+            </h2>
+            <div id="faq-content-{{ $f->id }}" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+              <div class="accordion-body">
+                {!! $f->answer !!}
               </div>
             </div>
           </div>
-          @endforeach
-         
-        </div>
 
-        <div class="col-lg-6">
           
-          <!-- F.A.Q List 2-->
-          <div class="accordion accordion-flush" id="faqlist2">
-            
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
-                  {{ $faq->question }}
-                </button>
-              </h2>
-              <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
-                <div class="accordion-body">
-                 {!! $faq->answer !!}
-                </div>
-              </div>
-            </div>
 
-            
-           
-          </div>
         </div>
-       
-        
-     
-
       </div>
-      
+
+      <div class="col-lg-6">
+
+        <!-- F.A.Q List 2-->
+        <div class="accordion accordion-flush" id="faqlist2">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+                Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+              </button>
+            </h2>
+            <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+              <div class="accordion-body">
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </div>
+            </div>
+          </div>
+
+          @endforeach
+
+        </div>
+      </div>
+
     </div>
-    
-  </section>
-  <!-- End F.A.Q Section -->
+
+  </div>
+
+</section><!-- End F.A.Q Section -->
   
   
 </main>

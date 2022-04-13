@@ -26,7 +26,7 @@
           
           
           <article class="entry">
-            <div class="entry-img">
+            <div class="entry-img text-center">
               <img src="{{ $partner->img }}" alt="" class="img-fluid">
             </div>
 
@@ -36,8 +36,8 @@
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="bi bi-person"></i>John Doe</li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">Jan 1, 2020</time></li>
+               
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ $partner->updated_at }}</time></li>
               </ul>
             </div>
 
@@ -60,6 +60,7 @@
               <li><a href="#">1</a></li>
               <li class="active"><a href="#">2</a></li>
               <li><a href="#">3</a></li>
+              
             </ul>
           </div>
 
