@@ -65,6 +65,12 @@ class FrontController extends Controller
     public function partner()
     {
         $partners = Partner::where('status','active')->latest()->paginate(10);
+        
+        
+
+        
+      
+       
         return view('landing-page.partners', compact('partners'));
     }
     public function singlepartner($id)

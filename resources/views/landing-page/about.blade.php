@@ -46,13 +46,17 @@
       </header>
 
       <div class="row justify-content-center">
+<<<<<<< HEAD
         <div class="col-lg-12" data-aos="zoom-out" data-aos-delay="200">
+=======
+        <div class="col-lg-10 text-center" data-aos="zoom-out" data-aos-delay="200">
+>>>>>>> 30362d04da74bc8cec15b2e3197bc3193a4cc50d
           <img src="{{ $aocf->img }}" class="img-fluid" alt="">
         </div>
       </div>
 
       <div class="row gx-0">
-        <div class="col-lg-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-12 align-items-center" data-aos="fade-up" data-aos-delay="200">
           <div class="content ">
             {!! $aocf->description !!}
           </div>

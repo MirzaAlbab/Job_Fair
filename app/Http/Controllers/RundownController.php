@@ -17,7 +17,7 @@ class RundownController extends Controller
     {
         $rundowns = Rundown::latest()->get();
         $rundowns->map(function ($rundown) {
-            $rundown->time = Carbon::parse($rundown->time)->format('l, d M Y');
+            $rundown->time = Carbon::parse($rundown->time)->format('l, d M Y H:i:s');
             return $rundown;
         });
         

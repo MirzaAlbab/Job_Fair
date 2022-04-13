@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         Partner::factory(30)->create();
         Careerfair::create([
+<<<<<<< HEAD
             'title' => 'AOCF 35th Unair',
             'description' => '<p>Airlangga Online Career Fair (AOCF) 2022 merupakan salah satu wahana strategis bagi kepentingan perusahaan/corporation dan jobseeker. Pada tahun 2022 ini, Airlangga Online Career Fair (AOCF) diadakan secara online/virtual melalui web DPKKA mengingat kondisi saat ini yang masih dalam pandemic COVID-19. Dalam hal ini, Corporation memiliki kemudahan untuk mencari talent yang sesuai dengan kualifikasi yang dibutuhkan untuk mempercepat growth dan pengembangan bisnis utamanya.</p><p>Sedangkan bagi jobseeker, dalam event AOCF ini dapat dijadikan peluang dalam melamar pekerjaan ditengah kondisi pandemic COVID-19 terhadap jenis perusahaan dan bidang yang menjadi passion personalnya.</p><p>Selain itu, AOCF 2022 terbuka untuk umum. Tidak hanya lulusan dari Universitas Airlangga, tetapi juga berbagai lulusan dari perguruan tinggi lain baik negeri maupun swasta. Dengan demikian, kegiatan ini sangat strategis untuk dijadikan agenda utama dalam berpartisipasi secara aktif.<br><br>&nbsp;</p><h4><strong>Rangkaian kegiatan Airlangga Online Career Fair (AOCF) 2022 :</strong></h4><ul><li>Publikasi Informasi Lowongan Pekerjaan perusahaan mitra DPKKA</li><li>Seminar online oleh mitra DPKKA</li></ul>',
             'start_date' => '2022-03-15',
@@ -30,6 +31,20 @@ class DatabaseSeeder extends Seeder
             'start_date' => '2022-01-01',
             'end_date' => '2022-01-01',
             'status' => 'inactive',
+=======
+            'title' => 'AOCF 35',
+            'start_date' => '2022-01-01',
+            'end_date' => '2022-01-01',
+            'img' => 'https://res.cloudinary.com/dxd813fbq/image/upload/v1649813268/CareerFair/2022-04-13_012742_banner.png',
+            'status' => 'active',
+        ]);
+        Careerfair::create([
+            'title' => 'AOCF 36',
+            'start_date' => '2022-01-01',
+            'end_date' => '2022-01-01',
+            'img' => 'https://res.cloudinary.com/dxd813fbq/image/upload/v1649830932/CareerFair/banner_yghi5p.jpg',
+            'status' => 'active',
+>>>>>>> 30362d04da74bc8cec15b2e3197bc3193a4cc50d
         ]);
         $this->call([
             EventSeeder::class,

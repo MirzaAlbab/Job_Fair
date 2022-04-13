@@ -96,8 +96,13 @@ class CareerfairController extends Controller
      */
     public function update(Request $request, Careerfair $careerfair)
     {
+<<<<<<< HEAD
 
         // dd($careerfair->img);
+=======
+        $careerfair = Careerfair::find($request->id);
+        
+>>>>>>> 30362d04da74bc8cec15b2e3197bc3193a4cc50d
         $request->validate([
             'judul' => 'required',
             'tglmulai' => 'required',
@@ -111,7 +116,12 @@ class CareerfairController extends Controller
         } else {
             $result = $careerfair->img;
         }
+<<<<<<< HEAD
         // dd($careerfair->img);
+=======
+        
+        
+>>>>>>> 30362d04da74bc8cec15b2e3197bc3193a4cc50d
         Careerfair::where('id', $request->id)
                 ->update([
                     'title' => $request->judul,
