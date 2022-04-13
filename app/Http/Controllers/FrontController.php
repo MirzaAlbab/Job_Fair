@@ -41,6 +41,7 @@ class FrontController extends Controller
         $countpartner = Partner::where('status', 'active')->count();
         $countevent = Event::where('status', 'active')->count();
         $gallery = Gallery::where('status', 'active')->take(3)->get();
+        
         $faqs = Faq::where('status', 'active')->get();
         return view('landing-page.landing', compact('aocf', 'partners', 'rundown', 'countpartner', 'countevent', 'gallery', 'faqs', 'participant'));
         
