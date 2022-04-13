@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Careerfair;
 use App\Models\Faq;
 use App\Models\Event;
 use App\Models\Gallery;
 use App\Models\Partner;
 use App\Models\Rundown;
+use App\Models\Careerfair;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class FrontController extends Controller
 {
@@ -33,10 +34,10 @@ class FrontController extends Controller
             ['status', 'active'],
             ['careerfair_id', $aocf->id],
         ])->get();
-      
-        
-         
-       
+        $rundown->map(function ($rd) {
+            $rd->time = Carbon::parse($rd->time)->format('l, d M Y');
+            return $rd;
+        });
         $countpartner = Partner::where('status', 'active')->count();
         $countevent = Event::where('status', 'active')->count();
         $gallery = Gallery::where('status', 'active')->take(3)->get();

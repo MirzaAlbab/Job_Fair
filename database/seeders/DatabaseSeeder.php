@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'AOCF dua',
             'start_date' => '2022-01-01',
             'end_date' => '2022-01-01',
+            'status' => 'active',
         ]);
         $this->call([
             EventSeeder::class,
