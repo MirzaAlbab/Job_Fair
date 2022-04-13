@@ -96,6 +96,8 @@ class CareerfairController extends Controller
      */
     public function update(Request $request, Careerfair $careerfair)
     {
+        $careerfair = Careerfair::find($request->id);
+        
         $request->validate([
             'judul' => 'required',
             'tglmulai' => 'required',
@@ -109,6 +111,7 @@ class CareerfairController extends Controller
         } else {
             $result = $careerfair->img;
         }
+        
         
         Careerfair::where('id', $request->id)
                 ->update([
