@@ -57,6 +57,7 @@ class EventSeeder extends Seeder
         Event::create([
             'title' => 'Pentingnya Work-Life Balance dan Tips Mencapainya',
             'description' => '<p>[WEBINAR BERSERTIFIKAT 10SKP]<br><br>Seberapa penting sih work-life balance itu? Terus, bagaimana cara mewujudkannya agar kita nggak burnout?<br><br>Yuk cari tau jawabannya di 35th AOCF Webinar Day 2 yang satu ini!<br><br>Eits nggak cuma itu! Di sini kamu juga bakal bertemu dengan perusahaan-perusahaan keren yang sedang membuka kesempatan berkarir di 35th AOCF ini lho~<br><br>Geser ke kiri untuk info lebih lengkapnya!<br><br>GRATIS DAN TERBUKA UNTUK UMUM! Daftarkan dirimu di: bit.ly/aocfday2</p>',
+            'img' => 'https://res.cloudinary.com/dxd813fbq/image/upload/v1649833824/CareerFair/2022-04-13_071023_Company-Session-Day-2-KOL-2-20220310-FILEminimizer-980x980.jpg',
             'time' => '2022-03-16 09:30:00',
             'link' => 'https://us06web.zoom.us/meeting/register/tZAtce2urzMpGNL7vGHrjTdPJFRY4zBeVOtj',
             'status' => 'active'
