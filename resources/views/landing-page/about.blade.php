@@ -23,15 +23,15 @@
         <p>Sponsors</p>
       </header>
       <div class="clients-slider2 swiper">
-        <div class="swiper-wrapper align-items-center" >
+        <div class="swiper-wrapper align-items-center"  >
           @foreach($partners as $sponsor)
-          <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
-          {{-- <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div> --}}
+          <div class="swiper-slide d-flex align-items-center justify-content-center "><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
+          <div class="swiper-slide swiper-slide-visible swiper-slide-next"><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
           @endforeach
         </div>
       </div>
-      <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </section>
   <!-- End Big Clients Section -->

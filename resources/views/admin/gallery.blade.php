@@ -36,7 +36,7 @@
                 </div>
                 
               @endif
-              <a href="{{ route('gallery-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New Gallery</a>
+              <a href="{{ route('gallery-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-zoom-in"></i> New Gallery</a>
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
