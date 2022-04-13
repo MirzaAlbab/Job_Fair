@@ -44,7 +44,7 @@
               <li><strong>Kategori</strong>: Webinar</li>
               <li><strong>Judul</strong>: {{ $event->title }}</li>
               <li><strong>Waktu</strong>: {{ $event->time }}</li>
-              <li><strong>Link</strong>: <a href="#">{{ $event->link }}</a></li>
+              <li><a class="getstarted" href="{{ $event->link }}">Daftar</a></li>
             </ul>
           </div>
           <div class="event-description">

@@ -1676,3 +1676,11 @@ a:hover {
 .event-details .event-description p {
     padding: 0;
 }
+a.getstarted {
+    background: #152d8f;
+    padding: 8px 20px;
+
+    border-radius: 4px;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+}
