@@ -90,6 +90,13 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
+        $request->validate([
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'waktu' => 'required',
+            'link' => 'required',
+            'status' => 'required',
+        ]);
         if($request->file('poster')){
             $file   = $request->file('poster');
             $result = CloudinaryStorage::replace($event->img, $file->getPathname(), $file->getClientOriginalName());
