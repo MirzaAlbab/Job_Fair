@@ -14,9 +14,9 @@ class CareerfairController extends Controller
      */
     public function index()
     {
-        // $careers = Careerfair::latest()->paginate(10);
+        
         $careers = Careerfair::latest()->get();
-        // dd($careers);
+       
         return view('admin.career-fair', compact('careers'));
     }
 
@@ -111,7 +111,7 @@ class CareerfairController extends Controller
         } else {
             $result = $careerfair->img;
         }
-        
+
         
         Careerfair::where('id', $request->id)
                 ->update([

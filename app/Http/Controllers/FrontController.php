@@ -42,7 +42,11 @@ class FrontController extends Controller
         $countevent = Event::where('status', 'active')->count();
         $gallery = Gallery::where('status', 'active')->take(3)->get();
         
-        $faqs = Faq::where('status', 'active')->get();
+        $faq = Faq::where('status', 'active')->get();
+        
+        $faqs = $faq->split(2);
+        
+        
         return view('landing-page.landing', compact('aocf', 'partners', 'rundown', 'countpartner', 'countevent', 'gallery', 'faqs', 'participant'));
         
     }
@@ -65,12 +69,6 @@ class FrontController extends Controller
     public function partner()
     {
         $partners = Partner::where('status','active')->latest()->paginate(10);
-        
-        
-
-        
-      
-       
         return view('landing-page.partners', compact('partners'));
     }
     public function singlepartner($id)
