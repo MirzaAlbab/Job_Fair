@@ -33,13 +33,13 @@
           <form action="{{ route('partner-store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Partner Name</label>
+              <label for="nama" class="col-sm-2 col-form-label">Partner Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}">
+                <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" value="{{ old('nama') }}">
                 @error('nama')
-                  <span class="invalid-feedback" role="alert">
-                      <strong>{{ $message }}</strong>
-                  </span>
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
                 @enderror
               </div>
             </div>

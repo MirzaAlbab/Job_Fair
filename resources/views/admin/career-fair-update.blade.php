@@ -26,7 +26,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Update Career Fair</h5>
-          <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
+          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
           {{-- @php
               dd($careerfair->id)
           @endphp --}}
@@ -34,17 +34,25 @@
           <form action="{{ route('career-fair-update', $careerfair->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Title</label>
+              <label for="judul" class="col-sm-2 col-form-label">Title</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" name="judul" value="{{ $careerfair->title }}">
+                <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul" name="judul" value="{{ old('judul', $careerfair->title) }}">
+                @error('judul')
+                <div class="invalid-feedback">
+                  {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
-              <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+              <label for="deskripsi" class="col-sm-2 col-form-label">Description</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="deskripsi">{!! $careerfair->description !!}</textarea>
+                    <textarea class="form-control" id="editor" name="deskripsi">{!! old('deskripsi', $careerfair->description) !!}</textarea>
+                    @error('deskripsi')
+                      <p class="text-danger">{{ $message }}</p>
+                    @enderror
                 </div>  
               </div>
             </div>
@@ -52,14 +60,22 @@
             <div class="row mb-3">
               <label for="inputStartDate" class="col-sm-2 col-form-label">Start Date</label>
               <div class="col-sm-10">
-                <input type="date" class="form-control" name="tglmulai" value="{{ $careerfair->start_date }}">
+                <input type="date" class="form-control @error('tglmulai') is-invalid @enderror" name="tglmulai" value="{{ old('tglmulai', $careerfair->start_date) }}">
+                @error('tglmulai')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
               <label for="inputEndDate" class="col-sm-2 col-form-label">End Date</label>
               <div class="col-sm-10">
-                <input type="date" class="form-control" name="tglselesai" value="{{ $careerfair->end_date }}">
+                <input type="date" class="form-control @error('tglselesai') is-invalid @enderror" name="tglselesai" value="{{ old('tglselesai', $careerfair->end_date) }}">
+                @error('tglselesai')
+                  {{ $message }}
+                @enderror
               </div>
             </div>
 

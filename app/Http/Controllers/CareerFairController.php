@@ -95,7 +95,13 @@ class CareerfairController extends Controller
      */
     public function update(Request $request, Careerfair $careerfair)
     {
-        
+        $request->validate([
+            'judul' => 'required',
+            'tglmulai' => 'required',
+            'deskripsi' => 'required',
+            'tglselesai' => 'required',
+            'status' => 'required',
+        ]);
         if($request->file('poster')){
             $file   = $request->file('poster');
             $result = CloudinaryStorage::replace($careerfair->img, $file->getPathname(), $file->getClientOriginalName());
