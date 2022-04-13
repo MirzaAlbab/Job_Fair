@@ -42,11 +42,11 @@
 
     <div class="container" data-aos="fade-up">
       <header class="section-header">
-        <p>Airlangga Online Career Fair</p>
+        <p>{{ $aocf->title }}</p>
       </header>
 
       <div class="row justify-content-center">
-        <div class="col-lg-10" data-aos="zoom-out" data-aos-delay="200">
+        <div class="col-lg-12" data-aos="zoom-out" data-aos-delay="200">
           <img src="{{ $aocf->img }}" class="img-fluid" alt="">
         </div>
       </div>

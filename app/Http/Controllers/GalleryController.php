@@ -83,6 +83,7 @@ class GalleryController extends Controller
      */
     public function update(Request $request, Gallery $gallery)
     {
+        // dd($gallery->img);
         $request->validate([
             'judul' => 'required',
             'status' => 'required',
