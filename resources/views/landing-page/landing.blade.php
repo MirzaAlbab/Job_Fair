@@ -258,8 +258,8 @@
             <img src="{{ $g->img }}" class="img-fluid" alt="">
             <div class="gallery-info">
               <div class="gallery-links">
-                <a href="{{ $g->img }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
-                <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link"></i></a>
+                <a href="{{ $g->img }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi-zoom-in position-absolute" style="font-size: 1rem;"></i></a>
+                <a href="{{ route('user-gallery') }}" title="More Details"><i class="bi bi-link position-absolute"></i></a>
               </div>
             </div>
           </div>
