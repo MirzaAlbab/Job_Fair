@@ -25,8 +25,8 @@
       <div class="clients-slider2 swiper">
         <div class="swiper-wrapper align-items-center"  >
           @foreach($partners as $sponsor)
-          <div class="swiper-slide d-flex align-items-center justify-content-center "><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
-          <div class="swiper-slide swiper-slide-visible swiper-slide-next"><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
+          {{-- <div class="swiper-slide d-flex align-items-center justify-content-center "><a href="#"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div> --}}
+          <div class="swiper-slide swiper-slide-visible swiper-slide-next"><a href="{{ route('user-singlepartner', $sponsor->id) }}"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
           @endforeach
         </div>
       </div>
@@ -74,8 +74,7 @@
       <div class="clients-slider swiper">
         <div class="swiper-wrapper align-items-center mb-5">
           @foreach ($participant as $partici)
-          <div class="swiper-slide"><img src="{{ $partici->img }}" class="img-fluid" alt=""></div>
-        
+          <div class="swiper-slide"><a href="{{ route('user-singlepartner', $partici->id) }}" target="_blank"><img src="{{ $partici->img }}" class="img-fluid" alt=""></a></div>
          @endforeach
           
         </div>

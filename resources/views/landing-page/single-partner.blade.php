@@ -29,8 +29,8 @@
 
           <article class="entry entry-single">
 
-            <div class="entry-img text-center">
-              <img src="{{ $partner->img }}" alt="" class="img-fluid">
+            <div class="text-center">
+              <img src="{{ $partner->img }}" alt="" class="entry-img  img-fluid">
             </div>
 
             <h2 class="entry-title">
