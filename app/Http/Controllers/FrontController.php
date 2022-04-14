@@ -68,7 +68,7 @@ class FrontController extends Controller
     }
     public function partner()
     {
-        $partners = Partner::where('status','active')->latest()->paginate(10);
+        $partners = Partner::where('status','active')->latest()->paginate(5);
         return view('landing-page.partners', compact('partners'));
     }
     public function singlepartner($id)
@@ -79,7 +79,7 @@ class FrontController extends Controller
     }
     public function events()
     {
-        $events = Event::where('status','active')->latest()->paginate(10);
+        $events = Event::where('status','active')->latest()->paginate(5);
         return view('landing-page.event', compact('events'));
     }
     public function eventdetail($id)

@@ -26,8 +26,8 @@
           
           
           <article class="entry">
-            <div class="entry-img text-center">
-              <img src="{{ $partner->img }}" alt="" class="img-fluid">
+            <div class=" text-center">
+              <img src="{{ $partner->img }}" alt="" class=" entry-img img-fluid">
             </div>
 
             <h2 class="entry-title">
@@ -56,11 +56,9 @@
           <!-- End company entry -->
 
           <div class="partner-pagination">
-            <ul class="justify-content-center">
-              <li><a href="#">1</a></li>
-              <li class="active"><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              
+            <ul class="d-flex justify-content-center">
+             
+              {{ $partners->links() }}
             </ul>
           </div>
 

@@ -868,7 +868,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Blog
+# Partner
 --------------------------------------------------------------*/
 .partner {
     padding: 40px 0 20px 0;
@@ -879,8 +879,7 @@ section {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 .partner .entry .entry-img {
-    max-height: 440px;
-    margin: -30px -30px 20px -30px;
+    max-height: 200px;
     overflow: hidden;
 }
 .partner .entry .entry-title {
@@ -973,33 +972,14 @@ section {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.partner .partner-pagination {
-    color: #024ed5;
-}
-.partner .partner-pagination ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
 .partner .partner-pagination li {
     margin: 0 5px;
     transition: 0.3s;
 }
-.partner .partner-pagination li a {
-    color: #012970;
-    padding: 7px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.partner .partner-pagination li.active,
-.partner .partner-pagination li:hover {
-    background: #4154f1;
-}
 .partner .partner-pagination li.active a,
 .partner .partner-pagination li:hover a {
     color: #fff;
+    background-color: #4154f1;
 }
 .partner .sidebar {
     padding: 30px;
@@ -1675,6 +1655,15 @@ a:hover {
 }
 .event-details .event-description p {
     padding: 0;
+}
+.light .partner-pagination li {
+    margin: 0 5px;
+    transition: 0.3s;
+}
+.light .partner-pagination li.active a,
+.light .partner-pagination li:hover a {
+    color: #fff;
+    background-color: #4154f1;
 }
 a.getstarted {
     background: #152d8f;

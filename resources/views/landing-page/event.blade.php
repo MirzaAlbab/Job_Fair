@@ -41,6 +41,12 @@
 		</article>
 		@endforeach
 		
+		<div class="partner-pagination">
+			<ul class="d-flex justify-content-center">
+			 
+				{{ $events->links() }}
+			</ul>
+		</div>
 	</div>
 </section>
 <!-- ======= Event Section ======= -->
