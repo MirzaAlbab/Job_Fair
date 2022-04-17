@@ -62,10 +62,10 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">User Role</label>
               <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">Admin</option>
-                  <option value="2">User</option>
+                <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="jenis">
+                  <option value="" selected>Select an option</option>
+                  <option value="1">Super Admin</option>
+                  <option value="2">Admin</option>
                 </select>
               </div>
             </div>

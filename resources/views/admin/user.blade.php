@@ -75,7 +75,7 @@
                           </div>
                       </div><!-- End Delete Modal-->
                     </td>
-                  </tr>
+                  </tr>  
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
