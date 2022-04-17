@@ -115,7 +115,7 @@
       <li class="nav-heading">Admin</li>
       
         <li class="nav-item">
-          <a class="nav-link @yield('rundown', 'collapsed')" href="{{ route('rundown') }}">
+          <a class="nav-link @yield('user', 'collapsed')" href="{{ route('user') }}">
             <i class="bi bi-layout-text-window-reverse"></i>
             <span>User</span>
           </a>
