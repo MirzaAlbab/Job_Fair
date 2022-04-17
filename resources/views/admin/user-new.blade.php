@@ -32,47 +32,40 @@
           <!-- General Form Elements -->
           <form action="dashboard" method="POST">
             <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Company</label>
+              <label for="inputText" class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control">
               </div>
             </div>
 
             <div class="row mb-3">
-              <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <textarea class="form-control" style="min-height: 100px"></textarea>
-              </div>
-            </div>
-            
-            <div class="row mb-3">
-              <label for="inputStartDate" class="col-sm-2 col-form-label">Start Date</label>
-              <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="email" class="form-control">
               </div>
             </div>
 
             <div class="row mb-3">
-              <label for="inputEndDate" class="col-sm-2 col-form-label">End Date</label>
+              <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
               <div class="col-sm-10">
-                <input type="date" class="form-control">
+                <input type="password" class="form-control">
               </div>
             </div>
 
             <div class="row mb-3">
-              <label for="inputImage" class="col-sm-2 col-form-label">Upload User</label>
+              <label for="inputPassword" class="col-sm-2 col-form-label">Confirm Password</label>
               <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile">
+                <input type="password" class="form-control">
               </div>
             </div>
             
             <div class="row mb-3">
-              <label class="col-sm-2 col-form-label">User Position</label>
+              <label class="col-sm-2 col-form-label">User Role</label>
               <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Open this select menu</option>
-                  <option value="1">Top</option>
-                  <option value="2">Bottom</option>
+                  <option value="1">Admin</option>
+                  <option value="2">User</option>
                 </select>
               </div>
             </div>
