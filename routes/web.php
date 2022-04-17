@@ -107,13 +107,13 @@ Route::post('/gallery-update/{gallery}', [GalleryController::class, 'update'])->
 Route::delete('/gallery/delete', [GalleryController::class, 'destroy'])->name('gallery-delete');
 
 // route: admin/user
-// Route::get('/user', [LogoController::class, 'index'])->name('logo');
-// Route::post('/user', [LogoController::class, 'store'])->name('logo-store');
-// Route::get('/user-new', [LogoController::class, 'create'])->name('logo-new');
-// Route::get('/user-view/{user}', [LogoController::class, 'show'])->name('logo-view');
-// Route::get('/user-update/{user}/edit', [LogoController::class, 'edit'])->name('logo-edit');
-// Route::post('/user-update/{user}', [LogoController::class, 'update'])->name('logo-update');
-// Route::delete('/user/delete', [LogoController::class, 'destroy'])->name('logo-delete');
+// Route::get('/user', [UserController::class, 'index'])->name('user');
+// Route::post('/user', [UserController::class, 'store'])->name('user-store');
+// Route::get('/user-new', [UserController::class, 'create'])->name('user-new');
+// Route::get('/user-view/{user}', [UserController::class, 'show'])->name('user-view');
+// Route::get('/user-update/{user}/edit', [UserController::class, 'edit'])->name('user-edit');
+// Route::post('/user-update/{user}', [UserController::class, 'update'])->name('user-update');
+// Route::delete('/user/delete', [UserController::class, 'destroy'])->name('user-delete');
 
 Route::get('/login', function () {
     return view('admin.login');
