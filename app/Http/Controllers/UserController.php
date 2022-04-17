@@ -14,8 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.user');
+        $users = User::latest()->get();
+
+        return view('admin.user', compact('users'));
     }
 
     /**
@@ -25,8 +26,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.user-new');
+        $users = User::all();
+        return view('admin.user-new', compact('users'));
     }
 
     /**
@@ -37,13 +38,27 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email'=> 'required',
+            'password' => 'required',
+            'status' => 'required',
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'email'=> $request->email,
+            'password' => $request->password,
+            'status' => $request->status,
+        ]);
+        
+        return redirect('/user')->with('status', 'User berhasil ditambahkan');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
@@ -55,13 +70,14 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Request $request)
     {
-        //
-        return view('admin.user-update');
+        $id = $request->id;
+        $user = User::find($id);
+        return view('admin.user-update', compact('user'));
     }
 
     /**
@@ -71,9 +87,24 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email'=> 'required',
+            'password' => 'required',
+            'status' => 'required',
+        ]);
+
+        User::where('id', $user->id)
+                ->update([
+                    'name' => $request->name,
+                    'email'=> $request->email,
+                    'password' => $request->password,
+                    'status' => $request->status,
+                ]);
+        
+        return redirect('/user')->with('status', 'User berhasil diperbarui');
     }
 
     /**
@@ -82,8 +113,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->id;
+        User::destroy($id);
+        return redirect('/user')->with('status', 'User berhasil dihapus');
     }
 }

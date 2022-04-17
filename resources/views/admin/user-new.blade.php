@@ -62,10 +62,10 @@
             <div class="row mb-3">
               <label class="col-sm-2 col-form-label">User Role</label>
               <div class="col-sm-10">
-                <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="jenis">
+                <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="role">
                   <option value="" selected>Select an option</option>
-                  <option value="1">Super Admin</option>
-                  <option value="2">Admin</option>
+                  <option value="1">Admin</option>
+                  <option value="2">User</option>
                 </select>
               </div>
             </div>
@@ -73,14 +73,14 @@
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active" checked>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive">
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>
