@@ -63,19 +63,25 @@
                     <p class="text-center small">Enter your email & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <!-- Session Status -->
+                  <x-auth-session-status class="mb-4" :status="session('status')" />
 
+                  <!-- Validation Errors -->
+                  <x-auth-validation-errors class="text-danger" :errors="$errors" />
+
+                  <form class="row g-3 needs-validation" novalidate method="POST" action="{{ route('login') }}">
+                    @csrf
                     <div class="col-12">
-                        <label for="yourEmail" class="col-sm-2 col-form-label">Email</label>
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
                         <div class="input-group has-validation">
-                          <input type="email" name="email" class="form-control" id="yourEmail" required>
+                          <input type="email" name="email" class="form-control" id="email" value="{{ old('email') }}" required>
                           <div class="invalid-feedback">Please enter your email.</div>
                         </div>
                       </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" name="password" class="form-control" id="password" required>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
@@ -101,7 +107,7 @@
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
               </div>
 
             </div>
