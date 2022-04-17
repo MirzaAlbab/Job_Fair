@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\FrontController;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\RundownController;
@@ -127,3 +127,4 @@ Route::get('/error', function () {
     throw new Exception('User not found by ID ');
 });
 // end route: admin
+
