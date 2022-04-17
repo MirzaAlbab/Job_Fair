@@ -48,10 +48,10 @@ Route::get('/galleryy', [FrontController::class, 'gallery'])->name('user-gallery
 // Route::get('/register', [FrontController::class, 'register'])->name('register');
 
 
-// // route: admin
-// Route::get('/dashboard', function () {
-//     return view('admin.dashboard');
-// })->name('dashboard');
+// route: admin
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+})->name('dashboard');
 
 // route: admin/rundown
 Route::get('/rundown', [RundownController::class, 'index'])->name('rundown');

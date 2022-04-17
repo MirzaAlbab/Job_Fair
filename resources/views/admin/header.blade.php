@@ -3,7 +3,7 @@
   <div class="d-flex align-items-center justify-content-between">
     <a href="{{ route('dashboard') }}" class="logo d-flex align-items-center">
       <img src="{{ asset('assets/img/DPKKA-logo.png') }}" alt="">
-      <span class="d-none d-lg-block">AOCF</span>
+      <span class="d-none d-lg-block">ACF</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
@@ -168,19 +168,19 @@
       <li class="nav-item dropdown pe-3">
 
         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
         </a><!-- End Profile Iamge Icon -->
 
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-          <li class="dropdown-header">
+          {{-- <li class="dropdown-header">
             <h6>Kevin Anderson</h6>
             <span>Web Designer</span>
           </li>
           <li>
             <hr class="dropdown-divider">
-          </li>
+          </li> --}}
 
-          <li>
+          {{-- <li>
             <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
               <i class="bi bi-person"></i>
               <span>My Profile</span>
@@ -198,7 +198,7 @@
           </li>
           <li>
             <hr class="dropdown-divider">
-          </li>
+          </li> --}}
 
           {{-- <li>
             <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
@@ -206,15 +206,18 @@
               <span>Need Help?</span>
             </a>
           </li> --}}
-          <li>
+          {{-- <li>
             <hr class="dropdown-divider">
-          </li>
+          </li> --}}
 
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-              <i class="bi bi-box-arrow-right"></i>
-              <span>Sign Out</span>
-            </a>
+            <form action="{{ route('logout') }}" method="post">
+              @csrf
+              <button class="dropdown-item d-flex align-items-center" type="submit">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+              </button>
+            </form>
           </li>
 
         </ul><!-- End Profile Dropdown Items -->
