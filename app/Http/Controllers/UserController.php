@@ -42,6 +42,7 @@ class UserController extends Controller
             'name' => 'required',
             'email'=> 'required',
             'password' => 'required',
+            'role' => 'required',
             'status' => 'required',
         ]);
 
@@ -49,6 +50,7 @@ class UserController extends Controller
             'name' => $request->name,
             'email'=> $request->email,
             'password' => $request->password,
+            'role' => $request->role,
             'status' => $request->status,
         ]);
         
@@ -93,6 +95,7 @@ class UserController extends Controller
             'name' => 'required',
             'email'=> 'required',
             'password' => 'required',
+            'role' => 'required',
             'status' => 'required',
         ]);
 
@@ -101,6 +104,7 @@ class UserController extends Controller
                     'name' => $request->name,
                     'email'=> $request->email,
                     'password' => $request->password,
+                    'role' => $request->role,
                     'status' => $request->status,
                 ]);
         
