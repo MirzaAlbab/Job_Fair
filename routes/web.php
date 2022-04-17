@@ -1,6 +1,17 @@
 <?php
 
+use App\Models\Event;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\RundownController;
+use App\Http\Controllers\CareerfairController;
+use function PHPUnit\Framework\throwException;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,13 +45,13 @@ Route::get('/singlepartner/{id}', [FrontController::class, 'singlepartner'])->na
 Route::get('/events', [FrontController::class, 'events'])->name('user-events');
 Route::get('/events-detail/{id}', [FrontController::class, 'eventdetail'])->name('user-event-detail');
 Route::get('/galleryy', [FrontController::class, 'gallery'])->name('user-gallery');
-Route::get('/register', [FrontController::class, 'register'])->name('register');
+// Route::get('/register', [FrontController::class, 'register'])->name('register');
 
 
-// route: admin
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-})->name('dashboard');
+// // route: admin
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+// })->name('dashboard');
 
 // route: admin/rundown
 Route::get('/rundown', [RundownController::class, 'index'])->name('rundown');
@@ -115,9 +126,9 @@ Route::delete('/gallery/delete', [GalleryController::class, 'destroy'])->name('g
 // Route::post('/user-update/{user}', [UserController::class, 'update'])->name('user-update');
 // Route::delete('/user/delete', [UserController::class, 'destroy'])->name('user-delete');
 
-Route::get('/login', function () {
-    return view('admin.login');
-})->name('login');
+// Route::get('/login', function () {
+//     return view('admin.login');
+// })->name('login');
 
 
 Route::get('/test', function () {
