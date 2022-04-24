@@ -29,64 +29,43 @@
           {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('user-update', $user->id) }}" method="POST">
+            @csrf
             <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Company</label>
+              <label for="inputText" class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name', $user->name) }}">
+                @error('name')
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
-              <label for="inputDescription" class="col-sm-2 col-form-label">Description</label>
+              <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <textarea class="form-control" style="min-height: 100px"></textarea>
-              </div>
-            </div>
-            
-            <div class="row mb-3">
-              <label for="inputStartDate" class="col-sm-2 col-form-label">Start Date</label>
-              <div class="col-sm-10">
-                <input type="date" class="form-control">
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <label for="inputEndDate" class="col-sm-2 col-form-label">End Date</label>
-              <div class="col-sm-10">
-                <input type="date" class="form-control">
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <label for="inputImage" class="col-sm-2 col-form-label">Upload User</label>
-              <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile">
-              </div>
-            </div>
-            
-            <div class="row mb-3">
-              <label class="col-sm-2 col-form-label">User Position</label>
-              <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">Top</option>
-                  <option value="2">Bottom</option>
-                </select>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email', $user->email) }}">
+                @error('email')
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>
               <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="active" @if ($user->status == 'active') checked @endif>
                   <label class="form-check-label" for="gridRadios1">
                     Active
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="inactive" @if ($user->status == 'inactive') checked @endif>
                   <label class="form-check-label" for="gridRadios2">
                     Inactive
                   </label>

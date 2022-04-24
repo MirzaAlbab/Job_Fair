@@ -77,10 +77,8 @@ class UserController extends Controller
      * @param  int  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request)
+    public function edit(User $user)
     {
-        $id = $request->id;
-        $user = User::find($id);
         return view('admin.user-update', compact('user'));
     }
 
@@ -93,11 +91,17 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $past_email = $user->email;
+        if ($request->email != $past_email) {
+            $request->validate([
+                'name' => 'required',
+                'email'=> 'required | unique:users,email',
+                'status' => 'required',
+            ]);
+        }
         $request->validate([
             'name' => 'required',
-            'email'=> 'required | unique:users,email',
-            'password' => 'required',
-            'role' => 'required',
+            'email'=> 'required',
             'status' => 'required',
         ]);
 
@@ -105,8 +109,6 @@ class UserController extends Controller
                 ->update([
                     'name' => $request->name,
                     'email'=> $request->email,
-                    'password' => $request->password,
-                    'role' => $request->role,
                     'status' => $request->status,
                 ]);
         
