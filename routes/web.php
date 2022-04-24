@@ -28,15 +28,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 require __DIR__.'/auth.php';
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/landingpage', [FrontController::class, 'index'])->name('user-landing');
 Route::get('/about', [FrontController::class, 'about'])->name('user-about');
@@ -117,18 +109,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/user-update/{user}/edit', [UserController::class, 'edit'])->name('user-edit');
     Route::post('/user-update/{user}', [UserController::class, 'update'])->name('user-update');
     Route::delete('/user/delete', [UserController::class, 'destroy'])->name('user-delete');
-});
-
-
-Route::get('/login', function () {
-    return view('admin.login');
-})->name('login');
-
-
-Route::get('/test', function () {
-    return view('admin.test');
-})->name('test');
-Route::get('/error', function () {
-    throw new Exception('User not found by ID ');
 });
 // end route: admin
