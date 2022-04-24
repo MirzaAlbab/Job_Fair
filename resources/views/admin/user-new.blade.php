@@ -30,36 +30,54 @@
           {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
     
           <!-- General Form Elements -->
-          <form action="dashboard" method="POST">
+          <form action="{{ route('user') }}" method="POST">
+            @csrf
             <div class="row mb-3">
               <label for="inputText" class="col-sm-2 col-form-label">Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" value="{{ old('name') }}">
+                @error('name')
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
               <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control">
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+                @error('email')
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
               <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
               <div class="col-sm-10">
-                <input type="password" class="form-control">
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password">
+                @error('password')
+                    <div class="invalid-feedback">
+                      {{ $message }}
+                    </div>
+                @enderror
               </div>
             </div>
 
             <div class="row mb-3">
               <label for="inputPassword" class="col-sm-2 col-form-label">Confirm Password</label>
               <div class="col-sm-10">
-                <input type="password" class="form-control">
+                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
               </div>
             </div>
+
+            <input id="role" name="role" type="hidden" value="user">
             
-            <div class="row mb-3">
+            {{-- <div class="row mb-3">
               <label class="col-sm-2 col-form-label">User Role</label>
               <div class="col-sm-10">
                 <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="role">
@@ -68,7 +86,7 @@
                   <option value="2">User</option>
                 </select>
               </div>
-            </div>
+            </div> --}}
 
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>

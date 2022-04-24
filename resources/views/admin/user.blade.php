@@ -45,6 +45,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Role</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
                   </tr>
@@ -55,6 +56,7 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td class="align-middle">{{ $user->name }}</td>
                     <td class="align-middle">{{ $user->email }}</td>
+                    <td class="align-middle">{{ $user->role }}</td>
                     @if($user->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $user->status }}</span></td>
                     @else
