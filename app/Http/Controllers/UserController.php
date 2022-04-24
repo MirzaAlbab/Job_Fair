@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
 
 class UserController extends Controller
 {
@@ -43,7 +45,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email'=> 'required | unique:users,email',
-            'password' => 'required',
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'role' => 'required',
             'status' => 'required',
         ]);
@@ -124,6 +126,11 @@ class UserController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->id;
+        $user = User::find($id);
+        $auth = Auth::user()->id;
+        if ($user->id == $auth || $user->role == 'admin') {
+            return redirect('/user')->withErrors(['error'=>'User gagal dihapus! *note: user dengan role admin tidak bisa dihapus']);
+        }
         User::destroy($id);
         return redirect('/user')->with('status', 'User berhasil dihapus');
     }
