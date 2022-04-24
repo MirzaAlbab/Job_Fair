@@ -17,6 +17,7 @@ class UserController extends Controller
      */
     public function index()
     {
+        $this->authorize('admin');
         $users = User::latest()->get();
 
         return view('admin.user', compact('users'));
@@ -29,6 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
+        $this->authorize('admin');
         $users = User::all();
         return view('admin.user-new', compact('users'));
     }
@@ -41,7 +43,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
+        $this->authorize('admin');
         $request->validate([
             'name' => 'required',
             'email'=> 'required | unique:users,email',
@@ -69,7 +71,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        $this->authorize('admin');
         return view('admin.user-view', compact('user'));
     }
 
@@ -81,6 +83,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        $this->authorize('admin');
         return view('admin.user-update', compact('user'));
     }
 
@@ -93,6 +96,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $this->authorize('admin');
         $past_email = $user->email;
         if ($request->email != $past_email) {
             $request->validate([
@@ -125,11 +129,12 @@ class UserController extends Controller
      */
     public function destroy(Request $request)
     {
+        $this->authorize('admin');
         $id = $request->id;
         $user = User::find($id);
         $auth = Auth::user()->id;
         if ($user->id == $auth || $user->role == 'admin') {
-            return redirect('/user')->withErrors(['error'=>'User gagal dihapus! *note: user dengan role admin tidak bisa dihapus']);
+            return redirect('/user')->withErrors(['error'=>'User ini tidak dapat dihapus!']);
         }
         User::destroy($id);
         return redirect('/user')->with('status', 'User berhasil dihapus');

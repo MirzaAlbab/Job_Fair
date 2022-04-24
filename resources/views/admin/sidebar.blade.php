@@ -111,7 +111,8 @@
             <span>Gallery</span>
           </a>
         </li><!-- End Gallery Page Nav -->
-
+      
+      @can('admin')
       <li class="nav-heading">Admin</li>
       
         <li class="nav-item">
@@ -120,6 +121,7 @@
             <span>User</span>
           </a>
         </li><!-- End User Page Nav -->
+      @endcan
       
     </ul>
 
