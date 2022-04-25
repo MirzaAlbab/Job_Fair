@@ -10,6 +10,8 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\RundownController;
 use App\Http\Controllers\CareerfairController;
+use App\Http\Controllers\DashboardController;
+
 use function PHPUnit\Framework\throwException;
 
 
@@ -42,9 +44,11 @@ Route::get('/galleryy', [FrontController::class, 'gallery'])->name('user-gallery
 
 Route::middleware(['auth'])->group(function () {
     // route: admin
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+    // Route::get('/dashboard', function () {
+    //     return view('admin.dashboard');
+    // })->name('dashboard');
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
     // route: admin/rundown
     Route::get('/rundown', [RundownController::class, 'index'])->name('rundown');
