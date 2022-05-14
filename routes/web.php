@@ -26,13 +26,11 @@ use function PHPUnit\Framework\throwException;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 require __DIR__.'/auth.php';
 
-Route::get('/landingpage', [FrontController::class, 'index'])->name('user-landing');
+Route::get('/', [FrontController::class, 'index'])->name('user-landing');
 Route::get('/about', [FrontController::class, 'about'])->name('user-about');
 Route::get('/partners', [FrontController::class, 'partner'])->name('user-partners');
 Route::get('/singlepartner/{id}', [FrontController::class, 'singlepartner'])->name('user-singlepartner');
