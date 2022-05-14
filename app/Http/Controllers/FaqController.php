@@ -49,7 +49,7 @@ class FaqController extends Controller
             'status' => $request->status
         ]);
 
-        return redirect('/faq')->with('status', 'FAQ berhasil ditambah');
+        return redirect('/dashboard/faq')->with('status', 'FAQ berhasil ditambah');
     }
 
     /**
@@ -95,7 +95,7 @@ class FaqController extends Controller
                 'answer' => $request->answer,
                 'status' => $request->status
             ]);
-        return redirect('/faq')->with('status', 'FAQ berhasil diperbarui');
+        return redirect('/dashboard/faq')->with('status', 'FAQ berhasil diperbarui');
     }
 
     /**
@@ -108,6 +108,6 @@ class FaqController extends Controller
     {
         $id = $request->id;
         Faq::destroy($id);
-        return redirect('/faq')->with('status', 'FAQ berhasil dihapus');
+        return redirect('/dashboard/faq')->with('status', 'FAQ berhasil dihapus');
     }
 }

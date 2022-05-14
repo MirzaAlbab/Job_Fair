@@ -58,7 +58,7 @@ class RundownController extends Controller
             'careerfair_id' => $request->periode,
             'status' => $request->status,
         ]);
-        return redirect('/rundown')->with('status', 'Rundown berhasil ditambah');
+        return redirect('/dashboard/rundown')->with('status', 'Rundown berhasil ditambah');
     }
 
     /**
@@ -107,7 +107,7 @@ class RundownController extends Controller
                     'careerfair_id' => $request->periode,
                     'status' => $request->status,
                 ]);
-        return redirect('/rundown')->with('status', 'Rundown berhasil diperbarui');
+        return redirect('/dashboard/rundown')->with('status', 'Rundown berhasil diperbarui');
     }
 
     /**
@@ -120,6 +120,6 @@ class RundownController extends Controller
     {
         $id = $request->id;
         Rundown::destroy($id);
-        return redirect('/rundown')->with('status', 'Rundown berhasil dihapus');
+        return redirect('/dashboard/rundown')->with('status', 'Rundown berhasil dihapus');
     }
 }

@@ -37,7 +37,7 @@
             <div class="entry-meta">
               <ul>
                
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ $partner->updated_at }}</time></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i>{{ $partner->updated_at->diffForHumans() }}</time></li>
               </ul>
             </div>
 

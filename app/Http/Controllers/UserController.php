@@ -60,7 +60,7 @@ class UserController extends Controller
             'status' => $request->status,
         ]);
         
-        return redirect('/user')->with('status', 'User berhasil ditambahkan');
+        return redirect('/dashboard/user')->with('status', 'User berhasil ditambahkan');
     }
 
     /**
@@ -118,7 +118,7 @@ class UserController extends Controller
                     'status' => $request->status,
                 ]);
         
-        return redirect('/user')->with('status', 'User berhasil diperbarui');
+        return redirect('/dashboard/user')->with('status', 'User berhasil diperbarui');
     }
 
     /**
@@ -137,6 +137,6 @@ class UserController extends Controller
             return redirect('/user')->withErrors(['error'=>'User ini tidak dapat dihapus!']);
         }
         User::destroy($id);
-        return redirect('/user')->with('status', 'User berhasil dihapus');
+        return redirect('/dashboard/user')->with('status', 'User berhasil dihapus');
     }
 }

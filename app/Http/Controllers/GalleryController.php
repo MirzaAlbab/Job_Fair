@@ -49,7 +49,7 @@ class GalleryController extends Controller
             'img' => $result,
             'status' => $request->status,
         ]);
-        return redirect('/gallery')->with('status', 'Galeri berhasil ditambah');
+        return redirect('/dashboard/gallery')->with('status', 'Galeri berhasil ditambah');
     }
 
     /**
@@ -100,7 +100,7 @@ class GalleryController extends Controller
                     'img' => $result,
                     'status' => $request->status,
                 ]);
-        return redirect('/gallery')->with('status', 'Galeri berhasil diperbarui');
+        return redirect('/dashboard/gallery')->with('status', 'Galeri berhasil diperbarui');
     }
 
     /**
@@ -113,6 +113,6 @@ class GalleryController extends Controller
     {
         $id = $request->id;
         Gallery::destroy($id);
-        return redirect('/gallery')->with('status', 'Galeri berhasil dihapus');
+        return redirect('/dashboard/gallery')->with('status', 'Galeri berhasil dihapus');
     }
 }

@@ -57,7 +57,7 @@ class CareerfairController extends Controller
             'img' => $result,
             'status' => $request->status,
         ]);
-        return redirect('/career-fair')->with('status', 'Career Fair berhasil ditambah');
+        return redirect('/dashboard/career-fair')->with('status', 'Career Fair berhasil ditambah');
     }
 
     /**
@@ -122,7 +122,7 @@ class CareerfairController extends Controller
                     'img' => $result,
                     'status' => $request->status,
                 ]);
-        return redirect('/career-fair')->with('status', 'Career Fair berhasil diperbarui');
+        return redirect('/dashboard/career-fair')->with('status', 'Career Fair berhasil diperbarui');
     }
 
     /**
@@ -135,6 +135,6 @@ class CareerfairController extends Controller
     {
         $id = $request->id;
         Careerfair::destroy($id);
-        return redirect('/career-fair')->with('status', 'Career Fair berhasil dihapus');
+        return redirect('/dashboard/career-fair')->with('status', 'Career Fair berhasil dihapus');
     }
 }

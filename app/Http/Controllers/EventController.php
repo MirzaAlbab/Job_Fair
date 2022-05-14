@@ -56,7 +56,7 @@ class EventController extends Controller
             'img' => $result,
             'status' => $request->status,
         ]);
-        return redirect('/event')->with('status', 'Event berhasil ditambah');
+        return redirect('/dashboard/event')->with('status', 'Event berhasil ditambah');
     }
 
     /**
@@ -112,7 +112,7 @@ class EventController extends Controller
                     'img' => $result,
                     'status' => $request->status,
                 ]);
-        return redirect('/event')->with('status', 'Event berhasil diperbarui');
+        return redirect('/dashboard/event')->with('status', 'Event berhasil diperbarui');
     }
 
     /**
@@ -125,6 +125,6 @@ class EventController extends Controller
     {
         $id = $request->id;
         Event::destroy($id);
-        return redirect('/event')->with('status', 'Event berhasil dihapus');
+        return redirect('/dashboard/event')->with('status', 'Event berhasil dihapus');
     }
 }

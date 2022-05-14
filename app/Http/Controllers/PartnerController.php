@@ -58,7 +58,7 @@ class PartnerController extends Controller
             'img' => $result,
             'status' => $request->status,
         ]);
-        return redirect('/partner')->with('status', 'Partner berhasil ditambah');
+        return redirect('/dashboard/partner')->with('status', 'Partner berhasil ditambah');
     }
 
     /**
@@ -116,7 +116,7 @@ class PartnerController extends Controller
                     'img' => $result,
                     'status' => $request->status,
                 ]);
-        return redirect('/partner')->with('status', 'Partner berhasil diperbarui');
+        return redirect('/dashboard/partner')->with('status', 'Partner berhasil diperbarui');
        
     }
 
@@ -130,6 +130,6 @@ class PartnerController extends Controller
     {
         $id = $request->id;
         Partner::destroy($id);
-        return redirect('/partner')->with('status', 'Partner berhasil dihapus');
+        return redirect('/dashboard/partner')->with('status', 'Partner berhasil dihapus');
     }
 }

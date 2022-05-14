@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Partner;
 use App\Models\Careerfair;
 use Illuminate\Database\Seeder;
 
