@@ -126,5 +126,5 @@ class FrontController extends Controller
 // about participant (done)
 // partner event empty when change career fair / comson page
 // tulisan galery faq kecil dihapus (done)
-// logo coming soon sponsor participant
-// rundowsn coming soon
+// logo coming soon sponsor participant (done)
+// rundowsn coming soon (done)
