@@ -80,11 +80,16 @@ class FrontController extends Controller
     public function events()
     {
         $events = Event::where('status','active')->latest()->paginate(5);
+        $events->map(function ($ev) {
+            $ev->time = Carbon::parse($ev->time)->isoFormat('dddd, D MMMM YYYY');
+            return $ev;
+        });
         return view('landing-page.event', compact('events'));
     }
     public function eventdetail($id)
     {
         $event = Event::find($id);
+        $event->time = Carbon::parse($event->time)->isoFormat('dddd, D MMMM YYYY');
         return view('landing-page.event-details', compact('event'));
     }
     public function gallery()

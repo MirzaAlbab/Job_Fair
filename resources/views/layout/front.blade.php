@@ -48,7 +48,7 @@
           <li><a class="nav-link scrollto {{ (request()->is('partners')) ? 'active' : '' }}" href="{{ route('user-partners') }}">Partners</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('events')) ? 'active' : '' }}" href="{{ route('user-events') }}">Events</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('galleryy')) ? 'active' : '' }}" href="{{ route('user-gallery') }}">Gallery</a></li>
-          <li><a class="getstarted scrollto" href="/register">Register</a></li>
+          <li><a class="getstarted scrollto" href="https://dpkka.unair.ac.id/v2/jobseeker/registration">Register</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>

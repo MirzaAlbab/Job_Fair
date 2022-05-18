@@ -240,7 +240,7 @@
   
   </section>
   <!-- End Clients Section -->
-
+  @if (count($gallery) != 0)
   <!-- ======= Gallery Section ======= -->
   <section id="gallery" class="gallery">
 
@@ -269,6 +269,8 @@
     </div>
 
   </section><!-- End Gallery Section -->
+  
+  @endif
 
   <!-- ======= F.A.Q Section ======= -->
   <section id="faq" class="faq">
@@ -328,10 +330,6 @@
           </div>
           @endforeach
         </div>
-       
-        
-     
-
       </div>
       
     </div>
