@@ -52,7 +52,7 @@
 
       <div class="row gx-0">
         <div class="col-lg-12 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="content ">
+          <div class="content">
             {!! $aocf->description !!}
           </div>
         </div>
@@ -75,7 +75,9 @@
         <div class="swiper-wrapper align-items-center mb-5">
           @foreach ($participant as $partici)
           <div class="swiper-slide"><a href="{{ route('user-singlepartner', $partici->id) }}" target="_blank"><img src="{{ $partici->img }}" class="img-fluid" alt=""></a></div>
+        
          @endforeach
+          
           
         </div>
         <div class="swiper-pagination"></div>

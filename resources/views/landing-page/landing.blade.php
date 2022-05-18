@@ -278,7 +278,7 @@
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>F.A.Q</h2>
+        
         <p>Frequently Asked Questions</p>
       </header>
 

@@ -59,7 +59,6 @@ class FrontController extends Controller
         ])->get();
         $participant = Partner::where([
             ['status', 'active'],
-            ['position', '2'],
             ['careerfair_id', $aocf->id],
         ])->get();
         return view('landing-page.about',compact('aocf', 'partners', 'participant'));
@@ -121,7 +120,7 @@ class FrontController extends Controller
 }
 // galeri pagination (done) set max height
 // event careerfairid (done)
-// about participant 
+// about participant (done)
 // partner event empty when change career fair / comson page
 // tulisan galery faq kecil dihapus
 // logo coming soon sponsor participant
