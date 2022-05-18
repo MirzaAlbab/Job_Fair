@@ -134,7 +134,7 @@ class UserController extends Controller
         $user = User::find($id);
         $auth = Auth::user()->id;
         if ($user->id == $auth || $user->role == 'admin') {
-            return redirect('/user')->withErrors(['error'=>'User ini tidak dapat dihapus!']);
+            return redirect('/dashboard/user')->withErrors(['error'=>'User ini tidak dapat dihapus!']);
         }
         User::destroy($id);
         return redirect('/dashboard/user')->with('status', 'User berhasil dihapus');
