@@ -64,6 +64,8 @@
 
         </div><!-- End company entries list -->
 
+        @if (count($partners) > 0)
+            
         <div class="col-lg-4">
 
           <div class="sidebar">
@@ -85,7 +87,8 @@
 
         </div>
         <!-- End company sidebar -->
-
+        @endif
+        
       </div>
 
     </div>
