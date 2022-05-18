@@ -21,7 +21,7 @@ class CreateEventsTable extends Migration
             $table->string('link');
             $table->string('location')->nullable()->default(null);
             $table->string('img')->nullable()->default(null);
-            // $table->foreignId('user_id')->constrained();
+            $table->foreignId('careerfair_id');
             $table->string('status');
             $table->timestamps();
         });

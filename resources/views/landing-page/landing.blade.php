@@ -287,8 +287,8 @@
          
           <!-- F.A.Q List 1-->
           
-          @foreach ($faqs[0] as $faq)
           <div class="accordion accordion-flush" id="faqlist1">
+            @foreach ($faqs[0] as $faq)
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-{{ $faq->id }}">
@@ -302,16 +302,16 @@
                 </div>
               </div>
             </div>
+            @endforeach
           </div>
-          @endforeach
          
         </div>
 
         <div class="col-lg-6">
           
           <!-- F.A.Q List 2-->
-          @foreach ($faqs[1] as $faq)
           <div class="accordion accordion-flush" id="faqlist2">
+            @foreach ($faqs[1] as $faq)
             
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -327,8 +327,8 @@
             </div>
             
             
+            @endforeach
           </div>
-          @endforeach
         </div>
       </div>
       
