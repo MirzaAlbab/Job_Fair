@@ -42,6 +42,74 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
 
+                <div class="card-body">
+                  <h5 class="card-title">Perusahaan</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-journal-richtext"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{ $countpartner }}</h6>
+                      <span class="text-muted small pt-2 ps-1">perusahaan</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Sales Card -->
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Webinar</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-headset"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>{{ $counterevent }}</h6>
+                      <span class="text-muted small pt-2 ps-1">webinar</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Revenue Card -->
+
+            <!-- Customers Card -->
+            <div class="col-xxl-4 col-xl-12">
+
+              <div class="card info-card customers-card">
+
+                <div class="card-body">
+                  <h5 class="card-title">Peserta</h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>0</h6>
+                      <span class="text-muted small pt-2 ps-1">peserta</span>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div><!-- End Customers Card -->
+
+            {{-- <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+
                 <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
                   <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -327,14 +395,11 @@
               @foreach ($partners as $par)
                   <p>{{ $par->company }}</p>
               @endforeach
-              @foreach ($test as $te)
-                  {{-- <p>{{ $te->id }}</p> --}}
-              @endforeach
 
             </div>
           </div><!-- End TESTT -->
 
-        </div><!-- End Right side columns -->
+        </div><!-- End Right side columns --> --}}
 
       </div>
     </section>
