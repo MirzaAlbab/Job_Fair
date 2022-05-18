@@ -21,11 +21,17 @@
     </header>
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
+        @if (count($partners) > 0)
+            
         @foreach ($partners as $sponsor)
         <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="{{ route('user-singlepartner', $sponsor->id) }}" target="_blank"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
         {{-- <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
          --}}
         @endforeach
+        @else
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/dummy.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/dummy.png') }}" class="img-fluid" alt=""></div>
+        @endif
       </div>
     </div>
     <div class="swiper-button-prev"></div>
@@ -100,20 +106,25 @@
 
         <div class="col-lg-6">
           <div class="accordion accordion-flush" id="accordionFlushExample">
-                @foreach ($rundown as $rd)
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $rd->id }}" aria-expanded="false" aria-controls="flush-collapseOne">
-                      {{ $rd->time }}
-                    </button>
-                  </h2>
-                  <div id="flush-collapse{{ $rd->id }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">{!! $rd->event !!}</div>
-                    
-                  </div>
-                </div>
+            @if (count($rundown) > 0)
                 
-                @endforeach
+            @foreach ($rundown as $rd)
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $rd->id }}" aria-expanded="false" aria-controls="flush-collapseOne">
+                  {{ $rd->time }}
+                </button>
+              </h2>
+              <div id="flush-collapse{{ $rd->id }}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">{!! $rd->event !!}</div>
+                
+              </div>
+            </div>
+            
+            @endforeach
+            @else
+            <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/comson.png') }}" class="img-fluid" alt=""></div>
+            @endif
               </div>
               <!-- End Accordion without outline borders -->
 
@@ -209,6 +220,16 @@
             </div>
           </div>
         </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-people" style="color: #bb0852;"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countevent }}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Peserta</p>
+            </div>
+          </div>
+        </div>
         
       </div>
       
@@ -226,11 +247,14 @@
       </header>
   
       <div class="clients-slider swiper">
-        <div class="swiper-wrapper align-items-center mb-5">
+        <div class="swiper-wrapper align-items-center justify-content-center mb-5">
+          @if (count($participant) > 0)
           @foreach ($participant as $partici)
           <div class="swiper-slide"><a href="{{ route('user-singlepartner', $partici->id) }}" target="_blank"><img src="{{ $partici->img }}" class="img-fluid" alt=""></a></div>
-        
-         @endforeach
+          @endforeach
+          @else
+          <div class="swiper-slide"><a href="#"><img src="{{ asset('assets/img/dummy.png') }}" class="img-fluid" alt=""></a></div>
+          @endif
           
           
         </div>
@@ -247,7 +271,7 @@
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Gallery</h2>
+       
         <p>Galeri AOCF</p>
       </header>
 
