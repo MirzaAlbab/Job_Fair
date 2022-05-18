@@ -99,8 +99,8 @@
         </div>
 
         <div class="col-lg-6">
-          @foreach ($rundown as $rd)
-              <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+                @foreach ($rundown as $rd)
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{ $rd->id }}" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -113,11 +113,11 @@
                   </div>
                 </div>
                 
+                @endforeach
               </div>
               <!-- End Accordion without outline borders -->
 
            
-          @endforeach
         </div>
 
       </div> 
