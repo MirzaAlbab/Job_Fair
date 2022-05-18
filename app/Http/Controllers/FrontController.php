@@ -35,7 +35,7 @@ class FrontController extends Controller
             ['careerfair_id', $aocf->id],
         ])->get();
         $rundown->map(function ($rd) {
-            $rd->time = Carbon::parse($rd->time)->format('l, d M Y');
+            $rd->time = Carbon::parse($rd->time)->isoFormat('dddd, D MMMM YYYY');
             return $rd;
         });
         $countpartner = Partner::where('status', 'active')->count();
