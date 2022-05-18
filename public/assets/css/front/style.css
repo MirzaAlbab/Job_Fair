@@ -476,6 +476,7 @@ section {
 .about .content {
     background-color: #f6f9ff;
     padding: 40px;
+    border-radius: 10px;
 }
 .about h3 {
     font-size: 14px;

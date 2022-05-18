@@ -52,7 +52,6 @@ class FrontController extends Controller
     public function about()
     {
         $aocf = Careerfair::where('status', 'active')->latest()->first();
-        
         $partners = Partner::where([
             ['status', 'active'],
             ['position', '1'],
@@ -60,14 +59,17 @@ class FrontController extends Controller
         ])->get();
         $participant = Partner::where([
             ['status', 'active'],
-            ['position', '2'],
             ['careerfair_id', $aocf->id],
         ])->get();
         return view('landing-page.about',compact('aocf', 'partners', 'participant'));
     }
     public function partner()
     {
-        $partners = Partner::where('status','active')->latest()->paginate(5);
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
+        $partners = Partner::where([
+            ['status','active'],
+            ['careerfair_id', $aocf->id],
+        ])->latest()->paginate(5);
         return view('landing-page.partners', compact('partners'));
     }
     public function singlepartner($id)
@@ -78,7 +80,11 @@ class FrontController extends Controller
     }
     public function events()
     {
-        $events = Event::where('status','active')->latest()->paginate(5);
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
+        $events = Event::where([
+            ['status','active'],
+            ['careerfair_id', $aocf->id],
+        ])->latest()->paginate(5);
         $events->map(function ($ev) {
             $ev->time = Carbon::parse($ev->time)->isoFormat('dddd, D MMMM YYYY');
             return $ev;
@@ -93,7 +99,7 @@ class FrontController extends Controller
     }
     public function gallery()
     {
-        $gallery = Gallery::where('status', 'active')->latest()->get();
+        $gallery = Gallery::where('status', 'active')->latest()->paginate(9);
         return view('landing-page.gallery', compact('gallery'));
     }
     public function register()
@@ -115,3 +121,10 @@ class FrontController extends Controller
     }
 
 }
+// galeri pagination (done) set max height
+// event careerfairid (done)
+// about participant (done)
+// partner event empty when change career fair / comson page
+// tulisan galery faq kecil dihapus (done)
+// logo coming soon sponsor participant (done)
+// rundowsn coming soon (done)

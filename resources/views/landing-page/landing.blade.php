@@ -21,11 +21,17 @@
     </header>
     <div class="clients-slider2 swiper">
       <div class="swiper-wrapper align-items-center" >
+        @if (count($partners) > 0)
+            
         @foreach ($partners as $sponsor)
         <div class="swiper-slide d-flex align-items-center justify-content-center"><a href="{{ route('user-singlepartner', $sponsor->id) }}" target="_blank"><img src="{{ $sponsor->img }}" class="img-fluid" alt=""></a></div>
         {{-- <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="assets/img/dummy.png" class="img-fluid" alt=""></div>
          --}}
         @endforeach
+        @else
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/dummy.png') }}" class="img-fluid" alt=""></div>
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/dummy.png') }}" class="img-fluid" alt=""></div>
+        @endif
       </div>
     </div>
     <div class="swiper-button-prev"></div>
@@ -100,6 +106,11 @@
 
         <div class="col-lg-6">
           <div class="accordion accordion-flush" id="accordionFlushExample">
+<<<<<<< HEAD
+=======
+            @if (count($rundown) > 0)
+                
+>>>>>>> 7d2a4b847bbc1317a9083048360ffb3628c114e7
             @foreach ($rundown as $rd)
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
@@ -114,8 +125,16 @@
             </div>
             
             @endforeach
+<<<<<<< HEAD
           </div>
           <!-- End Accordion without outline borders -->
+=======
+            @else
+            <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/comson.png') }}" class="img-fluid" alt=""></div>
+            @endif
+              </div>
+              <!-- End Accordion without outline borders -->
+>>>>>>> 7d2a4b847bbc1317a9083048360ffb3628c114e7
 
            
         </div>
@@ -209,6 +228,16 @@
             </div>
           </div>
         </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-people" style="color: #bb0852;"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $countevent }}" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Peserta</p>
+            </div>
+          </div>
+        </div>
         
       </div>
       
@@ -226,11 +255,14 @@
       </header>
   
       <div class="clients-slider swiper">
-        <div class="swiper-wrapper align-items-center mb-5">
+        <div class="swiper-wrapper align-items-center justify-content-center mb-5">
+          @if (count($participant) > 0)
           @foreach ($participant as $partici)
           <div class="swiper-slide"><a href="{{ route('user-singlepartner', $partici->id) }}" target="_blank"><img src="{{ $partici->img }}" class="img-fluid" alt=""></a></div>
-        
-         @endforeach
+          @endforeach
+          @else
+          <div class="swiper-slide"><a href="#"><img src="{{ asset('assets/img/dummy.png') }}" class="img-fluid" alt=""></a></div>
+          @endif
           
           
         </div>
@@ -247,7 +279,7 @@
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>Gallery</h2>
+       
         <p>Galeri AOCF</p>
       </header>
 
@@ -278,7 +310,7 @@
     <div class="container" data-aos="fade-up">
 
       <header class="section-header">
-        <h2>F.A.Q</h2>
+        
         <p>Frequently Asked Questions</p>
       </header>
 
