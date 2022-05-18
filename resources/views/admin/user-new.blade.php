@@ -77,16 +77,16 @@
 
             <input id="role" name="role" type="hidden" value="user">
             
-            {{-- <div class="row mb-3">
+            <div class="row mb-3">
               <label class="col-sm-2 col-form-label">User Role</label>
               <div class="col-sm-10">
-                <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="role">
+                <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="role" required>
                   <option value="" selected>Select an option</option>
-                  <option value="1">Admin</option>
-                  <option value="2">User</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
                 </select>
               </div>
-            </div> --}}
+            </div>
 
             <fieldset class="row mb-3">
               <legend class="col-form-label col-sm-2 pt-0">Status</legend>

@@ -1,5 +1,5 @@
 @extends('layout.front')
-@section('title', 'Event')
+@section('title', 'Gallery')
 
 @section('container')
 <!-- ======= Breadcrumbs ======= -->

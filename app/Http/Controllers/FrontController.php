@@ -26,7 +26,6 @@ class FrontController extends Controller
 
         $participant = Partner::where([
             ['status', 'active'],
-            ['position', '2'],
             ['careerfair_id', $aocf->id],
         ])->get();
         
