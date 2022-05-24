@@ -13,8 +13,13 @@ class Event extends Model
 
 
     public function getDateStartAttribute($value)
-{
+    {
     return Carbon::parse($value)->format('Y-m-d\TH:i');
-}
+    }
+
+    public function AOCF()
+    {
+        return $this->hasOne(Careerfair::class, 'id', 'careerfair_id');
+    }
 
 }

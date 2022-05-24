@@ -14,5 +14,10 @@ class Careerfair extends Model
     {
         return $this->hasMany(Partner::class);
     }
+
+    public function Events()
+    {
+        return $this->hasMany(Event::class);
+    }
     
 }

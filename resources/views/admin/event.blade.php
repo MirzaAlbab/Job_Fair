@@ -45,6 +45,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Career Fair</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
                   </tr>
@@ -54,8 +55,9 @@
                       
                   <tr>
                     <th scope="row">{{ $loop->iteration }} </th>
-                    <td class="align-middle">{{ $event->title }} </td>
+                    <td class="align-middle">{{ $event->title }}</td>
                     <td class="align-middle">{{ $event->time }}</td>
+                    <td class="align-middle">{{ $event->AOCF->title }}</td>
                     @if($event->status == 'active')
                       <td class="align-middle"><span class="badge rounded-pill bg-primary">{{ $event->status }}</span></td>
                     @else
