@@ -82,8 +82,8 @@
               <div class="col-sm-10">
                 <select class="form-select search-select" aria-label="Default select example" aria-placeholder="Open this select menu" name="role" required>
                   <option value="" selected>Select an option</option>
+                  <option value="superAdmin">Super Admin</option>
                   <option value="admin">Admin</option>
-                  <option value="user">User</option>
                 </select>
               </div>
             </div>
