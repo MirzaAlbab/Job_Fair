@@ -48,7 +48,7 @@
           <li><a class="nav-link scrollto {{ (request()->is('partners')) ? 'active' : '' }}" href="{{ route('user-partners') }}">Partners</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('events')) ? 'active' : '' }}" href="{{ route('user-events') }}">Events</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('galleryy')) ? 'active' : '' }}" href="{{ route('user-gallery') }}">Gallery</a></li>
-          <li><a class="getstarted scrollto" href="https://dpkka.unair.ac.id/site/login">Login</a></li>
+          <li><a class="getstarted scrollto" id="counter" href="https://dpkka.unair.ac.id/site/login" target="_blank">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -132,16 +132,23 @@
   <script src="{{ asset('assets/js/front/main.js') }}"></script>
 
   <script>
-    const element = document.querySelector('.accordion-button');
-    element.addEventListener('click', function() {
-      element.classList.toggle('collapsed');
-    });
+    document.getElementById("counter").addEventListener("click", function() {
+      const counter = new purecounter({
+        selector: '#counter',
+        start: 0,
+        end: 100,
+        duration: 1000,
+        onUpdate: function(value) {
+          const peserta = document.getElementById("peserta")
+          peserta.data-purecounter-end = value
 
-    $(document).ready(function(){
-      $(this).next().toggle('show');
+        },
+        onComplete: function(value) {
+          document.getElementById("counter").innerHTML = value;
+        }
+      });
+      counter.start();
     });
-
-    console.log('tes')
     
     
 

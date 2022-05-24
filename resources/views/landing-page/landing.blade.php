@@ -13,7 +13,7 @@
 <!-- End Hero -->
 
 
-<!-- ======= Big Clients Section ======= -->
+<!-- ======= Sponsor  Section ======= -->
 <section id="clients" class="clients bg-white">
   <div class="container" data-aos="fade-up">
     <header class="section-header">
@@ -38,11 +38,11 @@
     <div class="swiper-button-next"></div>
   </div>
 </section>
-<!-- End Big Clients Section -->
+<!-- End Sponsor Section -->
 
 <!-- ======= Main Section ======= -->
 <main id="main">
-<!-- ======= Values Section ======= -->
+<!-- ======= What's On Section ======= -->
   <section id="values" class="values">
       <div class="container" data-aos="fade-up">
         <header class="section-header">
@@ -84,12 +84,12 @@
       </div>
 
     </section>
-    <!-- End Values Section -->
+    <!-- End What's On Section -->
 
 
-  <!-- ======= Counts Section ======= -->
   
-  <!-- ======= Features Section ======= -->
+  
+  <!-- ======= Rundown Section ======= -->
   <section id="features" class="features">
 
     <div class="container" data-aos="fade-up">
@@ -106,11 +106,8 @@
 
         <div class="col-lg-6">
           <div class="accordion accordion-flush" id="accordionFlushExample">
-<<<<<<< HEAD
-=======
             @if (count($rundown) > 0)
                 
->>>>>>> 7d2a4b847bbc1317a9083048360ffb3628c114e7
             @foreach ($rundown as $rd)
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
@@ -125,16 +122,11 @@
             </div>
             
             @endforeach
-<<<<<<< HEAD
-          </div>
-          <!-- End Accordion without outline borders -->
-=======
             @else
             <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/comson.png') }}" class="img-fluid" alt=""></div>
             @endif
               </div>
               <!-- End Accordion without outline borders -->
->>>>>>> 7d2a4b847bbc1317a9083048360ffb3628c114e7
 
            
         </div>
@@ -201,9 +193,9 @@
     </div>
 
   </section>
-  <!-- End Features Section -->
+  <!-- End Rundonwn Section -->
 
-  <!-- ======= Counts Section ======= -->
+  <!-- ======= Counter Section ======= -->
   <section id="counts" class="counts">
     <div class="container" data-aos="fade-up">
 
@@ -233,7 +225,7 @@
           <div class="count-box">
             <i class="bi bi-people" style="color: #bb0852;"></i>
             <div>
-              <span data-purecounter-start="0" data-purecounter-end="{{ $countevent }}" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="" data-purecounter-duration="1" class="purecounter" id="peserta"></span>
               <p>Peserta</p>
             </div>
           </div>
@@ -243,9 +235,9 @@
       
     </div>
   </section>
-  <!-- End Counts Section -->
+  <!-- End Counter Section -->
   
-  <!-- ======= Clients Section ======= -->
+  <!-- ======= Participant Section ======= -->
   <section id="clients" class="clients">
   
     <div class="container" data-aos="fade-up">
@@ -271,7 +263,7 @@
     </div>
   
   </section>
-  <!-- End Clients Section -->
+  <!-- End Participant Section -->
   @if (count($gallery) != 0)
   <!-- ======= Gallery Section ======= -->
   <section id="gallery" class="gallery">
