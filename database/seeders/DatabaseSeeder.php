@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
             PartnerSeeder::class,
             RundownSeeder::class,
             UserSeeder::class,
+            CounterSeeder::class,
         ]);
     }
 }
