@@ -18,6 +18,7 @@
 <!-- ======= Event Section ======= -->
 <section class="light">
 	<div class="container">
+		@if (count($events) > 0)
 		@foreach ($events as $event)
 		<article class="postcard light blue">
 			<a class="postcard__img_link">
@@ -47,6 +48,9 @@
 				{{ $events->links() }}
 			</ul>
 		</div>
+		@else
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/comingsoonnnn.png') }}" class="img-fluid" alt=""></div>
+		@endif
 	</div>
 </section>
 <!-- ======= Event Section ======= -->
