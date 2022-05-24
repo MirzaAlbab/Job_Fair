@@ -69,6 +69,21 @@
             </div>
 
             <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">AOCF Period</label>
+              <div class="col-sm-10">
+                <select class="form-select search-select" aria-label="Default select example" name="periode">
+                  <option value=""></option>
+                  @foreach ($careers as $car)
+                    <option value="{{ $car->id }}">{{ $car->title }}</option>
+                  @endforeach
+                </select>
+                @error('periode')
+                  <p class="text-danger">{{ $message }}</p>
+                @enderror
+              </div>
+            </div>
+
+            <div class="row mb-3">
               <label for="inputImage" class="col-sm-2 col-form-label">Upload Poster</label>
               <div class="col-sm-10">
                 <input class="form-control @error('poster') is-invalid @enderror" type="file" id="formFile" name="poster">

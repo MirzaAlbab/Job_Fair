@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Careerfair;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -26,7 +27,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('admin.event-new');
+        $careers = Careerfair::all();
+        return view('admin.event-new', compact('careers'));
     }
 
     /**
@@ -42,6 +44,7 @@ class EventController extends Controller
             'judul' => 'required',
             'deskripsi' => 'required',
             'waktu' => 'required',
+            'periode' => 'required',
             'link' => 'required',
             'status' => 'required',
         ]);
@@ -52,6 +55,7 @@ class EventController extends Controller
             'title' => $request->judul,
             'description' => $request->deskripsi,
             'time' => $request->waktu,
+            'careerfair_id' => $request->periode,
             'link' => $request->link,
             'img' => $result,
             'status' => $request->status,
@@ -78,7 +82,8 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        return view('admin.event-update', compact('event'));
+        $careers = Careerfair::all();
+        return view('admin.event-update', compact('event', 'careers'));
     }
 
     /**
@@ -94,6 +99,7 @@ class EventController extends Controller
             'judul' => 'required',
             'deskripsi' => 'required',
             'waktu' => 'required',
+            'periode' => 'required',
             'link' => 'required',
             'status' => 'required',
         ]);
@@ -108,6 +114,7 @@ class EventController extends Controller
                     'title' => $request->judul,
                     'description' => $request->deskripsi,
                     'time' => $request->waktu,
+                    'careerfair_id' => $request->periode,
                     'link' => $request->link,
                     'img' => $result,
                     'status' => $request->status,
