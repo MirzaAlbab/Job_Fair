@@ -48,7 +48,7 @@
           <li><a class="nav-link scrollto {{ (request()->is('partners')) ? 'active' : '' }}" href="{{ route('user-partners') }}">Partners</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('events')) ? 'active' : '' }}" href="{{ route('user-events') }}">Events</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('galleryy')) ? 'active' : '' }}" href="{{ route('user-gallery') }}">Gallery</a></li>
-          <li><a class="getstarted scrollto" id="counter" href="https://dpkka.unair.ac.id/site/login" target="_blank">Login</a></li>
+          <li><a class="getstarted scrollto" id="counter" href="/loginn" target="_blank">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -132,28 +132,29 @@
   <script src="{{ asset('assets/js/front/main.js') }}"></script>
 
   <script>
-    document.getElementById("counter").addEventListener("click", function() {
-      const counter = new purecounter({
-        selector: '#counter',
-        start: 0,
-        end: 100,
-        duration: 1000,
-        onUpdate: function(value) {
-          const peserta = document.getElementById("peserta")
-          peserta.data-purecounter-end = value
-
-        },
-        onComplete: function(value) {
-          document.getElementById("counter").innerHTML = value;
-        }
+    onload = function() {
+      $(document).ready(function(){
+        $.ajax({
+          url: '/counter',
+          type: 'GET',
+          success: function(data){
+            $("#peserta").attr("data-purecounter-end", data.user);
+            $("#peserta").text(data.user)
+          }
+        });
       });
-      counter.start();
+    }
+
+    $('#counter').on('click', function() {
+      setTimeout(() => {
+        fetch('/counter')
+        .then(response => response.json())
+        .then(data => {
+          $("#peserta").attr("data-purecounter-end", data.user);
+          $("#peserta").text(data.user)
+        })
+      }, 2000);
     });
-    
-    
-
-  
-
   </script>
 
 </body>

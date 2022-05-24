@@ -10,6 +10,7 @@ use App\Models\Rundown;
 use App\Models\Careerfair;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Maher\Counters\Facades\Counters;
 
 class FrontController extends Controller
 {
@@ -102,22 +103,14 @@ class FrontController extends Controller
         $gallery = Gallery::where('status', 'active')->latest()->paginate(9);
         return view('landing-page.gallery', compact('gallery'));
     }
-    public function register()
-    {
-        $aocf = Careerfair::where('status', 'active')->latest()->first();
-        
-        $partners = Partner::where([
-            ['status', 'active'],
-            ['position', '1'],
-            ['careerfair_id', $aocf->id],
-        ])->get();
-        $participant = Partner::where([
-            ['status', 'active'],
-            ['position', '2'],
-            ['careerfair_id', $aocf->id],
-        ])->get();
-        
-        return view('landing-page.register', compact('aocf', 'partners', 'participant'));
+    public function login()
+    {   
+        Counters::increment('number_of_user');
+        return redirect('https://dpkka.unair.ac.id/site/login');
+    }
+    public function counter(){
+        $user = Counters::getValue('number_of_user');
+        return response()->json(['user' => $user]);
     }
 
 }

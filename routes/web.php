@@ -37,8 +37,8 @@ Route::get('/singlepartner/{id}', [FrontController::class, 'singlepartner'])->na
 Route::get('/events', [FrontController::class, 'events'])->name('user-events');
 Route::get('/events-detail/{id}', [FrontController::class, 'eventdetail'])->name('user-event-detail');
 Route::get('/gallery', [FrontController::class, 'gallery'])->name('user-gallery');
-// Route::get('/register', [FrontController::class, 'register'])->name('register');
-
+Route::get('/loginn', [FrontController::class, 'login'])->name('loginn');
+Route::get('/counter', [FrontController::class, 'counter']);
 
 Route::middleware(['auth'])->group(function () {
     // route: admin
