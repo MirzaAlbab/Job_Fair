@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::defaultView('pagination::bootstrap-4');
 
         Gate::define('admin', function ($user) {
-            return $user->role == 'admin';
+            return $user->role == 'superAdmin';
         });
 
         config(['app.locale' => 'id']);
