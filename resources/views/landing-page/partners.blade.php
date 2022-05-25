@@ -87,6 +87,8 @@
 
         </div>
         <!-- End company sidebar -->
+        @else
+        <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/comingsoonnnn.png') }}" class="img-fluid" alt=""></div>
         @endif
         
       </div>
