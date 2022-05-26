@@ -79,7 +79,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/admin/main.js') }}"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" ></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script>
       $(document).ready(function() {
@@ -99,6 +99,20 @@
           .catch( error => {
               console.error( error );
           } );
+  </script>
+  <script>
+    onload = function() {
+      $(document).ready(function(){
+        $.ajax({
+          url: '/counter/{{ $aocf->id }}',
+          type: 'GET',
+          success: function(data){
+            console.log(data);
+            $("#peserta").text(data.user)
+          }
+        });
+      });
+    }
   </script>
 </body>
 </html> 

@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Models;
-
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Careerfair extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'start_date', 'end_date','img', 'status'];
+    protected $fillable = ['title', 'description', 'start_date', 'end_date','img', 'status', 'user'];
 
     public function Partnership()
     {

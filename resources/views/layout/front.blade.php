@@ -48,7 +48,7 @@
           <li><a class="nav-link scrollto {{ (request()->is('partners')) ? 'active' : '' }}" href="{{ route('user-partners') }}">Partners</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('events')) ? 'active' : '' }}" href="{{ route('user-events') }}">Events</a></li>
           <li><a class="nav-link scrollto {{ (request()->is('galleryy')) ? 'active' : '' }}" href="{{ route('user-gallery') }}">Gallery</a></li>
-          <li><a class="getstarted scrollto" id="counter" href="/loginn" target="_blank">Login</a></li>
+          <li><a class="getstarted scrollto" id="counter" href="/loginuser/{{ $aocf->id }}" target="_blank">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -135,9 +135,10 @@
     onload = function() {
       $(document).ready(function(){
         $.ajax({
-          url: '/counter',
+          url: '/counter/{{ $aocf->id }}',
           type: 'GET',
           success: function(data){
+            
             $("#peserta").attr("data-purecounter-end", data.user);
             $("#peserta").text(data.user)
           }
@@ -147,7 +148,7 @@
 
     $('#counter').on('click', function() {
       setTimeout(() => {
-        fetch('/counter')
+        fetch('/counter/{{ $aocf->id }}')
         .then(response => response.json())
         .then(data => {
           $("#peserta").attr("data-purecounter-end", data.user);
