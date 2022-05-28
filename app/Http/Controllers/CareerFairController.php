@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Careerfair;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CareerfairController extends Controller
 {
@@ -43,7 +44,7 @@ class CareerfairController extends Controller
             'tglmulai' => 'required',
             'deskripsi' => 'required',
             'tglselesai' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|file|max:2048',
             'status' => 'required',
         ]);
         // $image  = $request->file('poster');
@@ -51,7 +52,7 @@ class CareerfairController extends Controller
         if($request->file('image')){
             $img = $request->file('image')->store('careerfair-images');
         }else{
-            $img = 'no-image.png';
+            $img = null;
         }
         Careerfair::create([
             'title' => $request->judul,
@@ -106,13 +107,19 @@ class CareerfairController extends Controller
             'judul' => 'required',
             'tglmulai' => 'required',
             'deskripsi' => 'required',
-            'poster' => 'image|file|max:2048',
+            'image' => 'image|file|max:2048',
             'tglselesai' => 'required',
             'status' => 'required',
         ]);
-        if($request->file('poster')){
-            $img = $request->file('poster')->store('careerfair-images');
+        if($request->file('image')){
+            Storage::delete($careerfair->img);
+            $img = $request->file('image')->store('careerfair-images');
+        }else{
+            $img = $careerfair->img;
         }
+
+
+        
         // if($request->file('poster')){
         //     $file   = $request->file('poster');
         //     $result = CloudinaryStorage::replace($careerfair->img, $file->getPathname(), $file->getClientOriginalName());
@@ -139,8 +146,9 @@ class CareerfairController extends Controller
      */
     public function destroy(Request $request)
     {
-        $id = $request->id;
-        Careerfair::destroy($id);
+        $careerfair = Careerfair::find($request->id);
+        Storage::delete($careerfair->img);
+        Careerfair::destroy($request->id);
         return redirect('/dashboard/career-fair')->with('status', 'Career Fair berhasil dihapus');
     }
 }

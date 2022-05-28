@@ -81,9 +81,10 @@
             </div>
 
             <div class="row mb-3">
-              <label for="image" class="col-sm-2 col-form-label">Upload Poster</label>
+              <label for="image" class="col-sm-2 col-form-label mt-3">Upload Poster</label>
               <div class="col-sm-10">
-                <input class="form-control @error('image') is-invalid @enderror" type="file" id="formFile" name="image">
+                <img class="img-preview img-fluid mb-3 col-sm-5">
+                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
                 @error('image')
                   <div class="invalid-feedback">
                     {{ $message }}
@@ -148,4 +149,21 @@
         </section>
         
       </main>   
+
+      <script>
+        function previewImage(){
+          const image = document.querySelector('#image');
+          const imgprev = document.querySelector('.img-preview');
+
+          imgprev.style.display = 'block';
+
+          const OFReader = new FileReader();
+          OFReader.readAsDataURL(image.files[0]);
+
+          OFReader.onload = (OFReaderEvent) => {
+            imgprev.src = OFReaderEvent.target.result;
+          }
+          console.log('ini berjalan')
+        }
+      </script>
 @endsection
