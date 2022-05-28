@@ -43,18 +43,22 @@ class CareerfairController extends Controller
             'tglmulai' => 'required',
             'deskripsi' => 'required',
             'tglselesai' => 'required',
-            'poster' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'status' => 'required',
         ]);
-        $image  = $request->file('poster');
-        $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
-
+        // $image  = $request->file('poster');
+        // $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
+        if($request->file('image')){
+            $img = $request->file('image')->store('careerfair-images');
+        }else{
+            $img = 'no-image.png';
+        }
         Careerfair::create([
             'title' => $request->judul,
             'description' => $request->deskripsi,
             'start_date' => $request->tglmulai,
             'end_date' => $request->tglselesai,
-            'img' => $result,
+            'img' => $img,
             'status' => $request->status,
         ]);
         return redirect('/dashboard/career-fair')->with('status', 'Career Fair berhasil ditambah');
@@ -102,24 +106,26 @@ class CareerfairController extends Controller
             'judul' => 'required',
             'tglmulai' => 'required',
             'deskripsi' => 'required',
+            'poster' => 'image|file|max:2048',
             'tglselesai' => 'required',
             'status' => 'required',
         ]);
         if($request->file('poster')){
-            $file   = $request->file('poster');
-            $result = CloudinaryStorage::replace($careerfair->img, $file->getPathname(), $file->getClientOriginalName());
-        } else {
-            $result = $careerfair->img;
+            $img = $request->file('poster')->store('careerfair-images');
         }
-
-        
+        // if($request->file('poster')){
+        //     $file   = $request->file('poster');
+        //     $result = CloudinaryStorage::replace($careerfair->img, $file->getPathname(), $file->getClientOriginalName());
+        // } else {
+        //     $result = $careerfair->img;
+        // }
         Careerfair::where('id', $request->id)
                 ->update([
                     'title' => $request->judul,
                     'description' => $request->deskripsi,
                     'start_date' => $request->tglmulai,
                     'end_date' => $request->tglselesai,
-                    'img' => $result,
+                    'img' => $img,
                     'status' => $request->status,
                 ]);
         return redirect('/dashboard/career-fair')->with('status', 'Career Fair berhasil diperbarui');

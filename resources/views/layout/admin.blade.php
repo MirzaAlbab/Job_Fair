@@ -100,19 +100,6 @@
               console.error( error );
           } );
   </script>
-  <script>
-    onload = function() {
-      $(document).ready(function(){
-        $.ajax({
-          url: '/counter/{{ $aocf->id }}',
-          type: 'GET',
-          success: function(data){
-            console.log(data);
-            $("#peserta").text(data.user)
-          }
-        });
-      });
-    }
-  </script>
+ 
 </body>
 </html> 

@@ -19,7 +19,7 @@ class CreateCareerfairsTable extends Migration
             $table->text('description')->nullable()->default(null);
             $table->date('start_date');
             $table->date('end_date');
-            $table->string('img')->nullable()->default(null);
+            $table->string('img')->nullable();
             // $table->foreignId('user_id')->constrained()->default(1);
             $table->enum('status', ['active', 'inactive'])->default('inactive');
             $table->integer('user')->default(0);
