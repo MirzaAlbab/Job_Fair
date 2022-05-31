@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Event extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'description', 'time', 'link','location', 'img','status'];
+    protected $fillable = ['title', 'description', 'time', 'link','location', 'img','status', 'careerfair_id'];
 
 
     public function getDateStartAttribute($value)

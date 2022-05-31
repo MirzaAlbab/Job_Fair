@@ -44,12 +44,15 @@
             </div>
 
             <div class="row mb-3">
-              <label for="inputImage" class="col-sm-2 col-form-label">Upload Image</label>
+              <label for="image" class="col-sm-2 col-form-label mt-3">Gallery Image</label>
               <div class="col-sm-10">
-                <input class="form-control " type="file" id="formFile" name="dokumentasi">
+                
                 @if ($gallery->img)
-                  <img src="{{ $gallery->img }}" alt="{{ $gallery->img }}" width="300px">
-                @endif
+                    <img src="{{ asset('storage/'. $gallery->img) }}" class="img-preview img-fluid mb-3 col-sm-5">
+                  @else
+                    <img class="img-preview img-fluid mb-3 col-sm-5">
+                  @endif
+                <input class="form-control" type="file" id="image" name="image" onchange="previewImage()">
               </div>
             </div>
 

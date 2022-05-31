@@ -149,21 +149,6 @@
 
   </main>
 
-  <script>
-    function previewImage(){
-      const image = document.querySelector('#image');
-      const imgprev = document.querySelector('.img-preview');
-
-      imgprev.style.display = 'block';
-
-      const OFReader = new FileReader();
-      OFReader.readAsDataURL(image.files[0]);
-
-      OFReader.onload = (OFReaderEvent) => {
-        imgprev.src = OFReaderEvent.target.result;
-      }
-      console.log('ini berjalan')
-    }
-  </script>
+ 
     
 @endsection

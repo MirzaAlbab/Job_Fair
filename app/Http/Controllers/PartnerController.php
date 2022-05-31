@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\CloudinaryStorage;
-use App\Models\Careerfair;
 use App\Models\Partner;
+use App\Models\Careerfair;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\CloudinaryStorage;
 
 class PartnerController extends Controller
 {
@@ -43,19 +44,24 @@ class PartnerController extends Controller
             'nama' => 'required',
             'deskripsi'=> 'required',
             'periode' => 'required',
+            'image' => 'image|file|max:2048',
             'jenis' => 'required',
             'status' => 'required',
         ]);
-        $image  = $request->file('logo');
-        // dd($image);
-        $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
-
+        // $image  = $request->file('logo');
+        // // dd($image);
+        // $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
+        if($request->file('image')){
+            $img = $request->file('image')->store('uploads/partner');
+        }else{
+            $img = null;
+        }
         Partner::create([
             'company' => $request->nama,
             'description'=> $request->deskripsi,
             'careerfair_id' => $request->periode,
             'position' => $request->jenis,
-            'img' => $result,
+            'img' => $img,
             'status' => $request->status,
         ]);
         return redirect('/dashboard/partner')->with('status', 'Partner berhasil ditambah');
@@ -99,13 +105,21 @@ class PartnerController extends Controller
             'deskripsi'=> 'required',
             'periode' => 'required',
             'jenis' => 'required',
+            'image' => 'image|file|max:2048',
             'status' => 'required',
         ]);
-        if($request->file('logo')){
-            $file   = $request->file('logo');
-            $result = CloudinaryStorage::replace($partner->img, $file->getPathname(), $file->getClientOriginalName());
-        } else {
-            $result = $partner->img;
+        // if($request->file('logo')){
+        //     $file   = $request->file('logo');
+        //     $result = CloudinaryStorage::replace($partner->img, $file->getPathname(), $file->getClientOriginalName());
+        // } else {
+        //     $result = $partner->img;
+        // }
+        if($request->file('image')){
+            Storage::delete($partner->img);
+            $img = $request->file('image')->store('uploads/partner');
+            
+        }else{
+            $img = $partner->img;
         }
         Partner::where('id', $partner->id)
                 ->update([
@@ -113,7 +127,7 @@ class PartnerController extends Controller
                     'description'=> $request->deskripsi,
                     'careerfair_id' => $request->periode,
                     'position' => $request->jenis,
-                    'img' => $result,
+                    'img' => $img,
                     'status' => $request->status,
                 ]);
         return redirect('/dashboard/partner')->with('status', 'Partner berhasil diperbarui');
@@ -128,8 +142,9 @@ class PartnerController extends Controller
      */
     public function destroy(Request $request)
     {
-        $id = $request->id;
-        Partner::destroy($id);
+        $partner = Partner::find($request->id);
+        Storage::delete($partner->img);
+        Partner::destroy($request->id);
         return redirect('/dashboard/partner')->with('status', 'Partner berhasil dihapus');
     }
 }

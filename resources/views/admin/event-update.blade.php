@@ -81,15 +81,17 @@
             </div>
 
             <div class="row mb-3">
-              <label for="inputImage" class="col-sm-2 col-form-label">Upload Poster</label>
+              <label for="image" class="col-sm-2 col-form-label mt-3">Event Image</label>
               <div class="col-sm-10">
-                <input class="form-control" type="file" id="formFile" name="poster">
+                
                 @if ($event->img)
-                  <img src="{{ $event->img }}" alt="{{ $event->img }}" width="300px">
-                @endif
+                    <img src="{{ asset('storage/'. $event->img) }}" class="img-preview img-fluid mb-3 col-sm-5">
+                  @else
+                    <img class="img-preview img-fluid mb-3 col-sm-5">
+                  @endif
+                <input class="form-control" type="file" id="image" name="image" onchange="previewImage()">
               </div>
             </div>
-            
             <div class="row mb-3">
               <label for="inputLink" class="col-sm-2 col-form-label">Link Meeting</label>
               <div class="col-sm-10">

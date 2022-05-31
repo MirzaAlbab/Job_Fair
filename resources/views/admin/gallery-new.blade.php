@@ -45,13 +45,14 @@
             </div>
 
             <div class="row mb-3">
-              <label for="inputImage" class="col-sm-2 col-form-label">Upload Image</label>
+              <label for="image" class="col-sm-2 col-form-label mt-3">Gallery Image</label>
               <div class="col-sm-10">
-                <input class="form-control @error('dokumentasi') is-invalid @enderror" type="file" id="formFile" name="dokumentasi">
-                @error('dokumentasi')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                <img class="img-preview img-fluid mb-3 col-sm-5">
+                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
+                @error('image')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
                 @enderror
               </div>
             </div>
