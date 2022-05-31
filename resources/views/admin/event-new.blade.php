@@ -84,12 +84,13 @@
             </div>
 
             <div class="row mb-3">
-              <label for="inputImage" class="col-sm-2 col-form-label">Upload Poster</label>
+              <label for="image" class="col-sm-2 col-form-label mt-3">Event Image</label>
               <div class="col-sm-10">
-                <input class="form-control @error('poster') is-invalid @enderror" type="file" id="formFile" name="poster">
-                @error('poster')
+                <img class="img-preview img-fluid mb-3 col-sm-5">
+                <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image" onchange="previewImage()">
+                @error('image')
                   <div class="invalid-feedback">
-                      {{ $message }}
+                    {{ $message }}
                   </div>
                 @enderror
               </div>

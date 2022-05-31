@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
@@ -38,15 +39,20 @@ class GalleryController extends Controller
     {
         $request->validate([
             'judul' => 'required',
-            'dokumentasi' => 'required',
+            'image' => 'required|image|file|max:2048',
             'status' => 'required',
         ]);
-        $image  = $request->file('dokumentasi');
-        $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
+        // $image  = $request->file('dokumentasi');
+        // $img = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
 
+        if($request->file('image')){
+            $img = $request->file('image')->store('uploads/gallery');
+        }else{
+            $img = null;
+        }
         Gallery::create([
             'title' => $request->judul,
-            'img' => $result,
+            'img' => $img,
             'status' => $request->status,
         ]);
         return redirect('/dashboard/gallery')->with('status', 'Galeri berhasil ditambah');
@@ -87,17 +93,25 @@ class GalleryController extends Controller
         $request->validate([
             'judul' => 'required',
             'status' => 'required',
+            'image' => 'required|image|file|max:2048',
         ]);
-        if($request->file('dokumentasi')){
-            $file   = $request->file('dokumentasi');
-            $result = CloudinaryStorage::replace($gallery->img, $file->getPathname(), $file->getClientOriginalName());
-        } else {
-            $result = $gallery->img;
+        // if($request->file('dokumentasi')){
+        //     $file   = $request->file('dokumentasi');
+        //     $img = CloudinaryStorage::replace($gallery->img, $file->getPathname(), $file->getClientOriginalName());
+        // } else {
+        //     $img = $gallery->img;
+        // }
+        if($request->file('image')){
+            Storage::delete($gallery->img);
+            $img = $request->file('image')->store('uploads/gallery');
+            
+        }else{
+            $img = $gallery->img;
         }
         Gallery::where('id', $gallery->id)
                 ->update([
                     'title' => $request->judul,
-                    'img' => $result,
+                    'img' => $img,
                     'status' => $request->status,
                 ]);
         return redirect('/dashboard/gallery')->with('status', 'Galeri berhasil diperbarui');
@@ -111,8 +125,9 @@ class GalleryController extends Controller
      */
     public function destroy(Request $request,Gallery $gallery)
     {
-        $id = $request->id;
-        Gallery::destroy($id);
+        $gallery = Gallery::find($request->id);
+        Storage::delete($gallery->img);
+        Gallery::destroy($request->id);
         return redirect('/dashboard/gallery')->with('status', 'Galeri berhasil dihapus');
     }
 }

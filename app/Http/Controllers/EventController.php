@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Event;
 use App\Models\Careerfair;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -39,25 +40,29 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
             'judul' => 'required',
             'deskripsi' => 'required',
             'waktu' => 'required',
             'periode' => 'required',
+            'image' => 'image|file|max:2048',
             'link' => 'required',
             'status' => 'required',
         ]);
-        $image  = $request->file('poster');
-        $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
-
+        // $image  = $request->file('poster');
+        // $img = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
+        if($request->file('image')){
+            $img = $request->file('image')->store('uploads/events');
+        }else{
+            $img = null;
+        }
         Event::create([
             'title' => $request->judul,
             'description' => $request->deskripsi,
             'time' => $request->waktu,
             'careerfair_id' => $request->periode,
             'link' => $request->link,
-            'img' => $result,
+            'img' => $img,
             'status' => $request->status,
         ]);
         return redirect('/dashboard/event')->with('status', 'Event berhasil ditambah');
@@ -101,14 +106,23 @@ class EventController extends Controller
             'waktu' => 'required',
             'periode' => 'required',
             'link' => 'required',
+            'image' => 'image|file|max:2048',
             'status' => 'required',
         ]);
-        if($request->file('poster')){
-            $file   = $request->file('poster');
-            $result = CloudinaryStorage::replace($event->img, $file->getPathname(), $file->getClientOriginalName());
-        } else {
-            $result = $event->img;
+        // if($request->file('poster')){
+        //     $file   = $request->file('poster');
+        //     $result = CloudinaryStorage::replace($event->img, $file->getPathname(), $file->getClientOriginalName());
+        // } else {
+        //     $result = $event->img;
+        // }
+        if($request->file('image')){
+            Storage::delete($event->img);
+            $img = $request->file('image')->store('uploads/events');
+            
+        }else{
+            $img = $event->img;
         }
+        
         Event::where('id', $event->id)
                 ->update([
                     'title' => $request->judul,
@@ -116,7 +130,7 @@ class EventController extends Controller
                     'time' => $request->waktu,
                     'careerfair_id' => $request->periode,
                     'link' => $request->link,
-                    'img' => $result,
+                    'img' => $img,
                     'status' => $request->status,
                 ]);
         return redirect('/dashboard/event')->with('status', 'Event berhasil diperbarui');
@@ -130,8 +144,9 @@ class EventController extends Controller
      */
     public function destroy(Request $request)
     {
-        $id = $request->id;
-        Event::destroy($id);
+        $event = Event::find($request->id);
+        Storage::delete($event->img);
+        Event::destroy($request->id);
         return redirect('/dashboard/event')->with('status', 'Event berhasil dihapus');
     }
 }

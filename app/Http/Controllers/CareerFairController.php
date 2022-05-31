@@ -113,7 +113,8 @@ class CareerfairController extends Controller
         ]);
         if($request->file('image')){
             Storage::delete($careerfair->img);
-            $img = $request->file('image')->store('careerfair-images');
+            $img = $request->file('image')->store('uploads/careerfair');
+            
         }else{
             $img = $careerfair->img;
         }
