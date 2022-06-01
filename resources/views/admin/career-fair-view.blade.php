@@ -1,19 +1,17 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>View Career Fair | DPKKA - Universitas Airlangga</title>
+  <title>View Career Fair | DPKKA - Universitas Airlangga</title>
 @endsection
 
 @section('career-fair', '')
 
 @section('main')
-<main id="main" class="main">
-
+  <main id="main" class="main">
     <div class="pagetitle">
       <h1>Career Fair</h1>
       <nav>
         <ol class="breadcrumb">
-          {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
           <li class="breadcrumb-item"><a href="{{ route('career') }}">Career Fair</a></li>
@@ -32,15 +30,11 @@
           <div class="card-text">
             <p>{!! $careerfair->description !!}</p>
           </div>
-          
-        
           <div class="text-center">
             <a href="{{ route('career') }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
-    
 @endsection
