@@ -27,7 +27,7 @@
           
           <article class="entry">
             <div class=" text-center">
-              <img src="{{ $partner->img }}" alt="" class=" entry-img img-fluid">
+              <img src="{{ asset('storage/'.$partner->img) }}" alt="" class=" entry-img img-fluid">
             </div>
 
             <h2 class="entry-title">
@@ -73,7 +73,7 @@
             @foreach ($partners as $partner)
             <div class="sidebar-item recent-posts">
               <div class="post-item clearfix">
-                <img src="{{ $partner->img }}" alt="">
+                <img src="{{ asset('storage/'.$partner->img) }}" alt="">
                 <h4><a href="{{ route('user-singlepartner', $partner->id) }}">{{ $partner->company }}</a></h4>
                 <time datetime="2020-01-01">Jan 1, 2020</time>
               </div>
