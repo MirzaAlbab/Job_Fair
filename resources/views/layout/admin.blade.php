@@ -113,7 +113,7 @@
       OFReader.onload = (OFReaderEvent) => {
         imgprev.src = OFReaderEvent.target.result;
       }
-      console.log('ini berjalan')
+      
     }
   </script>
   
