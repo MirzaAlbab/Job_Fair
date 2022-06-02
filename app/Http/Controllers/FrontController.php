@@ -23,7 +23,6 @@ class FrontController extends Controller
             ['careerfair_id', $aocf->id],
         ])->get();
         
-
         $participant = Partner::where([
             ['status', 'active'],
             ['careerfair_id', $aocf->id],
@@ -40,12 +39,8 @@ class FrontController extends Controller
         $countpartner = Partner::where('status', 'active')->count();
         $countevent = Event::where('status', 'active')->count();
         $gallery = Gallery::where('status', 'active')->take(3)->get();
-        
         $faq = Faq::where('status', 'active')->get();
-        
         $faqs = $faq->split(2);
-        
-        
         return view('landing-page.landing', compact('aocf', 'partners', 'rundown', 'countpartner', 'countevent', 'gallery', 'faqs', 'participant'));
         
     }
@@ -70,13 +65,14 @@ class FrontController extends Controller
             ['status','active'],
             ['careerfair_id', $aocf->id],
         ])->latest()->paginate(5);
-        return view('landing-page.partners', compact('partners'));
+        return view('landing-page.partners', compact('partners', 'aocf'));
     }
     public function singlepartner($id)
     {
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
         $sidebar = Partner::latest()->get();
         $partner = Partner::findorFail($id);
-        return view('landing-page.single-partner', compact('partner', 'sidebar'));
+        return view('landing-page.single-partner', compact('partner', 'sidebar','aocf'));
     }
     public function events()
     {
@@ -89,18 +85,20 @@ class FrontController extends Controller
             $ev->time = Carbon::parse($ev->time)->isoFormat('dddd, D MMMM YYYY');
             return $ev;
         });
-        return view('landing-page.event', compact('events'));
+        return view('landing-page.event', compact('events','aocf'));
     }
     public function eventdetail($id)
     {
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
         $event = Event::find($id);
         $event->time = Carbon::parse($event->time)->isoFormat('dddd, D MMMM YYYY');
-        return view('landing-page.event-details', compact('event'));
+        return view('landing-page.event-details', compact('event','aocf'));
     }
     public function gallery()
     {
+        $aocf = Careerfair::where('status', 'active')->latest()->first();
         $gallery = Gallery::where('status', 'active')->latest()->paginate(9);
-        return view('landing-page.gallery', compact('gallery'));
+        return view('landing-page.gallery', compact('gallery', 'aocf'));
     }
     public function login(Request $request)
     {   
