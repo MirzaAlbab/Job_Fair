@@ -1,23 +1,20 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>New Gallery | DPKKA - Universitas Airlangga</title>
+  <title>New Gallery | DPKKA - Universitas Airlangga</title>
 @endsection
 
 @section('gallery', '')
 
 @section('main')
-<main id="main" class="main">
-
+  <main id="main" class="main">
     <div class="pagetitle">
       <h1>Gallery</h1>
       <nav>
         <ol class="breadcrumb">
-          {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
           <li class="breadcrumb-item"><a href="{{ route('gallery') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Gallery</a></li>
-
           <li class="breadcrumb-item active">New Gallery</li>
         </ol>
       </nav>
@@ -27,8 +24,6 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">New Gallery</h5>
-          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
-    
           <!-- General Form Elements -->
           <form action="{{ route('gallery-store') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -37,9 +32,9 @@
               <div class="col-sm-10">
                 <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul" value="{{ old('judul') }}">
                 @error('judul')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
                 @enderror
               </div>
             </div>
@@ -89,7 +84,7 @@
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            Are you sure you want to discard all your changes?
+                              Are you sure you want to discard all your changes?
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -99,6 +94,7 @@
                       </div>
                   </div><!-- End Vertically centered Modal-->
               </div>
+
               <div class="col-sm-10 text-end">
                 <button type="reset" class="btn btn-secondary">Reset</button>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -108,6 +104,5 @@
         </div>
       </div>
     </section>
-        
-</main>   
+  </main>   
 @endsection
