@@ -1,14 +1,13 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>Event | DPKKA - Universitas Airlangga</title>
+  <title>Event | DPKKA - Universitas Airlangga</title>
 @endsection
 
 @section('event', '')
 
 @section('main')
-<main id="main" class="main">
-
+  <main id="main" class="main">
     <div class="pagetitle">
       <h1>Event</h1>
       <nav>
@@ -23,18 +22,14 @@
     <section class="section">
       <div class="row">
         <div class="col-lg-12">
-
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Datatables</h5>
-              
-              {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
               @if (session('status'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                   <strong>{{ session('status') }}</strong>
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
-                
               @endif
               <a href="{{ route('event-new') }}" class="btn btn-primary mb-3" role="button" aria-pressed="true"><i class="bi bi-plus-lg"></i> New Event</a>
 
@@ -52,7 +47,6 @@
                 </thead>
                 <tbody>
                   @foreach ($events as $event)
-                      
                   <tr>
                     <th scope="row">{{ $loop->iteration }} </th>
                     <td class="align-middle">{{ $event->title }}</td>
@@ -67,11 +61,7 @@
                       <a href="{{ route('event-view',$event->id) }}" class="btn btn-primary btn-sm" role="button" aria-pressed="true" title="View"><i class="bi bi-eye"></i></a>
                       <a href="{{ route('event-edit',$event->id) }}" class="btn btn-warning btn-sm" role="button" aria-pressed="true" title="Edit"><i class="bi bi-pencil-square"></i></a>
                       <!-- Delete Modal -->
-                      <a type="button" class="btn btn-danger btn-sm" id="delete-modal"
-                      data-value="{{$event->id}}"
-                      data-bs-toggle="modal"  data-bs-target="#deleteFormModal">
-                        <i class="bi bi-trash"></i>
-                      </a>
+                      <a type="button" class="btn btn-danger btn-sm" id="delete-modal" data-value="{{$event->id}}" data-bs-toggle="modal"  data-bs-target="#deleteFormModal"><i class="bi bi-trash"></i></a>
                     </td>
                   </tr>
                   @endforeach
@@ -80,41 +70,32 @@
               </table>
               <!-- End Table with stripped rows -->
 
-              {{-- Pagination --}}
-              {{-- {{ $events->links() }} --}}
-              {{-- End Pagination --}}
-
               <!-- Delete Modal -->
               <div class="modal fade" id="deleteFormModal" tabindex="-1" >
                 <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                  <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title">Delete Event</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <h5 class="modal-title">Delete Event</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                    Are you sure you want to delete this Event?
-                    </div>
+                    <div class="modal-body">Are you sure you want to delete this Event?</div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <form action="{{ route('event-delete') }}" method="POST">
-                      <input type="text" id="id" name="id" hidden>
-                      @csrf
-                      @method('DELETE')
-                      <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
-                    
-                    </form>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                      <form action="{{ route('event-delete') }}" method="POST">
+                        <input type="text" id="id" name="id" hidden>
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger" role="button" aria-pressed="true">Delete</button>
+                      </form>
                     </div>
                   </div>
-                  </div>
+                </div>
               </div>
-             <!-- End Delete Modal-->
+              <!-- End Delete Modal-->
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   </main>
 @endsection

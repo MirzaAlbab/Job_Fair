@@ -1,14 +1,13 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>Dashboard | DPKKA - Universitas Airlangga</title>
+  <title>Dashboard | DPKKA - Universitas Airlangga</title>
 @endsection
 
 @section('dashboard', '')
 
 @section('main')
-<main id="main" class="main">
-
+  <main id="main" class="main">
     <div class="pagetitle">
       <h1>Dashboard</h1>
       <nav>
@@ -21,30 +20,23 @@
 
     <section class="section dashboard">
       <div class="row">
-
-        
-
         <!-- Left side columns -->
         <div class="col-lg-12">
           <div class="row">
-
             <!-- Welcoming -->
             <div class="col-12">
               <div class="card">
                 <div class="card-body pb-0">
                   <h5 class="card-title">Welcome back, {{ $auth->name }}!</h5>
                 </div>
-
               </div>
             </div><!-- End Welcoming -->
 
-            <!-- Sales Card -->
+            <!-- Perusahaan Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
-
                 <div class="card-body">
                   <h5 class="card-title">Perusahaan</h5>
-
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-journal-richtext"></i>
@@ -52,15 +44,13 @@
                     <div class="ps-3">
                       <h6>{{ $countpartner }}</h6>
                       <span class="text-muted small pt-2 ps-1">perusahaan</span>
-
                     </div>
                   </div>
                 </div>
-
               </div>
-            </div><!-- End Sales Card -->
+            </div><!-- End Perusahaan Card -->
 
-            <!-- Revenue Card -->
+            <!-- Webinar Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card">
 
@@ -80,16 +70,13 @@
                 </div>
 
               </div>
-            </div><!-- End Revenue Card -->
+            </div><!-- End Webinar Card -->
 
-            <!-- Customers Card -->
+            <!-- Peserta Card -->
             <div class="col-xxl-4 col-xl-12">
-
               <div class="card info-card customers-card">
-
                 <div class="card-body">
                   <h5 class="card-title">Peserta</h5>
-
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-people"></i>
@@ -97,14 +84,11 @@
                     <div class="ps-3">
                       <h6 id="peserta">0</h6>
                       <span class="text-muted small pt-2 ps-1">peserta</span>
-
                     </div>
                   </div>
-
                 </div>
               </div>
-
-            </div><!-- End Customers Card -->
+            </div><!-- End Peserta Card -->
 
             {{-- <!-- Sales Card -->
             <div class="col-xxl-4 col-md-6">
@@ -403,8 +387,8 @@
 
       </div>
     </section>
-
   </main>
+
   <script>
     onload = function() {
       $(document).ready(function(){

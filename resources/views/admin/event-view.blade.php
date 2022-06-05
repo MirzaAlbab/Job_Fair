@@ -1,19 +1,17 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>View Event | DPKKA - Universitas Airlangga</title>
+  <title>View Event | DPKKA - Universitas Airlangga</title>
 @endsection
 
 @section('event', '')
 
 @section('main')
-<main id="main" class="main">
-
+  <main id="main" class="main">
     <div class="pagetitle">
       <h1>Event</h1>
       <nav>
         <ol class="breadcrumb">
-          {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
           <li class="breadcrumb-item"><a href="{{ route('event') }}">Event</a></li>
@@ -26,17 +24,13 @@
       <div class="card">
         <div class="card-body">
           <div class="container">
-
             <div class="row gy-4 m-3">
-      
               <div class="col-lg-6">
                 <div class="">
                   <div class=" align-items-center">
-      
                     <div class="">
                       <img class="img-fluid" src="{{ $event->img }}" alt="">
                     </div>
-      
                   </div>
                 </div>
               </div>
@@ -50,22 +44,20 @@
                     <li><strong>Meeting URL</strong>: <a href="{{ $event->link }}">{{ $event->link }}</a></li>
                   </ul>
                 </div>
+
                 <div class="event-description">
                   <h2>Event description</h2>
                   {!! $event->description !!}
                 </div>
               </div>
-      
             </div>
-      
           </div>
+
           <div class="text-center">
             <a href="{{ route('event') }}" class="btn btn-primary" role="button" aria-pressed="true">Back</a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
-    
 @endsection
