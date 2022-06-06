@@ -27,7 +27,6 @@ use function PHPUnit\Framework\throwException;
 */
 
 
-
 require __DIR__.'/auth.php';
 
 Route::get('/', [FrontController::class, 'index'])->name('user-landing');
@@ -41,11 +40,7 @@ Route::get('/loginuser/{id}', [FrontController::class, 'login'])->name('loginuse
 Route::get('/counter/{id}', [FrontController::class, 'counter']);
 
 Route::middleware(['auth'])->group(function () {
-    // route: admin
-    // Route::get('/dashboard', function () {
-    //     return view('admin.dashboard');
-    // })->name('dashboard');
-
+    // route: admin/dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
     // route: admin/rundown
