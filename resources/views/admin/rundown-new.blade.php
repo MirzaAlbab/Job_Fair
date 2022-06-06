@@ -1,23 +1,20 @@
 @extends('layout.admin')
 
 @section('title')
-    <title>New Rundown | DPKKA - Universitas Airlangga</title>
+  <title>New Rundown | DPKKA - Universitas Airlangga</title>
 @endsection
 
 @section('rundown', '')
 
 @section('main')
-<main id="main" class="main">
-
+  <main id="main" class="main">
     <div class="pagetitle">
       <h1>Rundown</h1>
       <nav>
         <ol class="breadcrumb">
-          {{-- <li class="breadcrumb-item"><a href="{{ route('dashboard') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Home</a></li> --}}
           <li class="breadcrumb-item">Home</li>
           <li class="breadcrumb-item">Pages</li>
           <li class="breadcrumb-item"><a href="{{ route('rundown') }}" data-bs-toggle="modal" data-bs-target="#cancelFormModal">Rundown</a></li>
-
           <li class="breadcrumb-item active">New Rundown</li>
         </ol>
       </nav>
@@ -27,8 +24,6 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">New Rundown</h5>
-          {{-- <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p> --}}
-    
           <!-- General Form Elements -->
           <form action="{{ route('rundown') }}" method="POST">
             @csrf
@@ -46,10 +41,10 @@
               <label for="rincian" class="col-sm-2 col-form-label">Rincian</label>
               <div class="col-sm-10">
                 <div>
-                    <textarea class="form-control" id="editor" name="rincian">{{ old('rincian') }}</textarea>
-                    @error('rincian')
-                        <p class="text-danger">{{ $message }}</p>
-                    @enderror
+                  <textarea class="form-control" id="editor" name="rincian">{{ old('rincian') }}</textarea>
+                  @error('rincian')
+                    <p class="text-danger">{{ $message }}</p>
+                  @enderror
                 </div>  
               </div>
             </div>
@@ -84,34 +79,36 @@
                     Inactive
                   </label>
                 </div>
-
               </div>
             </fieldset>
 
             <div class="row mb-3">
               <div class="col-sm-2">
-                  <!-- Vertically centered Modal -->
-                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelFormModal">
-                      Cancel
-                  </button>
-                  <div class="modal fade" id="cancelFormModal" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title">Discard Changes</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                            Are you sure you want to discard all your changes?
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                              <a href="{{ route('rundown') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
-                            </div>
-                        </div>
+                <!-- Vertically centered Modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#cancelFormModal">
+                  Cancel
+                </button>
+                <div class="modal fade" id="cancelFormModal" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Discard Changes</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                  </div><!-- End Vertically centered Modal-->
+
+                      <div class="modal-body">
+                        Are you sure you want to discard all your changes?
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <a href="{{ route('rundown') }}" class="btn btn-danger" role="button" aria-pressed="true">Discard</a>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Vertically centered Modal-->
               </div>
+
               <div class="col-sm-10 text-end">
                 <button type="reset" class="btn btn-secondary">Reset</button>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -121,6 +118,5 @@
         </div>
       </div>
     </section>
-        
-</main>   
+  </main>   
 @endsection
