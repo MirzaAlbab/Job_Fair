@@ -50,7 +50,7 @@ class CareerfairController extends Controller
         // $image  = $request->file('poster');
         // $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
         if($request->file('image')){
-            $img = $request->file('image')->store('careerfair-images');
+            $img = $request->file('image')->store('uploads/careerfair');
         }else{
             $img = null;
         }
