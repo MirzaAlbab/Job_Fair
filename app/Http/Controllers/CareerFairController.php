@@ -47,8 +47,6 @@ class CareerfairController extends Controller
             'image' => 'image|file|max:2048',
             'status' => 'required',
         ]);
-        // $image  = $request->file('poster');
-        // $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
         if($request->file('image')){
             $img = $request->file('image')->store('uploads/careerfair');
         }else{
@@ -118,15 +116,6 @@ class CareerfairController extends Controller
         }else{
             $img = $careerfair->img;
         }
-
-
-        
-        // if($request->file('poster')){
-        //     $file   = $request->file('poster');
-        //     $result = CloudinaryStorage::replace($careerfair->img, $file->getPathname(), $file->getClientOriginalName());
-        // } else {
-        //     $result = $careerfair->img;
-        // }
         Careerfair::where('id', $request->id)
                 ->update([
                     'title' => $request->judul,

@@ -42,8 +42,7 @@ class GalleryController extends Controller
             'image' => 'required|image|file|max:2048',
             'status' => 'required',
         ]);
-        // $image  = $request->file('dokumentasi');
-        // $img = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
+       
 
         if($request->file('image')){
             $img = $request->file('image')->store('uploads/gallery');
@@ -95,12 +94,7 @@ class GalleryController extends Controller
             'status' => 'required',
             'image' => 'required|image|file|max:2048',
         ]);
-        // if($request->file('dokumentasi')){
-        //     $file   = $request->file('dokumentasi');
-        //     $img = CloudinaryStorage::replace($gallery->img, $file->getPathname(), $file->getClientOriginalName());
-        // } else {
-        //     $img = $gallery->img;
-        // }
+       
         if($request->file('image')){
             Storage::delete($gallery->img);
             $img = $request->file('image')->store('uploads/gallery');

@@ -114,10 +114,3 @@ class FrontController extends Controller
     }
 
 }
-// galeri pagination (done) set max height
-// event careerfairid (done)
-// about participant (done)
-// partner event empty when change career fair / comson page
-// tulisan galery faq kecil dihapus (done)
-// logo coming soon sponsor participant (done)
-// rundowsn coming soon (done)

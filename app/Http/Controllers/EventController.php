@@ -49,8 +49,6 @@ class EventController extends Controller
             'link' => 'required',
             'status' => 'required',
         ]);
-        // $image  = $request->file('poster');
-        // $img = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
         if($request->file('image')){
             $img = $request->file('image')->store('uploads/events');
         }else{
@@ -109,12 +107,6 @@ class EventController extends Controller
             'image' => 'image|file|max:2048',
             'status' => 'required',
         ]);
-        // if($request->file('poster')){
-        //     $file   = $request->file('poster');
-        //     $result = CloudinaryStorage::replace($event->img, $file->getPathname(), $file->getClientOriginalName());
-        // } else {
-        //     $result = $event->img;
-        // }
         if($request->file('image')){
             Storage::delete($event->img);
             $img = $request->file('image')->store('uploads/events');

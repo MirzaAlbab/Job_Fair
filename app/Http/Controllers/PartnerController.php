@@ -48,9 +48,7 @@ class PartnerController extends Controller
             'jenis' => 'required',
             'status' => 'required',
         ]);
-        // $image  = $request->file('logo');
-        // // dd($image);
-        // $result = CloudinaryStorage::upload($image->getPathname(), $image->getClientOriginalName());
+      
         if($request->file('image')){
             $img = $request->file('image')->store('uploads/partner');
         }else{
@@ -108,12 +106,7 @@ class PartnerController extends Controller
             'image' => 'image|file|max:2048',
             'status' => 'required',
         ]);
-        // if($request->file('logo')){
-        //     $file   = $request->file('logo');
-        //     $result = CloudinaryStorage::replace($partner->img, $file->getPathname(), $file->getClientOriginalName());
-        // } else {
-        //     $result = $partner->img;
-        // }
+        
         if($request->file('image')){
             Storage::delete($partner->img);
             $img = $request->file('image')->store('uploads/partner');
