@@ -50,7 +50,7 @@ class EventController extends Controller
             'status' => 'required',
         ]);
         if($request->file('image')){
-            $img = $request->file('image')->store('uploads/events');
+            $img = $request->file('image')->store('public/uploads/events');
         }else{
             $img = null;
         }
@@ -109,7 +109,7 @@ class EventController extends Controller
         ]);
         if($request->file('image')){
             Storage::delete($event->img);
-            $img = $request->file('image')->store('uploads/events');
+            $img = $request->file('image')->store('public/uploads/events');
             
         }else{
             $img = $event->img;

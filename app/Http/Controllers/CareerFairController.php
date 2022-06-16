@@ -48,7 +48,7 @@ class CareerfairController extends Controller
             'status' => 'required',
         ]);
         if($request->file('image')){
-            $img = $request->file('image')->store('uploads/careerfair');
+            $img = $request->file('image')->store('public/uploads/careerfair');
         }else{
             $img = null;
         }
@@ -111,7 +111,7 @@ class CareerfairController extends Controller
         ]);
         if($request->file('image')){
             Storage::delete($careerfair->img);
-            $img = $request->file('image')->store('uploads/careerfair');
+            $img = $request->file('image')->store('public/uploads/careerfair');
             
         }else{
             $img = $careerfair->img;

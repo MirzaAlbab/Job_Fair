@@ -45,7 +45,7 @@ class GalleryController extends Controller
        
 
         if($request->file('image')){
-            $img = $request->file('image')->store('uploads/gallery');
+            $img = $request->file('image')->store('public/uploads/gallery');
         }else{
             $img = null;
         }
@@ -97,7 +97,7 @@ class GalleryController extends Controller
        
         if($request->file('image')){
             Storage::delete($gallery->img);
-            $img = $request->file('image')->store('uploads/gallery');
+            $img = $request->file('image')->store('public/uploads/gallery');
             
         }else{
             $img = $gallery->img;

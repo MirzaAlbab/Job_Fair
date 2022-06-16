@@ -50,7 +50,7 @@ class PartnerController extends Controller
         ]);
       
         if($request->file('image')){
-            $img = $request->file('image')->store('uploads/partner');
+            $img = $request->file('image')->store('public/uploads/partner');
         }else{
             $img = null;
         }
@@ -109,7 +109,7 @@ class PartnerController extends Controller
         
         if($request->file('image')){
             Storage::delete($partner->img);
-            $img = $request->file('image')->store('uploads/partner');
+            $img = $request->file('image')->store('public/uploads/partner');
             
         }else{
             $img = $partner->img;
