@@ -21,13 +21,13 @@
   <div class="container" data-aos="fade-up">
 
     <div class="row gy-4 gallery-container" data-aos="fade-up" data-aos-delay="200">
-      @foreach ($gallery as $gallery)
+      @foreach ($gallery as $galle)
       <div class="col-lg-4 col-md-6 gallery-item filter-app">
         <div class="gallery-wrap">
-          <img src="{{ asset('storage/app/'.$gallery->img) }}" class="img-fluid" alt="">
+          <img src="{{ asset('storage/app/'.$galle->img) }}" class="img-fluid" alt="">
           <div class="gallery-info">
             <div class="gallery-links">
-              <a href="{{ asset('storage/app/'.$gallery->img) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+              <a href="{{ asset('storage/app/'.$galle->img) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
             </div>
           </div>
         </div>
