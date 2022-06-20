@@ -29,7 +29,7 @@
             <div class="swiper-wrapper align-items-center">
 
               <div class="swiper-slide">
-                <img src="{{ asset('storage/'.$event->img) }}" alt="">
+                <img src="{{ asset('storage/app/'.$event->img) }}" alt="">
               </div>
 
             </div>

@@ -24,10 +24,10 @@
       @foreach ($gallery as $gallery)
       <div class="col-lg-4 col-md-6 gallery-item filter-app">
         <div class="gallery-wrap">
-          <img src="{{ asset('storage/'.$gallery->img) }}" class="img-fluid" alt="">
+          <img src="{{ asset('storage/app/'.$gallery->img) }}" class="img-fluid" alt="">
           <div class="gallery-info">
             <div class="gallery-links">
-              <a href="{{ asset('storage/'.$gallery->img) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
+              <a href="{{ asset('storage/app/'.$gallery->img) }}" data-gallery="portfolioGallery" class="portfokio-lightbox"><i class="bi bi-plus"></i></a>
             </div>
           </div>
         </div>
