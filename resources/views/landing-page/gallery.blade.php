@@ -20,6 +20,7 @@
 
   <div class="container" data-aos="fade-up">
 
+    @if (count($gallery) > 0)
     <div class="row gy-4 gallery-container" data-aos="fade-up" data-aos-delay="200">
       @foreach ($gallery as $gallery)
       <div class="col-lg-4 col-md-6 gallery-item filter-app">
@@ -36,8 +37,10 @@
       
       {{ $gallery->links() }}
       
-
     </div>
+    @else
+    <div class="swiper-slide d-flex align-items-center justify-content-center"><img src="{{ asset('assets/img/comingsoonnnn.png') }}" class="img-fluid" alt=""></div>
+    @endif
 
   </div>
 
